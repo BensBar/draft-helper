@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bebas Neue", Impact, "Arial Narrow", sans-serif;
+  --font-label: "Oswald", "DIN Alternate", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --color-ink: #f4f1ea;
+  --color-void: #050508;
+  --color-panel: #0c0c12;
+  --color-panel-2: #12121a;
+  --color-line: #232333;
+  --color-lime: #c6ff00;
+  --color-hot: #ff2a7a;
+  --color-cyan: #2ef5ff;
+  --color-amber: #ffb703;
+  --color-qb: #ffb703;
+  --color-rb: #3dff8a;
+  --color-wr: #4db3ff;
+  --color-te: #ff8a3d;
+  --color-k: #c084fc;
+  --color-dst: #ff5c5c;
+}
+
+html,
+body {
+  background: var(--color-void);
+  color: var(--color-ink);
+  min-height: 100%;
+}
+
+body {
+  background-image:
+    radial-gradient(1200px 500px at 10% -10%, rgba(198, 255, 0, 0.08), transparent 50%),
+    radial-gradient(900px 400px at 100% 0%, rgba(255, 42, 122, 0.1), transparent 45%),
+    linear-gradient(180deg, #050508 0%, #08080e 100%);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2a2a3a #0a0a10;
+}
+
+::selection {
+  background: #c6ff00;
+  color: #050508;
+}
+
+@keyframes pulse-onclock {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 42, 122, 0.55);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(255, 42, 122, 0);
+  }
+}
+
+@keyframes siren {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes glow-name {
+  0%,
+  100% {
+    text-shadow:
+      0 0 12px rgba(198, 255, 0, 0.45),
+      0 8px 0 rgba(0, 0, 0, 0.6);
+  }
+  50% {
+    text-shadow:
+      0 0 28px rgba(198, 255, 0, 0.8),
+      0 8px 0 rgba(0, 0, 0, 0.6);
+  }
+}
+
+@keyframes tick-urgent {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+.siren-bar {
+  background: linear-gradient(90deg, #ff2a7a, #c6ff00, #2ef5ff, #ff2a7a);
+  background-size: 300% 100%;
+  animation: siren 2.4s linear infinite;
+}
+
+.on-clock-pulse {
+  animation: pulse-onclock 1.15s ease-out infinite;
+}
+
+.glow-name {
+  animation: glow-name 1.8s ease-in-out infinite;
+}
+
+.tick-urgent {
+  animation: tick-urgent 0.55s ease-in-out infinite;
+}
+
+.scanlines {
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.015),
+    rgba(255, 255, 255, 0.015) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}

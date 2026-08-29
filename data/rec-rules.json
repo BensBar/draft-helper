@@ -1,0 +1,109 @@
+{
+  "gable": {
+    "windows": [
+      {
+        "id": "r1r2",
+        "rounds": [1, 2],
+        "picks": [12, 13],
+        "take": 2,
+        "positions": ["RB"],
+        "from": [
+          "christian-mccaffrey",
+          "james-cook",
+          "chase-brown",
+          "derrick-henry",
+          "saquon-barkley",
+          "omarion-hampton",
+          "ashton-jeanty"
+        ],
+        "neverPositions": ["TE", "QB", "K", "DST"],
+        "neverIds": [
+          "josh-jacobs",
+          "jonathan-taylor",
+          "jamarr-chase",
+          "jaxon-smith-njigba",
+          "puka-nacua",
+          "chris-olave",
+          "drake-maye"
+        ],
+        "why": "12/13 smash — two RBs from the leftover pile. Do not reach TE/QB."
+      },
+      {
+        "id": "r3r4",
+        "rounds": [3, 4],
+        "picks": [36, 37],
+        "take": 2,
+        "positions": ["WR", "RB"],
+        "from": [
+          "amon-ra-st-brown",
+          "ceedee-lamb",
+          "justin-jefferson",
+          "drake-london",
+          "aj-brown",
+          "rashee-rice",
+          "nico-collins",
+          "malik-nabers",
+          "derrick-henry"
+        ],
+        "neverPositions": ["TE", "QB", "K", "DST"],
+        "neverIds": [],
+        "why": "36/37 — WR/RB only. Explosive skill for distance + 100-yd bonuses. Never TE."
+      },
+      {
+        "id": "r5r6",
+        "rounds": [5, 6],
+        "picks": [60, 61],
+        "take": 2,
+        "positions": ["RB", "WR"],
+        "from": ["bhayshul-tuten", "jadarian-price"],
+        "preferThen": ["WR"],
+        "neverPositions": ["TE", "QB", "K", "DST"],
+        "neverIds": ["drake-maye"],
+        "why": "60/61 — Tuten (ADP 56) or Price (58) plus a WR. Maye is kept."
+      },
+      {
+        "id": "r8plus",
+        "rounds": [8, 9, 10, 11, 12, 13, 14, 15],
+        "from": [
+          "jk-dobbins",
+          "carnell-tate",
+          "mike-washington-jr",
+          "marshawn-lloyd",
+          "rashid-shaheed"
+        ],
+        "positions": ["RB", "WR", "QB", "TE"],
+        "neverPositions": ["K", "DST"],
+        "neverIds": ["den-dst"],
+        "why": "R8+ board: Dobbins, Tate, Mike Washington Jr., Lloyd, Shaheed. DST/K last. DEN DST is a trap."
+      },
+      {
+        "id": "late",
+        "rounds": [16, 17],
+        "positions": ["K", "DST", "QB", "RB", "WR", "TE"],
+        "neverIds": ["den-dst"],
+        "why": "K/DST last. Skip Denver — ADP 90 is a trap."
+      }
+    ],
+    "fadeIds": ["josh-jacobs"],
+    "trapIds": ["den-dst"]
+  },
+  "cobra": {
+    "slot3Round1": {
+      "from": ["jahmyr-gibbs", "bijan-robinson", "jamarr-chase"],
+      "elseFrom": ["jonathan-taylor", "puka-nacua"],
+      "why": "Slot 3 smash — leftover of Gibbs / Bijan / Chase, else Taylor or Nacua."
+    },
+    "round2": {
+      "positions": ["RB", "WR"],
+      "neverIds": ["josh-allen"],
+      "why": "Round 2 — best remaining RB/WR. Do not take Josh Allen here."
+    },
+    "mid": {
+      "positions": ["WR", "RB"],
+      "why": "All-play 3WR+FLEX — do not punt weeks. Explosive WR/RB for +2 at 50 and 100-yd bonuses."
+    },
+    "waitOnQbUntilRound": 7,
+    "kDstLastRounds": 2,
+    "neverEarlyIds": ["josh-allen"]
+  }
+}

@@ -1,0 +1,1795 @@
+{
+  "source": "Sample CBS ADP — Gil's board, Aug 27 2026",
+  "scoring": "PPR",
+  "fetched": "2026-08-27",
+  "players": [
+    {
+      "id": "jahmyr-gibbs",
+      "name": "Jahmyr Gibbs",
+      "position": "RB",
+      "nflTeam": "DET",
+      "overallRank": 1,
+      "adp": 1.21,
+      "kept": true
+    },
+    {
+      "id": "bijan-robinson",
+      "name": "Bijan Robinson",
+      "position": "RB",
+      "nflTeam": "ATL",
+      "overallRank": 2,
+      "adp": 1.96,
+      "kept": true
+    },
+    {
+      "id": "jamarr-chase",
+      "name": "Ja'Marr Chase",
+      "position": "WR",
+      "nflTeam": "CIN",
+      "overallRank": 3,
+      "adp": 4.15,
+      "kept": true,
+      "injury": "inj"
+    },
+    {
+      "id": "jonathan-taylor",
+      "name": "Jonathan Taylor",
+      "position": "RB",
+      "nflTeam": "IND",
+      "overallRank": 4,
+      "adp": 5.12,
+      "kept": true
+    },
+    {
+      "id": "puka-nacua",
+      "name": "Puka Nacua",
+      "position": "WR",
+      "nflTeam": "LAR",
+      "overallRank": 5,
+      "adp": 5.26,
+      "kept": true,
+      "injury": "inj"
+    },
+    {
+      "id": "jaxon-smith-njigba",
+      "name": "Jaxon Smith-Njigba",
+      "position": "WR",
+      "nflTeam": "SEA",
+      "overallRank": 6,
+      "adp": 6.85,
+      "kept": true
+    },
+    {
+      "id": "christian-mccaffrey",
+      "name": "Christian McCaffrey",
+      "position": "RB",
+      "nflTeam": "SF",
+      "overallRank": 7,
+      "adp": 7.53
+    },
+    {
+      "id": "amon-ra-st-brown",
+      "name": "Amon-Ra St. Brown",
+      "position": "WR",
+      "nflTeam": "DET",
+      "overallRank": 8,
+      "adp": 9.15
+    },
+    {
+      "id": "james-cook",
+      "name": "James Cook",
+      "position": "RB",
+      "nflTeam": "BUF",
+      "overallRank": 9,
+      "adp": 10.22
+    },
+    {
+      "id": "devon-achane",
+      "name": "De'Von Achane",
+      "position": "RB",
+      "nflTeam": "MIA",
+      "overallRank": 10,
+      "adp": 11.51,
+      "kept": true
+    },
+    {
+      "id": "chase-brown",
+      "name": "Chase Brown",
+      "position": "RB",
+      "nflTeam": "CIN",
+      "overallRank": 11,
+      "adp": 12.24
+    },
+    {
+      "id": "derrick-henry",
+      "name": "Derrick Henry",
+      "position": "RB",
+      "nflTeam": "BAL",
+      "overallRank": 12,
+      "adp": 13.08
+    },
+    {
+      "id": "saquon-barkley",
+      "name": "Saquon Barkley",
+      "position": "RB",
+      "nflTeam": "PHI",
+      "overallRank": 13,
+      "adp": 13.81
+    },
+    {
+      "id": "ceedee-lamb",
+      "name": "CeeDee Lamb",
+      "position": "WR",
+      "nflTeam": "DAL",
+      "overallRank": 14,
+      "adp": 15.32
+    },
+    {
+      "id": "ashton-jeanty",
+      "name": "Ashton Jeanty",
+      "position": "RB",
+      "nflTeam": "LV",
+      "overallRank": 15,
+      "adp": 16.57
+    },
+    {
+      "id": "justin-jefferson",
+      "name": "Justin Jefferson",
+      "position": "WR",
+      "nflTeam": "MIN",
+      "overallRank": 16,
+      "adp": 17.37
+    },
+    {
+      "id": "kenneth-walker",
+      "name": "Kenneth Walker III",
+      "position": "RB",
+      "nflTeam": "KC",
+      "overallRank": 17,
+      "adp": 18.34,
+      "kept": true,
+      "injury": "inj"
+    },
+    {
+      "id": "josh-allen",
+      "name": "Josh Allen",
+      "position": "QB",
+      "nflTeam": "BUF",
+      "overallRank": 18,
+      "adp": 19.19
+    },
+    {
+      "id": "drake-london",
+      "name": "Drake London",
+      "position": "WR",
+      "nflTeam": "ATL",
+      "overallRank": 19,
+      "adp": 19.64
+    },
+    {
+      "id": "omarion-hampton",
+      "name": "Omarion Hampton",
+      "position": "RB",
+      "nflTeam": "LAC",
+      "overallRank": 20,
+      "adp": 20.22
+    },
+    {
+      "id": "nico-collins",
+      "name": "Nico Collins",
+      "position": "WR",
+      "nflTeam": "HOU",
+      "overallRank": 21,
+      "adp": 21.4
+    },
+    {
+      "id": "aj-brown",
+      "name": "A.J. Brown",
+      "position": "WR",
+      "nflTeam": "PHI",
+      "overallRank": 22,
+      "adp": 22.1
+    },
+    {
+      "id": "rashee-rice",
+      "name": "Rashee Rice",
+      "position": "WR",
+      "nflTeam": "KC",
+      "overallRank": 24,
+      "adp": 24.8
+    },
+    {
+      "id": "breece-hall",
+      "name": "Breece Hall",
+      "position": "RB",
+      "nflTeam": "NYJ",
+      "overallRank": 25,
+      "adp": 25.6
+    },
+    {
+      "id": "tyreek-hill",
+      "name": "Tyreek Hill",
+      "position": "WR",
+      "nflTeam": "MIA",
+      "overallRank": 26,
+      "adp": 26.4
+    },
+    {
+      "id": "josh-jacobs",
+      "name": "Josh Jacobs",
+      "position": "RB",
+      "nflTeam": "GB",
+      "overallRank": 53,
+      "adp": 27.86,
+      "fade": true,
+      "notes": "FADE — charges; ADP 28 vs rank ~53"
+    },
+    {
+      "id": "brock-bowers",
+      "name": "Brock Bowers",
+      "position": "TE",
+      "nflTeam": "LV",
+      "overallRank": 28,
+      "adp": 28.2,
+      "kept": true
+    },
+    {
+      "id": "trey-mcbride",
+      "name": "Trey McBride",
+      "position": "TE",
+      "nflTeam": "ARI",
+      "overallRank": 29,
+      "adp": 28.8
+    },
+    {
+      "id": "brian-thomas",
+      "name": "Brian Thomas Jr.",
+      "position": "WR",
+      "nflTeam": "JAC",
+      "overallRank": 30,
+      "adp": 29.5
+    },
+    {
+      "id": "garrett-wilson",
+      "name": "Garrett Wilson",
+      "position": "WR",
+      "nflTeam": "NYJ",
+      "overallRank": 31,
+      "adp": 30.7
+    },
+    {
+      "id": "jayden-daniels",
+      "name": "Jayden Daniels",
+      "position": "QB",
+      "nflTeam": "WAS",
+      "overallRank": 32,
+      "adp": 31.9
+    },
+    {
+      "id": "malik-nabers",
+      "name": "Malik Nabers",
+      "position": "WR",
+      "nflTeam": "NYG",
+      "overallRank": 23,
+      "adp": 32.77
+    },
+    {
+      "id": "jeremiyah-love",
+      "name": "Jeremiyah Love",
+      "position": "RB",
+      "nflTeam": "NO",
+      "overallRank": 33,
+      "adp": 33.09,
+      "sleeper": true
+    },
+    {
+      "id": "cam-skattebo",
+      "name": "Cam Skattebo",
+      "position": "RB",
+      "nflTeam": "NYG",
+      "overallRank": 35,
+      "adp": 35.24,
+      "kept": true
+    },
+    {
+      "id": "jalen-hurts",
+      "name": "Jalen Hurts",
+      "position": "QB",
+      "nflTeam": "PHI",
+      "overallRank": 37,
+      "adp": 36.8
+    },
+    {
+      "id": "marvin-harrison",
+      "name": "Marvin Harrison Jr.",
+      "position": "WR",
+      "nflTeam": "ARI",
+      "overallRank": 38,
+      "adp": 37.5
+    },
+    {
+      "id": "kyren-williams",
+      "name": "Kyren Williams",
+      "position": "RB",
+      "nflTeam": "LAR",
+      "overallRank": 39,
+      "adp": 38.2,
+      "kept": true
+    },
+    {
+      "id": "ladd-mcconkey",
+      "name": "Ladd McConkey",
+      "position": "WR",
+      "nflTeam": "LAC",
+      "overallRank": 40,
+      "adp": 39.1,
+      "kept": true
+    },
+    {
+      "id": "tee-higgins",
+      "name": "Tee Higgins",
+      "position": "WR",
+      "nflTeam": "CIN",
+      "overallRank": 36,
+      "adp": 40.35,
+      "kept": true
+    },
+    {
+      "id": "lamar-jackson",
+      "name": "Lamar Jackson",
+      "position": "QB",
+      "nflTeam": "BAL",
+      "overallRank": 34,
+      "adp": 40.74
+    },
+    {
+      "id": "dk-metcalf",
+      "name": "DK Metcalf",
+      "position": "WR",
+      "nflTeam": "PIT",
+      "overallRank": 41,
+      "adp": 41.2
+    },
+    {
+      "id": "george-pickens",
+      "name": "George Pickens",
+      "position": "WR",
+      "nflTeam": "DAL",
+      "overallRank": 42,
+      "adp": 42,
+      "kept": true
+    },
+    {
+      "id": "alvin-kamara",
+      "name": "Alvin Kamara",
+      "position": "RB",
+      "nflTeam": "NO",
+      "overallRank": 43,
+      "adp": 43.1
+    },
+    {
+      "id": "terry-mclaurin",
+      "name": "Terry McLaurin",
+      "position": "WR",
+      "nflTeam": "WAS",
+      "overallRank": 44,
+      "adp": 44
+    },
+    {
+      "id": "joe-burrow",
+      "name": "Joe Burrow",
+      "position": "QB",
+      "nflTeam": "CIN",
+      "overallRank": 45,
+      "adp": 44.8
+    },
+    {
+      "id": "james-conner",
+      "name": "James Conner",
+      "position": "RB",
+      "nflTeam": "ARI",
+      "overallRank": 46,
+      "adp": 45.6
+    },
+    {
+      "id": "mike-evans",
+      "name": "Mike Evans",
+      "position": "WR",
+      "nflTeam": "TB",
+      "overallRank": 47,
+      "adp": 46.4
+    },
+    {
+      "id": "davante-adams",
+      "name": "Davante Adams",
+      "position": "WR",
+      "nflTeam": "LAR",
+      "overallRank": 48,
+      "adp": 47.2
+    },
+    {
+      "id": "devonta-smith",
+      "name": "DeVonta Smith",
+      "position": "WR",
+      "nflTeam": "PHI",
+      "overallRank": 49,
+      "adp": 48.1
+    },
+    {
+      "id": "chuba-hubbard",
+      "name": "Chuba Hubbard",
+      "position": "RB",
+      "nflTeam": "CAR",
+      "overallRank": 50,
+      "adp": 49
+    },
+    {
+      "id": "trevor-lawrence",
+      "name": "Trevor Lawrence",
+      "position": "QB",
+      "nflTeam": "JAC",
+      "overallRank": 51,
+      "adp": 50.2
+    },
+    {
+      "id": "bucky-irving",
+      "name": "Bucky Irving",
+      "position": "RB",
+      "nflTeam": "TB",
+      "overallRank": 52,
+      "adp": 51.4,
+      "kept": true
+    },
+    {
+      "id": "sam-laporta",
+      "name": "Sam LaPorta",
+      "position": "TE",
+      "nflTeam": "DET",
+      "overallRank": 54,
+      "adp": 52.8
+    },
+    {
+      "id": "zay-flowers",
+      "name": "Zay Flowers",
+      "position": "WR",
+      "nflTeam": "BAL",
+      "overallRank": 55,
+      "adp": 53.6
+    },
+    {
+      "id": "courtland-sutton",
+      "name": "Courtland Sutton",
+      "position": "WR",
+      "nflTeam": "DEN",
+      "overallRank": 57,
+      "adp": 54.8
+    },
+    {
+      "id": "chris-olave",
+      "name": "Chris Olave",
+      "position": "WR",
+      "nflTeam": "NO",
+      "overallRank": 59,
+      "adp": 55.7,
+      "kept": true
+    },
+    {
+      "id": "bhayshul-tuten",
+      "name": "Bhayshul Tuten",
+      "position": "RB",
+      "nflTeam": "JAC",
+      "overallRank": 56,
+      "adp": 56,
+      "sleeper": true
+    },
+    {
+      "id": "jadarian-price",
+      "name": "Jadarian Price",
+      "position": "RB",
+      "nflTeam": "IND",
+      "overallRank": 58,
+      "adp": 58,
+      "sleeper": true
+    },
+    {
+      "id": "jameson-williams",
+      "name": "Jameson Williams",
+      "position": "WR",
+      "nflTeam": "DET",
+      "overallRank": 60,
+      "adp": 59.4
+    },
+    {
+      "id": "jaylen-waddle",
+      "name": "Jaylen Waddle",
+      "position": "WR",
+      "nflTeam": "MIA",
+      "overallRank": 61,
+      "adp": 60.3
+    },
+    {
+      "id": "travis-etienne",
+      "name": "Travis Etienne",
+      "position": "RB",
+      "nflTeam": "JAC",
+      "overallRank": 62,
+      "adp": 61.1
+    },
+    {
+      "id": "emeka-egbuka",
+      "name": "Emeka Egbuka",
+      "position": "WR",
+      "nflTeam": "TB",
+      "overallRank": 63,
+      "adp": 62.4,
+      "kept": true,
+      "injury": "inj"
+    },
+    {
+      "id": "patrick-mahomes",
+      "name": "Patrick Mahomes",
+      "position": "QB",
+      "nflTeam": "KC",
+      "overallRank": 65,
+      "adp": 63.2
+    },
+    {
+      "id": "luther-burden",
+      "name": "Luther Burden III",
+      "position": "WR",
+      "nflTeam": "CHI",
+      "overallRank": 64,
+      "adp": 64.3,
+      "kept": true,
+      "injury": "groin Q"
+    },
+    {
+      "id": "t.j.-hockenson",
+      "name": "T.J. Hockenson",
+      "position": "TE",
+      "nflTeam": "MIN",
+      "overallRank": 66,
+      "adp": 65.1
+    },
+    {
+      "id": "quinshon-judkins",
+      "name": "Quinshon Judkins",
+      "position": "RB",
+      "nflTeam": "CLE",
+      "overallRank": 67,
+      "adp": 66,
+      "kept": true
+    },
+    {
+      "id": "dandre-swift",
+      "name": "D'Andre Swift",
+      "position": "RB",
+      "nflTeam": "CHI",
+      "overallRank": 68,
+      "adp": 66.8
+    },
+    {
+      "id": "jordan-addison",
+      "name": "Jordan Addison",
+      "position": "WR",
+      "nflTeam": "MIN",
+      "overallRank": 69,
+      "adp": 67.5
+    },
+    {
+      "id": "isiah-pacheco",
+      "name": "Isiah Pacheco",
+      "position": "RB",
+      "nflTeam": "KC",
+      "overallRank": 70,
+      "adp": 68.4
+    },
+    {
+      "id": "bo-nix",
+      "name": "Bo Nix",
+      "position": "QB",
+      "nflTeam": "DEN",
+      "overallRank": 71,
+      "adp": 69.2
+    },
+    {
+      "id": "xavier-worthy",
+      "name": "Xavier Worthy",
+      "position": "WR",
+      "nflTeam": "KC",
+      "overallRank": 72,
+      "adp": 70.1
+    },
+    {
+      "id": "david-montgomery",
+      "name": "David Montgomery",
+      "position": "RB",
+      "nflTeam": "DET",
+      "overallRank": 73,
+      "adp": 71
+    },
+    {
+      "id": "calvin-ridley",
+      "name": "Calvin Ridley",
+      "position": "WR",
+      "nflTeam": "TEN",
+      "overallRank": 74,
+      "adp": 72.3
+    },
+    {
+      "id": "george-kittle",
+      "name": "George Kittle",
+      "position": "TE",
+      "nflTeam": "SF",
+      "overallRank": 75,
+      "adp": 73.1
+    },
+    {
+      "id": "jauan-jennings",
+      "name": "Jauan Jennings",
+      "position": "WR",
+      "nflTeam": "SF",
+      "overallRank": 76,
+      "adp": 74
+    },
+    {
+      "id": "tony-pollard",
+      "name": "Tony Pollard",
+      "position": "RB",
+      "nflTeam": "TEN",
+      "overallRank": 77,
+      "adp": 75.2
+    },
+    {
+      "id": "baker-mayfield",
+      "name": "Baker Mayfield",
+      "position": "QB",
+      "nflTeam": "TB",
+      "overallRank": 78,
+      "adp": 76
+    },
+    {
+      "id": "rome-odunze",
+      "name": "Rome Odunze",
+      "position": "WR",
+      "nflTeam": "CHI",
+      "overallRank": 79,
+      "adp": 77.4
+    },
+    {
+      "id": "aaron-jones",
+      "name": "Aaron Jones",
+      "position": "RB",
+      "nflTeam": "MIN",
+      "overallRank": 80,
+      "adp": 78.2
+    },
+    {
+      "id": "justin-herbert",
+      "name": "Justin Herbert",
+      "position": "QB",
+      "nflTeam": "LAC",
+      "overallRank": 81,
+      "adp": 79.5
+    },
+    {
+      "id": "jake-ferguson",
+      "name": "Jake Ferguson",
+      "position": "TE",
+      "nflTeam": "DAL",
+      "overallRank": 82,
+      "adp": 80.8
+    },
+    {
+      "id": "jaylen-warren",
+      "name": "Jaylen Warren",
+      "position": "RB",
+      "nflTeam": "PIT",
+      "overallRank": 83,
+      "adp": 82.1
+    },
+    {
+      "id": "khalil-shakir",
+      "name": "Khalil Shakir",
+      "position": "WR",
+      "nflTeam": "BUF",
+      "overallRank": 84,
+      "adp": 83.4
+    },
+    {
+      "id": "jk-dobbins",
+      "name": "J.K. Dobbins",
+      "position": "RB",
+      "nflTeam": "DEN",
+      "overallRank": 85,
+      "adp": 85,
+      "sleeper": true
+    },
+    {
+      "id": "deebo-samuel",
+      "name": "Deebo Samuel",
+      "position": "WR",
+      "nflTeam": "WAS",
+      "overallRank": 86,
+      "adp": 86.2
+    },
+    {
+      "id": "rj-harvey",
+      "name": "RJ Harvey",
+      "position": "RB",
+      "nflTeam": "DEN",
+      "overallRank": 87,
+      "adp": 87
+    },
+    {
+      "id": "mark-andrews",
+      "name": "Mark Andrews",
+      "position": "TE",
+      "nflTeam": "BAL",
+      "overallRank": 88,
+      "adp": 88.3
+    },
+    {
+      "id": "kaleb-johnson",
+      "name": "Kaleb Johnson",
+      "position": "RB",
+      "nflTeam": "PIT",
+      "overallRank": 89,
+      "adp": 89.1
+    },
+    {
+      "id": "den-dst",
+      "name": "Broncos",
+      "position": "DST",
+      "nflTeam": "DEN",
+      "overallRank": 120,
+      "adp": 90,
+      "trap": true,
+      "notes": "TRAP — ADP 90 is a reach. DST last."
+    },
+    {
+      "id": "carnell-tate",
+      "name": "Carnell Tate",
+      "position": "WR",
+      "nflTeam": "CIN",
+      "overallRank": 91,
+      "adp": 91,
+      "sleeper": true
+    },
+    {
+      "id": "treveyon-henderson",
+      "name": "TreVeyon Henderson",
+      "position": "RB",
+      "nflTeam": "NE",
+      "overallRank": 92,
+      "adp": 91.8
+    },
+    {
+      "id": "cooper-kupp",
+      "name": "Cooper Kupp",
+      "position": "WR",
+      "nflTeam": "SEA",
+      "overallRank": 93,
+      "adp": 92.6
+    },
+    {
+      "id": "caleb-williams",
+      "name": "Caleb Williams",
+      "position": "QB",
+      "nflTeam": "CHI",
+      "overallRank": 94,
+      "adp": 93.5
+    },
+    {
+      "id": "jordan-love",
+      "name": "Jordan Love",
+      "position": "QB",
+      "nflTeam": "GB",
+      "overallRank": 95,
+      "adp": 94.4
+    },
+    {
+      "id": "dak-prescott",
+      "name": "Dak Prescott",
+      "position": "QB",
+      "nflTeam": "DAL",
+      "overallRank": 96,
+      "adp": 95.2
+    },
+    {
+      "id": "colston-loveland",
+      "name": "Colston Loveland",
+      "position": "TE",
+      "nflTeam": "CHI",
+      "overallRank": 97,
+      "adp": 96.1,
+      "kept": true
+    },
+    {
+      "id": "jerry-jeudy",
+      "name": "Jerry Jeudy",
+      "position": "WR",
+      "nflTeam": "CLE",
+      "overallRank": 98,
+      "adp": 97
+    },
+    {
+      "id": "rachaad-white",
+      "name": "Rachaad White",
+      "position": "RB",
+      "nflTeam": "TB",
+      "overallRank": 99,
+      "adp": 98.2
+    },
+    {
+      "id": "chris-godwin",
+      "name": "Chris Godwin",
+      "position": "WR",
+      "nflTeam": "TB",
+      "overallRank": 100,
+      "adp": 99
+    },
+    {
+      "id": "kyle-pitts",
+      "name": "Kyle Pitts",
+      "position": "TE",
+      "nflTeam": "ATL",
+      "overallRank": 101,
+      "adp": 100.4,
+      "kept": true
+    },
+    {
+      "id": "stefon-diggs",
+      "name": "Stefon Diggs",
+      "position": "WR",
+      "nflTeam": "NE",
+      "overallRank": 102,
+      "adp": 101.2
+    },
+    {
+      "id": "david-njoku",
+      "name": "David Njoku",
+      "position": "TE",
+      "nflTeam": "CLE",
+      "overallRank": 103,
+      "adp": 102.5
+    },
+    {
+      "id": "brandon-aubrey",
+      "name": "Brandon Aubrey",
+      "position": "K",
+      "nflTeam": "DAL",
+      "overallRank": 104,
+      "adp": 103.8
+    },
+    {
+      "id": "tyjae-spears",
+      "name": "Tyjae Spears",
+      "position": "RB",
+      "nflTeam": "TEN",
+      "overallRank": 105,
+      "adp": 104.6
+    },
+    {
+      "id": "jared-goff",
+      "name": "Jared Goff",
+      "position": "QB",
+      "nflTeam": "DET",
+      "overallRank": 106,
+      "adp": 105.3
+    },
+    {
+      "id": "kyler-murray",
+      "name": "Kyler Murray",
+      "position": "QB",
+      "nflTeam": "ARI",
+      "overallRank": 107,
+      "adp": 106.1
+    },
+    {
+      "id": "travis-kelce",
+      "name": "Travis Kelce",
+      "position": "TE",
+      "nflTeam": "KC",
+      "overallRank": 108,
+      "adp": 107
+    },
+    {
+      "id": "tank-dell",
+      "name": "Tank Dell",
+      "position": "WR",
+      "nflTeam": "HOU",
+      "overallRank": 109,
+      "adp": 108.2
+    },
+    {
+      "id": "najee-harris",
+      "name": "Najee Harris",
+      "position": "RB",
+      "nflTeam": "LAC",
+      "overallRank": 110,
+      "adp": 109.4
+    },
+    {
+      "id": "cj-stroud",
+      "name": "C.J. Stroud",
+      "position": "QB",
+      "nflTeam": "HOU",
+      "overallRank": 111,
+      "adp": 110.1
+    },
+    {
+      "id": "brock-purdy",
+      "name": "Brock Purdy",
+      "position": "QB",
+      "nflTeam": "SF",
+      "overallRank": 112,
+      "adp": 111
+    },
+    {
+      "id": "jonathon-brooks",
+      "name": "Jonathon Brooks",
+      "position": "RB",
+      "nflTeam": "CAR",
+      "overallRank": 113,
+      "adp": 112.5,
+      "sleeper": true
+    },
+    {
+      "id": "michael-pittman",
+      "name": "Michael Pittman Jr.",
+      "position": "WR",
+      "nflTeam": "IND",
+      "overallRank": 114,
+      "adp": 113.2
+    },
+    {
+      "id": "dalton-kincaid",
+      "name": "Dalton Kincaid",
+      "position": "TE",
+      "nflTeam": "BUF",
+      "overallRank": 115,
+      "adp": 114
+    },
+    {
+      "id": "keon-coleman",
+      "name": "Keon Coleman",
+      "position": "WR",
+      "nflTeam": "BUF",
+      "overallRank": 116,
+      "adp": 115.3
+    },
+    {
+      "id": "justin-fields",
+      "name": "Justin Fields",
+      "position": "QB",
+      "nflTeam": "NYJ",
+      "overallRank": 117,
+      "adp": 116
+    },
+    {
+      "id": "ricky-pearsall",
+      "name": "Ricky Pearsall",
+      "position": "WR",
+      "nflTeam": "SF",
+      "overallRank": 118,
+      "adp": 117.4
+    },
+    {
+      "id": "zack-moss",
+      "name": "Zack Moss",
+      "position": "RB",
+      "nflTeam": "CIN",
+      "overallRank": 119,
+      "adp": 118.1
+    },
+    {
+      "id": "evan-engram",
+      "name": "Evan Engram",
+      "position": "TE",
+      "nflTeam": "DEN",
+      "overallRank": 121,
+      "adp": 119.6
+    },
+    {
+      "id": "jayden-reed",
+      "name": "Jayden Reed",
+      "position": "WR",
+      "nflTeam": "GB",
+      "overallRank": 122,
+      "adp": 120.4
+    },
+    {
+      "id": "tua-tagovailoa",
+      "name": "Tua Tagovailoa",
+      "position": "QB",
+      "nflTeam": "MIA",
+      "overallRank": 123,
+      "adp": 121.2
+    },
+    {
+      "id": "austin-ekeler",
+      "name": "Austin Ekeler",
+      "position": "RB",
+      "nflTeam": "WAS",
+      "overallRank": 124,
+      "adp": 122
+    },
+    {
+      "id": "bal-dst",
+      "name": "Ravens",
+      "position": "DST",
+      "nflTeam": "BAL",
+      "overallRank": 125,
+      "adp": 123.5
+    },
+    {
+      "id": "darnell-mooney",
+      "name": "Darnell Mooney",
+      "position": "WR",
+      "nflTeam": "ATL",
+      "overallRank": 126,
+      "adp": 124.1
+    },
+    {
+      "id": "tyler-warren",
+      "name": "Tyler Warren",
+      "position": "TE",
+      "nflTeam": "IND",
+      "overallRank": 127,
+      "adp": 125
+    },
+    {
+      "id": "rhamondre-stevenson",
+      "name": "Rhamondre Stevenson",
+      "position": "RB",
+      "nflTeam": "NE",
+      "overallRank": 128,
+      "adp": 126.3
+    },
+    {
+      "id": "cameron-dicker",
+      "name": "Cameron Dicker",
+      "position": "K",
+      "nflTeam": "LAC",
+      "overallRank": 129,
+      "adp": 127
+    },
+    {
+      "id": "christian-kirk",
+      "name": "Christian Kirk",
+      "position": "WR",
+      "nflTeam": "HOU",
+      "overallRank": 130,
+      "adp": 128.4
+    },
+    {
+      "id": "braelon-allen",
+      "name": "Braelon Allen",
+      "position": "RB",
+      "nflTeam": "NYJ",
+      "overallRank": 131,
+      "adp": 129.2
+    },
+    {
+      "id": "phi-dst",
+      "name": "Eagles",
+      "position": "DST",
+      "nflTeam": "PHI",
+      "overallRank": 132,
+      "adp": 130.5
+    },
+    {
+      "id": "jakobi-meyers",
+      "name": "Jakobi Meyers",
+      "position": "WR",
+      "nflTeam": "LV",
+      "overallRank": 134,
+      "adp": 131.8
+    },
+    {
+      "id": "justin-tucker",
+      "name": "Justin Tucker",
+      "position": "K",
+      "nflTeam": "BAL",
+      "overallRank": 135,
+      "adp": 132.6
+    },
+    {
+      "id": "mike-washington-jr",
+      "name": "Mike Washington Jr.",
+      "position": "WR",
+      "nflTeam": "NYJ",
+      "overallRank": 133,
+      "adp": 133,
+      "sleeper": true
+    },
+    {
+      "id": "pit-dst",
+      "name": "Steelers",
+      "position": "DST",
+      "nflTeam": "PIT",
+      "overallRank": 136,
+      "adp": 134.2
+    },
+    {
+      "id": "isaac-teslaa",
+      "name": "Isaac Teslaa",
+      "position": "WR",
+      "nflTeam": "DET",
+      "overallRank": 137,
+      "adp": 135
+    },
+    {
+      "id": "kc-concepcion",
+      "name": "KC Concepcion",
+      "position": "WR",
+      "nflTeam": "CAR",
+      "overallRank": 138,
+      "adp": 136.4,
+      "sleeper": true
+    },
+    {
+      "id": "min-dst",
+      "name": "Vikings",
+      "position": "DST",
+      "nflTeam": "MIN",
+      "overallRank": 139,
+      "adp": 137.1
+    },
+    {
+      "id": "tucker-kraft",
+      "name": "Tucker Kraft",
+      "position": "TE",
+      "nflTeam": "GB",
+      "overallRank": 141,
+      "adp": 138.5
+    },
+    {
+      "id": "jake-bates",
+      "name": "Jake Bates",
+      "position": "K",
+      "nflTeam": "DET",
+      "overallRank": 142,
+      "adp": 139.2
+    },
+    {
+      "id": "rashid-shaheed",
+      "name": "Rashid Shaheed",
+      "position": "WR",
+      "nflTeam": "NO",
+      "overallRank": 140,
+      "adp": 140,
+      "sleeper": true
+    },
+    {
+      "id": "gb-dst",
+      "name": "Packers",
+      "position": "DST",
+      "nflTeam": "GB",
+      "overallRank": 143,
+      "adp": 141
+    },
+    {
+      "id": "makai-lemon",
+      "name": "Makai Lemon",
+      "position": "WR",
+      "nflTeam": "LAC",
+      "overallRank": 144,
+      "adp": 142.3,
+      "sleeper": true
+    },
+    {
+      "id": "hou-dst",
+      "name": "Texans",
+      "position": "DST",
+      "nflTeam": "HOU",
+      "overallRank": 145,
+      "adp": 143.1
+    },
+    {
+      "id": "dallas-goedert",
+      "name": "Dallas Goedert",
+      "position": "TE",
+      "nflTeam": "PHI",
+      "overallRank": 146,
+      "adp": 144
+    },
+    {
+      "id": "sf-dst",
+      "name": "49ers",
+      "position": "DST",
+      "nflTeam": "SF",
+      "overallRank": 147,
+      "adp": 145.2
+    },
+    {
+      "id": "harrison-butker",
+      "name": "Harrison Butker",
+      "position": "K",
+      "nflTeam": "KC",
+      "overallRank": 148,
+      "adp": 146
+    },
+    {
+      "id": "parker-washington",
+      "name": "Parker Washington",
+      "position": "WR",
+      "nflTeam": "JAC",
+      "overallRank": 150,
+      "adp": 147.8,
+      "kept": true
+    },
+    {
+      "id": "rico-dowdle",
+      "name": "Rico Dowdle",
+      "position": "RB",
+      "nflTeam": "PIT",
+      "overallRank": 151,
+      "adp": 148.6,
+      "kept": true
+    },
+    {
+      "id": "marshawn-lloyd",
+      "name": "MarShawn Lloyd",
+      "position": "RB",
+      "nflTeam": "GB",
+      "overallRank": 149,
+      "adp": 149,
+      "sleeper": true
+    },
+    {
+      "id": "drake-maye",
+      "name": "Drake Maye",
+      "position": "QB",
+      "nflTeam": "NE",
+      "overallRank": 152,
+      "adp": 150.2,
+      "kept": true
+    },
+    {
+      "id": "dal-dst",
+      "name": "Cowboys",
+      "position": "DST",
+      "nflTeam": "DAL",
+      "overallRank": 153,
+      "adp": 151
+    },
+    {
+      "id": "chris-boswell",
+      "name": "Chris Boswell",
+      "position": "K",
+      "nflTeam": "PIT",
+      "overallRank": 154,
+      "adp": 152.4
+    },
+    {
+      "id": "kc-dst",
+      "name": "Chiefs",
+      "position": "DST",
+      "nflTeam": "KC",
+      "overallRank": 155,
+      "adp": 153.1
+    },
+    {
+      "id": "buf-dst",
+      "name": "Bills",
+      "position": "DST",
+      "nflTeam": "BUF",
+      "overallRank": 156,
+      "adp": 154
+    },
+    {
+      "id": "wil-lutz",
+      "name": "Wil Lutz",
+      "position": "K",
+      "nflTeam": "DEN",
+      "overallRank": 157,
+      "adp": 155.2
+    },
+    {
+      "id": "pat-freiermuth",
+      "name": "Pat Freiermuth",
+      "position": "TE",
+      "nflTeam": "PIT",
+      "overallRank": 158,
+      "adp": 156
+    },
+    {
+      "id": "nyj-dst",
+      "name": "Jets",
+      "position": "DST",
+      "nflTeam": "NYJ",
+      "overallRank": 159,
+      "adp": 157.3
+    },
+    {
+      "id": "kaimi-fairbairn",
+      "name": "Ka'imi Fairbairn",
+      "position": "K",
+      "nflTeam": "HOU",
+      "overallRank": 160,
+      "adp": 158.1
+    },
+    {
+      "id": "det-dst",
+      "name": "Lions",
+      "position": "DST",
+      "nflTeam": "DET",
+      "overallRank": 161,
+      "adp": 159
+    },
+    {
+      "id": "hunter-henry",
+      "name": "Hunter Henry",
+      "position": "TE",
+      "nflTeam": "NE",
+      "overallRank": 162,
+      "adp": 160.4
+    },
+    {
+      "id": "younghoe-koo",
+      "name": "Younghoe Koo",
+      "position": "K",
+      "nflTeam": "ATL",
+      "overallRank": 163,
+      "adp": 161.2
+    },
+    {
+      "id": "cle-dst",
+      "name": "Browns",
+      "position": "DST",
+      "nflTeam": "CLE",
+      "overallRank": 164,
+      "adp": 162
+    },
+    {
+      "id": "zack-ertz",
+      "name": "Zach Ertz",
+      "position": "TE",
+      "nflTeam": "WAS",
+      "overallRank": 165,
+      "adp": 163.5
+    },
+    {
+      "id": "jason-myers",
+      "name": "Jason Myers",
+      "position": "K",
+      "nflTeam": "SEA",
+      "overallRank": 166,
+      "adp": 164.1
+    },
+    {
+      "id": "sea-dst",
+      "name": "Seahawks",
+      "position": "DST",
+      "nflTeam": "SEA",
+      "overallRank": 167,
+      "adp": 165
+    },
+    {
+      "id": "cade-otton",
+      "name": "Cade Otton",
+      "position": "TE",
+      "nflTeam": "TB",
+      "overallRank": 168,
+      "adp": 166.2
+    },
+    {
+      "id": "matt-gay",
+      "name": "Matt Gay",
+      "position": "K",
+      "nflTeam": "WAS",
+      "overallRank": 169,
+      "adp": 167
+    },
+    {
+      "id": "lar-dst",
+      "name": "Rams",
+      "position": "DST",
+      "nflTeam": "LAR",
+      "overallRank": 170,
+      "adp": 168.4
+    },
+    {
+      "id": "jonnu-smith",
+      "name": "Jonnu Smith",
+      "position": "TE",
+      "nflTeam": "PIT",
+      "overallRank": 171,
+      "adp": 169.1
+    },
+    {
+      "id": "chase-mclaughlin",
+      "name": "Chase McLaughlin",
+      "position": "K",
+      "nflTeam": "TB",
+      "overallRank": 172,
+      "adp": 170
+    },
+    {
+      "id": "mia-dst",
+      "name": "Dolphins",
+      "position": "DST",
+      "nflTeam": "MIA",
+      "overallRank": 173,
+      "adp": 171.3
+    },
+    {
+      "id": "isaiah-likely",
+      "name": "Isaiah Likely",
+      "position": "TE",
+      "nflTeam": "BAL",
+      "overallRank": 174,
+      "adp": 172
+    },
+    {
+      "id": "jake-elliott",
+      "name": "Jake Elliott",
+      "position": "K",
+      "nflTeam": "PHI",
+      "overallRank": 175,
+      "adp": 173.2
+    },
+    {
+      "id": "chi-dst",
+      "name": "Bears",
+      "position": "DST",
+      "nflTeam": "CHI",
+      "overallRank": 176,
+      "adp": 174
+    },
+    {
+      "id": "noah-fant",
+      "name": "Noah Fant",
+      "position": "TE",
+      "nflTeam": "SEA",
+      "overallRank": 177,
+      "adp": 175.1
+    },
+    {
+      "id": "matt-prater",
+      "name": "Matt Prater",
+      "position": "K",
+      "nflTeam": "ARI",
+      "overallRank": 178,
+      "adp": 176
+    },
+    {
+      "id": "no-dst",
+      "name": "Saints",
+      "position": "DST",
+      "nflTeam": "NO",
+      "overallRank": 179,
+      "adp": 177.4
+    },
+    {
+      "id": "cam-ward",
+      "name": "Cam Ward",
+      "position": "QB",
+      "nflTeam": "TEN",
+      "overallRank": 180,
+      "adp": 178.2
+    },
+    {
+      "id": "jj-mccarthy",
+      "name": "J.J. McCarthy",
+      "position": "QB",
+      "nflTeam": "MIN",
+      "overallRank": 181,
+      "adp": 179
+    },
+    {
+      "id": "michael-penix",
+      "name": "Michael Penix Jr.",
+      "position": "QB",
+      "nflTeam": "ATL",
+      "overallRank": 182,
+      "adp": 180.5
+    },
+    {
+      "id": "shedeur-sanders",
+      "name": "Shedeur Sanders",
+      "position": "QB",
+      "nflTeam": "CLE",
+      "overallRank": 183,
+      "adp": 181.2
+    },
+    {
+      "id": "tyrone-tracy",
+      "name": "Tyrone Tracy Jr.",
+      "position": "RB",
+      "nflTeam": "NYG",
+      "overallRank": 184,
+      "adp": 182
+    },
+    {
+      "id": "ray-davis",
+      "name": "Ray Davis",
+      "position": "RB",
+      "nflTeam": "BUF",
+      "overallRank": 185,
+      "adp": 183.4
+    },
+    {
+      "id": "tank-bigsby",
+      "name": "Tank Bigsby",
+      "position": "RB",
+      "nflTeam": "PHI",
+      "overallRank": 186,
+      "adp": 184.1
+    },
+    {
+      "id": "jaydon-blue",
+      "name": "Jaydon Blue",
+      "position": "RB",
+      "nflTeam": "DAL",
+      "overallRank": 187,
+      "adp": 185
+    },
+    {
+      "id": "ollie-gordon",
+      "name": "Ollie Gordon II",
+      "position": "RB",
+      "nflTeam": "MIA",
+      "overallRank": 188,
+      "adp": 186.3
+    },
+    {
+      "id": "dylan-sampson",
+      "name": "Dylan Sampson",
+      "position": "RB",
+      "nflTeam": "CLE",
+      "overallRank": 189,
+      "adp": 187
+    },
+    {
+      "id": "woody-marks",
+      "name": "Woody Marks",
+      "position": "RB",
+      "nflTeam": "HOU",
+      "overallRank": 190,
+      "adp": 188.2
+    },
+    {
+      "id": "matthew-golden",
+      "name": "Matthew Golden",
+      "position": "WR",
+      "nflTeam": "GB",
+      "overallRank": 191,
+      "adp": 189
+    },
+    {
+      "id": "travis-hunter",
+      "name": "Travis Hunter",
+      "position": "WR",
+      "nflTeam": "JAC",
+      "overallRank": 192,
+      "adp": 190.4
+    },
+    {
+      "id": "tetairoa-mcmillan",
+      "name": "Tetairoa McMillan",
+      "position": "WR",
+      "nflTeam": "CAR",
+      "overallRank": 193,
+      "adp": 191.1
+    },
+    {
+      "id": "ezekiel-elliott",
+      "name": "Ezekiel Elliott",
+      "position": "RB",
+      "nflTeam": "DAL",
+      "overallRank": 194,
+      "adp": 192
+    },
+    {
+      "id": "jalen-mcmillan",
+      "name": "Jalen McMillan",
+      "position": "WR",
+      "nflTeam": "TB",
+      "overallRank": 195,
+      "adp": 193.2
+    },
+    {
+      "id": "cedric-tillman",
+      "name": "Cedric Tillman",
+      "position": "WR",
+      "nflTeam": "CLE",
+      "overallRank": 196,
+      "adp": 194
+    },
+    {
+      "id": "wan-dale-robinson",
+      "name": "Wan'Dale Robinson",
+      "position": "WR",
+      "nflTeam": "NYG",
+      "overallRank": 197,
+      "adp": 195.1
+    },
+    {
+      "id": "josh-downs",
+      "name": "Josh Downs",
+      "position": "WR",
+      "nflTeam": "IND",
+      "overallRank": 198,
+      "adp": 196
+    },
+    {
+      "id": "romeo-doubs",
+      "name": "Romeo Doubs",
+      "position": "WR",
+      "nflTeam": "GB",
+      "overallRank": 199,
+      "adp": 197.3
+    },
+    {
+      "id": "demario-douglas",
+      "name": "DeMario Douglas",
+      "position": "WR",
+      "nflTeam": "NE",
+      "overallRank": 200,
+      "adp": 198
+    },
+    {
+      "id": "jalen-coker",
+      "name": "Jalen Coker",
+      "position": "WR",
+      "nflTeam": "CAR",
+      "overallRank": 201,
+      "adp": 199.4
+    },
+    {
+      "id": "marvin-mims",
+      "name": "Marvin Mims Jr.",
+      "position": "WR",
+      "nflTeam": "DEN",
+      "overallRank": 202,
+      "adp": 200.1
+    },
+    {
+      "id": "adoni-mitchell",
+      "name": "Adonai Mitchell",
+      "position": "WR",
+      "nflTeam": "IND",
+      "overallRank": 203,
+      "adp": 201
+    },
+    {
+      "id": "xavier-legette",
+      "name": "Xavier Legette",
+      "position": "WR",
+      "nflTeam": "CAR",
+      "overallRank": 204,
+      "adp": 202.2
+    },
+    {
+      "id": "diante-thornton",
+      "name": "Dont'e Thornton Jr.",
+      "position": "WR",
+      "nflTeam": "LV",
+      "overallRank": 205,
+      "adp": 203
+    },
+    {
+      "id": "jack-bech",
+      "name": "Jack Bech",
+      "position": "WR",
+      "nflTeam": "LV",
+      "overallRank": 206,
+      "adp": 204.5
+    },
+    {
+      "id": "elic-ayomanor",
+      "name": "Elic Ayomanor",
+      "position": "WR",
+      "nflTeam": "TEN",
+      "overallRank": 207,
+      "adp": 205.1
+    },
+    {
+      "id": "jalin-hyatt",
+      "name": "Jalin Hyatt",
+      "position": "WR",
+      "nflTeam": "NYG",
+      "overallRank": 208,
+      "adp": 206
+    },
+    {
+      "id": "andrei-iosivas",
+      "name": "Andrei Iosivas",
+      "position": "WR",
+      "nflTeam": "CIN",
+      "overallRank": 209,
+      "adp": 207.3
+    },
+    {
+      "id": "tre-harris",
+      "name": "Tre Harris",
+      "position": "WR",
+      "nflTeam": "LAC",
+      "overallRank": 210,
+      "adp": 208
+    },
+    {
+      "id": "jaylin-noel",
+      "name": "Jaylin Noel",
+      "position": "WR",
+      "nflTeam": "HOU",
+      "overallRank": 211,
+      "adp": 209.2
+    },
+    {
+      "id": "isaac-guerendo",
+      "name": "Isaac Guerendo",
+      "position": "RB",
+      "nflTeam": "SF",
+      "overallRank": 212,
+      "adp": 210
+    },
+    {
+      "id": "audric-estime",
+      "name": "Audric Estime",
+      "position": "RB",
+      "nflTeam": "DEN",
+      "overallRank": 213,
+      "adp": 211.4
+    },
+    {
+      "id": "kimani-vidal",
+      "name": "Kimani Vidal",
+      "position": "RB",
+      "nflTeam": "LAC",
+      "overallRank": 214,
+      "adp": 212.1
+    },
+    {
+      "id": "blake-corum",
+      "name": "Blake Corum",
+      "position": "RB",
+      "nflTeam": "LAR",
+      "overallRank": 215,
+      "adp": 213
+    },
+    {
+      "id": "ameer-abdullah",
+      "name": "Ameer Abdullah",
+      "position": "RB",
+      "nflTeam": "LV",
+      "overallRank": 216,
+      "adp": 214.2
+    },
+    {
+      "id": "justice-hill",
+      "name": "Justice Hill",
+      "position": "RB",
+      "nflTeam": "BAL",
+      "overallRank": 217,
+      "adp": 215
+    },
+    {
+      "id": "alexander-mattison",
+      "name": "Alexander Mattison",
+      "position": "RB",
+      "nflTeam": "MIA",
+      "overallRank": 218,
+      "adp": 216.3
+    },
+    {
+      "id": "samaje-perine",
+      "name": "Samaje Perine",
+      "position": "RB",
+      "nflTeam": "CIN",
+      "overallRank": 219,
+      "adp": 217
+    },
+    {
+      "id": "kenneth-gainwell",
+      "name": "Kenneth Gainwell",
+      "position": "RB",
+      "nflTeam": "PIT",
+      "overallRank": 220,
+      "adp": 218.4
+    }
+  ]
+}

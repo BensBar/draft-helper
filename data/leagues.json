@@ -1,0 +1,184 @@
+{
+  "leagues": [
+    {
+      "id": "gable",
+      "name": "Stan Gable's All Americans",
+      "shortName": "GABLE",
+      "teamName": "Ben's Bar Bruskis",
+      "url": "https://gable.football.cbssports.com",
+      "teams": 12,
+      "rounds": 17,
+      "clockSeconds": 75,
+      "draftStartsAt": "2026-09-03T20:00:00-04:00",
+      "draftType": "snake",
+      "format": "h2h",
+      "divisions": 3,
+      "buyIn": 160,
+      "benSlot": 12,
+      "slotIsDrawn": false,
+      "robot": true,
+      "scoringLabel": "HALF-PPR · Pass TD 5",
+      "scoring": {
+        "reception": 0.5,
+        "passTd": 5,
+        "rushTd": 6,
+        "recTd": 6,
+        "passYds": 0.04,
+        "rushYds": 0.1,
+        "recYds": 0.1,
+        "int": -2,
+        "fumbleLost": -2,
+        "distanceTd": [
+          { "min": 40, "max": 59, "bonus": 1 },
+          { "min": 60, "max": 79, "bonus": 2 },
+          { "min": 80, "max": 99, "bonus": 3 },
+          { "min": 100, "max": 200, "bonus": 4 }
+        ],
+        "passBonuses": [
+          { "yards": 300, "bonus": 3 },
+          { "yards": 400, "bonus": 2 },
+          { "yards": 500, "bonus": 2 }
+        ],
+        "rushBonuses": [
+          { "yards": 100, "bonus": 3 },
+          { "yards": 200, "bonus": 2 },
+          { "yards": 300, "bonus": 2 }
+        ],
+        "recBonuses": [
+          { "yards": 100, "bonus": 3 },
+          { "yards": 200, "bonus": 2 },
+          { "yards": 300, "bonus": 2 }
+        ]
+      },
+      "scoringNotes": [
+        "Pass TD 5 slightly devalues QB vs standard.",
+        "Distance + 100-yd bonuses prefer explosive WR/RB."
+      ],
+      "roster": {
+        "qb": 1,
+        "rb": 2,
+        "wr": 3,
+        "te": 1,
+        "flex": 1,
+        "flexElig": ["RB", "WR", "TE"],
+        "k": 1,
+        "dst": 1,
+        "starters": 10,
+        "benchMin": 1,
+        "benchMax": 7,
+        "ir": 4,
+        "totalMin": 11,
+        "totalMax": 21,
+        "emptyStarterPenalty": 5
+      },
+      "playoffs": {
+        "startWeek": 15,
+        "teams": 6,
+        "weeks": 3
+      },
+      "waivers": {
+        "reset": false,
+        "benPosition": 1,
+        "of": 12
+      },
+      "draftOrder": [
+        "Big Weiner",
+        "GirthQuake",
+        "Smoochy",
+        "Gitty Up",
+        "Dickless Cunts",
+        "Ballock",
+        "Haywood D'Jablome",
+        "Hurts So Good",
+        "#Goofballs",
+        "Natrix",
+        "JDK",
+        "Ben's Bar Bruskis"
+      ]
+    },
+    {
+      "id": "cobra",
+      "name": "Cobra Craig",
+      "shortName": "COBRA",
+      "teamName": "Ben's Bar",
+      "url": "https://ck22.football.cbssports.com",
+      "teams": 12,
+      "rounds": 16,
+      "clockSeconds": 75,
+      "draftStartsAt": "2026-09-10T17:00:00-04:00",
+      "draftType": "snake",
+      "format": "all-play",
+      "divisions": 0,
+      "buyIn": null,
+      "benSlot": null,
+      "slotIsDrawn": true,
+      "robot": false,
+      "scoringLabel": "HALF-PPR · ALL-PLAY · TD 6",
+      "scoring": {
+        "reception": 0.5,
+        "passTd": 6,
+        "rushTd": 6,
+        "recTd": 6,
+        "passYds": 0.04,
+        "rushYds": 0.1,
+        "recYds": 0.1,
+        "int": 0,
+        "fumbleLost": 0,
+        "anyTd50plus": 2,
+        "passBonuses": [
+          { "yards": 300, "bonus": 2 },
+          { "yards": 400, "bonus": 3 },
+          { "yards": 500, "bonus": 4 }
+        ],
+        "rushBonuses": [
+          { "yards": 100, "bonus": 2 },
+          { "yards": 200, "bonus": 3 },
+          { "yards": 300, "bonus": 4 }
+        ],
+        "recBonuses": [
+          { "yards": 100, "bonus": 2 },
+          { "yards": 200, "bonus": 3 },
+          { "yards": 300, "bonus": 4 }
+        ]
+      },
+      "scoringNotes": [
+        "3WR + FLEX all-play: do not punt weeks.",
+        "Explosive WR/RB for 50-yd TD and 100-yd bonuses.",
+        "Wait on QB. K/DST last two rounds."
+      ],
+      "roster": {
+        "qb": 1,
+        "rb": 2,
+        "wr": 3,
+        "te": 1,
+        "flex": 1,
+        "flexElig": ["RB", "WR", "TE"],
+        "k": 1,
+        "dst": 1,
+        "starters": 10,
+        "benchMin": 6,
+        "benchMax": 6,
+        "ir": 2,
+        "totalMin": 16,
+        "totalMax": 16,
+        "emptyStarterPenalty": 0
+      },
+      "playoffs": null,
+      "waivers": null,
+      "draftOrder": [
+        "Slot 1",
+        "Slot 2",
+        "Slot 3",
+        "Slot 4",
+        "Slot 5",
+        "Slot 6",
+        "Slot 7",
+        "Slot 8",
+        "Slot 9",
+        "Slot 10",
+        "Slot 11",
+        "Slot 12"
+      ]
+    }
+  ]
+}

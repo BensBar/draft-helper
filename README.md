@@ -56,6 +56,32 @@ Local `npm run dev` is unchanged — still [http://localhost:3000](http://localh
 
 Keyboard: `Enter` / `D` mark highlighted player drafted · `U` undo · `↑↓` pool · `/` search · `C` clock.
 
+## CBS live-draft sync (Pages)
+
+Live site: [https://bensbar.github.io/draft-helper/](https://bensbar.github.io/draft-helper/)
+
+GitHub Pages is **static**. The browser cannot fetch `cbssports.com` (CORS), we do not scrape CBS, and we do not use Ben’s CBS password. Sync is a **bookmarklet** (or optional unpacked Chrome extension) that Ben runs **on the CBS draft page**. It reads the live board DOM, matches names to `data/players.json`, and pushes the pick list to the companion via `postMessage` (origin-checked) plus `BroadcastChannel` `bensbar-draft-sync` (companion tabs) and a same-origin `sync-relay.html` iframe so the Pages tab can hear CBS.
+
+### Install the bookmarklet
+
+1. Open the companion ([Pages](https://bensbar.github.io/draft-helper/) or `http://localhost:3000`).
+2. Click **COPY BOOKMARKLET** in the CBS SYNC bar.
+3. Add a bookmark on the bookmarks bar. Edit it and paste the copied `javascript:…` as the URL. Name it `Ben draft sync`.
+
+### Live draft (Gable Thu 9/3/2026 8:00pm ET)
+
+1. Keep the companion open (Gable).
+2. Open the CBS draft room (`*.football.cbssports.com` — Gable host `gable.football.cbssports.com`, Cobra `ck22.football.cbssports.com`).
+3. Click **Ben draft sync** once. Leave both tabs open. It polls every ~2s.
+4. After each CBS pick, GiantRec / next-8 recompute from the remaining pool. Ben does **not** click that player in the companion.
+5. CBS is source of truth: a full replay **replaces** live `takenIds` only. Keepers stay locked from `data/keepers.json` and are never ingested again.
+6. Unmatched CBS names show in a small list — search the pool and mark them, or fix the paste.
+7. If the bookmarklet cannot run: **HOW-TO / PASTE** and paste names (one per line).
+
+Optional: Chrome → `chrome://extensions` → Developer mode → Load unpacked → `extension/` in this repo. Same postMessage path. No CBS login in the extension.
+
+The sample ADP banner stays honest: **Sample CBS ADP — Gil's board, Aug 27 2026**. Sync is picks only, not a live ADP feed.
+
 ## Data layer (Gil diffs here)
 
 Swap boards without rewriting UI:

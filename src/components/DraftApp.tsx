@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
+import { useCbsSync } from "@/hooks/useCbsSync";
 import { useClock } from "@/hooks/useClock";
 import { useDraft } from "@/hooks/useDraft";
 import type { KeepersFile, League, Meta, Player } from "@/lib/types";
+import { CbsSyncBar } from "./CbsSyncBar";
 import { DraftBoard } from "./DraftBoard";
 import { FAQueue } from "./FAQueue";
 import { GiantRec } from "./GiantRec";
@@ -30,6 +32,14 @@ export function DraftApp({
 }) {
   void _keepers;
   const draft = useDraft(players, initialLeagueId);
+  const cbs = useCbsSync({
+    players,
+    keeperPlayerIds: draft.keeperPlayerIds,
+    keeperPickNums: draft.keeperNums,
+    teams: draft.league.teams,
+    rounds: draft.league.rounds,
+    onApply: draft.applySyncPicks,
+  });
   const clock = useClock(
     draft.league.clockSeconds,
     draft.currentPick,
@@ -80,6 +90,7 @@ export function DraftApp({
   return (
     <div className="min-h-screen">
       <SampleBanner text={meta.adpBanner} news={meta.newsBanner} />
+      <CbsSyncBar status={cbs.status} onPaste={cbs.applyPaste} />
       <StickyHeader
         leagues={leagues}
         league={draft.league}

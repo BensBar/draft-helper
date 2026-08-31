@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Ben's CBS draft sync",
+  "version": "1.0.0",
+  "description": "Pushes the CBS live draft board to the static companion on bensbar.github.io. No CBS password. No scraping from the cloud.",
+  "content_scripts": [
+    {
+      "matches": ["*://*.football.cbssports.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

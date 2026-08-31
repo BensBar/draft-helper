@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>draft-helper sync relay</title>
+  </head>
+  <body>
+    <script>
+      (function () {
+        var CHANNEL = "bensbar-draft-sync";
+        var TYPE = "bensbar-draft-sync";
+        var KEY = "bensbar-draft-sync:last";
+        function allowed(origin) {
+          try {
+            var u = new URL(origin);
+            return (
+              u.hostname.indexOf(".football.cbssports.com") !== -1 ||
+              u.hostname === "football.cbssports.com" ||
+              u.hostname === "localhost" ||
+              u.hostname === "127.0.0.1" ||
+              u.origin === "https://bensbar.github.io"
+            );
+          } catch (e) {
+            return false;
+          }
+        }
+        window.addEventListener("message", function (e) {
+          if (!allowed(e.origin)) return;
+          var d = e.data;
+          if (!d || d.type !== TYPE || d.version !== 1 || !d.names) return;
+          try {
+            new BroadcastChannel(CHANNEL).postMessage(d);
+          } catch (err) {}
+          try {
+            localStorage.setItem(KEY, JSON.stringify(d));
+          } catch (err) {}
+        });
+      })();
+    </script>
+  </body>
+</html>

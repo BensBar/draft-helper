@@ -115,7 +115,7 @@ export interface Meta {
 export interface DraftPick {
   overallPick: number;
   playerId: string;
-  source: "user" | "keeper";
+  source: "user" | "keeper" | "sync";
 }
 
 export interface RecResult {

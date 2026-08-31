@@ -13,6 +13,7 @@ import {
   totalPicks,
   withBenInOrder,
 } from "@/lib/snake";
+import type { ApplyCbsPicksResult } from "@/lib/cbs-sync";
 import { clearDraft, emptyDraft, loadDraft, saveDraft } from "@/lib/storage";
 import type { DraftPick, League, Player, Position } from "@/lib/types";
 
@@ -65,6 +66,10 @@ export function useDraft(players: Player[], initialLeagueId: string) {
   );
   const keeperNums = useMemo(
     () => new Set(keeperList.map((p) => p.overallPick)),
+    [keeperList],
+  );
+  const keeperPlayerIds = useMemo(
+    () => new Set(keeperList.map((p) => p.playerId)),
     [keeperList],
   );
   const lastPick = totalPicks(league.teams, league.rounds);
@@ -196,6 +201,11 @@ export function useDraft(players: Player[], initialLeagueId: string) {
     setCobraSlot(slot);
   }, []);
 
+  const applySyncPicks = useCallback((result: ApplyCbsPicksResult) => {
+    setUserPicks(result.livePicks);
+    setHighlight(0);
+  }, []);
+
   return {
     league,
     leagueId,
@@ -207,6 +217,7 @@ export function useDraft(players: Player[], initialLeagueId: string) {
     keepers,
     keeperList,
     keeperNums,
+    keeperPlayerIds,
     userPicks,
     pickByOverall,
     takenIds,
@@ -230,6 +241,7 @@ export function useDraft(players: Player[], initialLeagueId: string) {
     rosterSlots,
     faQueue,
     markDrafted,
+    applySyncPicks,
     undo,
     reset,
     hydrated,

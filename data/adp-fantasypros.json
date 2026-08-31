@@ -1,0 +1,12 @@
+{
+  "id": "fantasypros",
+  "source": "FantasyPros consensus PPR ADP",
+  "url": "https://www.fantasypros.com/nfl/adp/ppr-overall.php",
+  "fetched": "2026-08-31",
+  "scoring": "PPR",
+  "status": "skipped",
+  "skipReason": "Public HTML only embeds a 5-row preview; full table is client-loaded. Official JSON API returned 403 without x-api-key. CSV export is not a public file.",
+  "notes": null,
+  "playerCount": 0,
+  "players": []
+}

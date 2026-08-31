@@ -1,0 +1,12 @@
+{
+  "id": "sleeper",
+  "source": "Sleeper ADP as published on FantasyPros",
+  "url": "https://www.fantasypros.com/nfl/adp/ppr-overall.php",
+  "fetched": "2026-08-31",
+  "scoring": "PPR",
+  "status": "skipped",
+  "skipReason": "api.sleeper.app/v1/players/nfl is public but has no ADP field in 2026. FantasyPros' Sleeper column is not fully public (HTML preview only). Not faking numbers.",
+  "notes": "api.sleeper.app/v1/players/nfl is public but has no adp_ppr in 2026. Numbers here are the Sleeper column on FantasyPros' public PPR ADP page (source dated Aug 30 2026). Not a Sleeper login scrape.",
+  "playerCount": 0,
+  "players": []
+}

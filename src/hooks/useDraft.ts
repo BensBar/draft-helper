@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { keepersFor, leagueById, playerById, recRules } from "@/lib/data";
+import { keepersFor, leagueById, recRules } from "@/lib/data";
 import { firstLivePick, keeperPicks, nextLivePick } from "@/lib/keepers";
 import { nextBenPick, recommendNext } from "@/lib/rec-engine";
 import { assignRoster } from "@/lib/roster";
@@ -27,6 +27,8 @@ export function useDraft(players: Player[], initialLeagueId: string) {
   const [highlight, setHighlight] = useState(0);
 
   const league: League = leagueById(leagueId);
+  const playerMap = useMemo(() => new Map(players.map((p) => [p.id, p])), [players]);
+  const lookup = useCallback((id: string) => playerMap.get(id), [playerMap]);
 
   useEffect(() => {
     const saved = loadDraft(leagueId) ?? emptyDraft(leagueId);
@@ -149,8 +151,8 @@ export function useDraft(players: Player[], initialLeagueId: string) {
     for (const [overall, pick] of pickByOverall) {
       if (slotForOverallPick(overall, league.teams) === benSlot) ids.push(pick.playerId);
     }
-    return ids.map((id) => playerById(id)).filter((p): p is Player => Boolean(p));
-  }, [benSlot, pickByOverall, league.teams]);
+    return ids.map((id) => lookup(id)).filter((p): p is Player => Boolean(p));
+  }, [benSlot, pickByOverall, league.teams, lookup]);
 
   const rosterSlots = useMemo(
     () => assignRoster(benPlayers, league.roster),
@@ -168,7 +170,7 @@ export function useDraft(players: Player[], initialLeagueId: string) {
       if (!benSlot && league.slotIsDrawn) return;
       if (takenIds.has(playerId)) return;
       if (currentPick > lastPick) return;
-      const player = playerById(playerId);
+      const player = lookup(playerId);
       if (!player) return;
       setUserPicks((prev) => [
         ...prev,
@@ -176,7 +178,7 @@ export function useDraft(players: Player[], initialLeagueId: string) {
       ]);
       setHighlight(0);
     },
-    [benSlot, league.slotIsDrawn, takenIds, currentPick, lastPick],
+    [benSlot, league.slotIsDrawn, takenIds, currentPick, lastPick, lookup],
   );
 
   const undo = useCallback(() => {

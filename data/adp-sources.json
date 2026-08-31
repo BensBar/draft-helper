@@ -1,0 +1,82 @@
+{
+  "defaultSourceId": "gil",
+  "fetched": "2026-08-31",
+  "scoring": "PPR",
+  "notes": "Default is Gil's CBS 8/31 board (data/players.json). Other files are extras. Consensus averages unique publishers only.",
+  "sources": [
+    {
+      "id": "gil",
+      "label": "Gil / CBS 8/31",
+      "banner": "CBS public ADP Aug 31 2026 — Gil's board (not a live draft feed)",
+      "fetched": "2026-08-31",
+      "scoring": "PPR",
+      "status": "ok",
+      "file": "adp-gil.json",
+      "blend": true
+    },
+    {
+      "id": "cbs-public",
+      "label": "CBS public",
+      "banner": "CBS public draft averages Aug 31 2026 — not a live draft feed",
+      "fetched": "2026-08-31",
+      "scoring": "PPR",
+      "status": "ok",
+      "file": "adp-cbs-public.json",
+      "blend": false
+    },
+    {
+      "id": "fantasypros",
+      "label": "FantasyPros",
+      "banner": "FantasyPros ADP skipped — Public HTML only embeds a 5-row preview; full table is client-loaded. Official JSON API returned 403 without x-api-key. CSV export is not a public file.",
+      "fetched": "2026-08-31",
+      "scoring": "PPR",
+      "status": "skipped",
+      "skipReason": "Public HTML only embeds a 5-row preview; full table is client-loaded. Official JSON API returned 403 without x-api-key. CSV export is not a public file.",
+      "file": "adp-fantasypros.json",
+      "blend": false
+    },
+    {
+      "id": "sleeper",
+      "label": "Sleeper",
+      "banner": "Sleeper ADP skipped — api.sleeper.app/v1/players/nfl is public but has no ADP field in 2026. FantasyPros' Sleeper column is not fully public (HTML preview only). Not faking numbers.",
+      "fetched": "2026-08-31",
+      "scoring": "PPR",
+      "status": "skipped",
+      "skipReason": "api.sleeper.app/v1/players/nfl is public but has no ADP field in 2026. FantasyPros' Sleeper column is not fully public (HTML preview only). Not faking numbers.",
+      "file": "adp-sleeper.json",
+      "blend": false
+    },
+    {
+      "id": "espn",
+      "label": "ESPN",
+      "banner": "ESPN PPR ADP Aug 31 2026",
+      "fetched": "2026-08-31",
+      "scoring": "PPR",
+      "status": "ok",
+      "skipReason": null,
+      "file": "adp-espn.json",
+      "blend": true
+    },
+    {
+      "id": "yahoo",
+      "label": "Yahoo",
+      "banner": "Yahoo public draft analysis ADP Aug 31 2026",
+      "fetched": "2026-08-31",
+      "scoring": "Yahoo",
+      "status": "ok",
+      "skipReason": null,
+      "file": "adp-yahoo.json",
+      "blend": true
+    },
+    {
+      "id": "consensus",
+      "label": "Consensus",
+      "banner": "Consensus of Gil / CBS 8/31 + ESPN + Yahoo, fetched Aug 31 2026",
+      "fetched": "2026-08-31",
+      "scoring": "mixed",
+      "status": "ok",
+      "file": "adp-consensus.json",
+      "blend": false
+    }
+  ]
+}

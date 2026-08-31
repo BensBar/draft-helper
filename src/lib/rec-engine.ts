@@ -18,9 +18,10 @@ function available(players: Player[], taken: Set<string>): Player[] {
     .sort((a, b) => a.adp - b.adp || a.overallRank - b.overallRank);
 }
 
+/** Eligible set is locked; order follows current ADP (selected source). */
 function byIds(pool: Player[], ids: string[]): Player[] {
-  const map = new Map(pool.map((p) => [p.id, p]));
-  return ids.map((id) => map.get(id)).filter((p): p is Player => Boolean(p));
+  const want = new Set(ids);
+  return pool.filter((p) => want.has(p.id));
 }
 
 function byPositions(pool: Player[], positions: Position[]): Player[] {

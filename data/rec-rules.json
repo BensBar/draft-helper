@@ -26,7 +26,7 @@
           "chris-olave",
           "drake-maye"
         ],
-        "why": "12/13 smash — two RBs from the leftover pile. Do not reach TE/QB."
+        "why": "Live CBS has Cook/Henry/CMC ~7–8, often gone at 12. Doorstep is Saquon ~12 and Chase Brown ~13. If those two are gone, Hampton then Jeanty (Q). Never Jacobs."
       },
       {
         "id": "r3r4",
@@ -59,7 +59,7 @@
         "preferThen": ["WR"],
         "neverPositions": ["TE", "QB", "K", "DST"],
         "neverIds": ["drake-maye", "josh-jacobs"],
-        "why": "60/61 — Tuten (ADP 56) or Price (58) plus a WR. Maye is kept."
+        "why": "Tuten 51 / Price 53 are R5, not sleepers. Price is SEA lead (Charbonnet PUP ≥4 games). Prefer Price slightly if both there. Maye is kept."
       },
       {
         "id": "r8plus",
@@ -74,7 +74,7 @@
         "positions": ["RB", "WR", "QB", "TE"],
         "neverPositions": ["K", "DST"],
         "neverIds": ["den-dst", "josh-jacobs"],
-        "why": "R8+ board: Dobbins, Tate, Mike Washington Jr., Lloyd, Shaheed. GB exposure is Lloyd (Chris Brooks), not Jacobs. DST/K last. DEN DST is a trap."
+        "why": "Lloyd is now ~107 (R9), not a R13 dart. Johnson is not a 12-team pick. Washington Jr. only if Jeanty already drafted. GB exposure is Lloyd (Chris Brooks), not Jacobs. DST/K last. DEN DST is a trap."
       },
       {
         "id": "late",
@@ -84,11 +84,11 @@
         "why": "K/DST last. Skip Denver — ADP 90 is a trap."
       }
     ],
-    "fadeIds": ["josh-jacobs"],
+    "fadeIds": ["josh-jacobs", "kaleb-johnson"],
     "trapIds": ["den-dst"]
   },
   "cobra": {
-    "fadeIds": ["josh-jacobs"],
+    "fadeIds": ["josh-jacobs", "kaleb-johnson"],
     "slot3Round1": {
       "from": ["jahmyr-gibbs", "bijan-robinson", "jamarr-chase"],
       "elseFrom": ["jonathan-taylor", "puka-nacua"],

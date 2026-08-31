@@ -1,10 +1,13 @@
 "use client";
 
 import { useEffect } from "react";
+import { useAdpSource } from "@/hooks/useAdpSource";
 import { useCbsSync } from "@/hooks/useCbsSync";
 import { useClock } from "@/hooks/useClock";
 import { useDraft } from "@/hooks/useDraft";
+import type { AdpBoard, AdpSourcesFile } from "@/lib/adp";
 import type { KeepersFile, League, Meta, Player } from "@/lib/types";
+import { AdpSourceBar } from "./AdpSourceBar";
 import { CbsSyncBar } from "./CbsSyncBar";
 import { DraftBoard } from "./DraftBoard";
 import { FAQueue } from "./FAQueue";
@@ -22,16 +25,21 @@ export function DraftApp({
   players,
   keepers: _keepers,
   meta,
+  adpSources,
+  adpBoards,
   initialLeagueId,
 }: {
   leagues: League[];
   players: Player[];
   keepers: KeepersFile;
   meta: Meta;
+  adpSources: AdpSourcesFile;
+  adpBoards: Record<string, AdpBoard>;
   initialLeagueId: string;
 }) {
   void _keepers;
-  const draft = useDraft(players, initialLeagueId);
+  const adp = useAdpSource(players, adpSources, adpBoards, meta.adpBanner);
+  const draft = useDraft(adp.players, initialLeagueId);
   const cbs = useCbsSync({
     players,
     keeperPlayerIds: draft.keeperPlayerIds,
@@ -89,7 +97,12 @@ export function DraftApp({
 
   return (
     <div className="min-h-screen">
-      <SampleBanner text={meta.adpBanner} news={meta.newsBanner} />
+      <SampleBanner text={adp.banner} news={meta.newsBanner} />
+      <AdpSourceBar
+        sources={adp.catalog.sources}
+        selectedId={adp.sourceId}
+        onSelect={adp.setSourceId}
+      />
       <CbsSyncBar status={cbs.status} onPaste={cbs.applyPaste} />
       <StickyHeader
         leagues={leagues}

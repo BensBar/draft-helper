@@ -7,11 +7,11 @@ Leagues:
 - **Gable** (default through Thu 9/3/2026 8:00pm ET) — Stan Gable's All Americans, Ben's Bar Bruskis, pick 12
 - **Cobra** — Cobra Craig, Ben's Bar, slot drawn at kickoff (1–12 picker, never hardcoded)
 
-All ranks are **sample** data. The banner always reads:
+Default ranks are **CBS public draft averages** fetched Mon 8/31/2026 from [the public ADP page](https://www.cbssports.com/fantasy/football/draft/averages/) (no login), plus Gil's must-write numbers. The banner is honest:
 
-> Sample CBS ADP — Gil's board, Aug 27 2026
+> CBS public ADP Aug 31 2026 — Gil's board (not a live draft feed)
 
-Do not treat placeholders as live CBS.
+This is **not** a live CBS draft-room ADP stream. Switch sources in the ADP SOURCE bar — that only reorders value, not rec-engine rules.
 
 ## Run it
 
@@ -26,7 +26,8 @@ Open [http://localhost:3000](http://localhost:3000). Laptop-first. No auth. No l
 | --- | --- |
 | `npm run dev` | Next.js App Router at [http://localhost:3000](http://localhost:3000) |
 | `npm run typecheck` | `tsc --noEmit` |
-| `npm test` | Snake math + rec engine |
+| `npm test` | Snake math + rec engine + ADP overlay |
+| `npm run refresh-adp` | Re-fetch public ADP into `data/adp-*.json` and refresh `data/players.json` (Gil must-write values always win) |
 | `npm run build` | Static export to `out/` (no Pages path prefix) |
 
 `next start` is not used for this app. GitHub Pages (and `npx serve out`) host the `out/` folder. JSON boards are bundled at build time from `data/`.
@@ -35,7 +36,7 @@ Open [http://localhost:3000](http://localhost:3000). Laptop-first. No auth. No l
 
 Live URL: **https://bensbar.github.io/draft-helper/**
 
-This is a **private** repo. Keep it private. GitHub Pages on a private repository requires **GitHub Pro** (or Team / Enterprise) on the account that owns the repo.
+Public repo. GitHub Pages deploys from `main`.
 
 Enable hosting once (does not change visibility):
 
@@ -80,7 +81,39 @@ GitHub Pages is **static**. The browser cannot fetch `cbssports.com` (CORS), we 
 
 Optional: Chrome → `chrome://extensions` → Developer mode → Load unpacked → `extension/` in this repo. Same postMessage path. No CBS login in the extension.
 
-The sample ADP banner stays honest: **Sample CBS ADP — Gil's board, Aug 27 2026**. Sync is picks only, not a live ADP feed.
+The ADP banner stays honest about **whose board** is selected (Gil/CBS 8/31 by default). Sync is **picks only**, not a live ADP feed.
+
+## ADP sources
+
+Default board is **Gil / CBS 8/31** (`data/players.json`). Other public sources are extras — they change ADP/ordering of eligible players only.
+
+| Control | What |
+| --- | --- |
+| **ADP SOURCE** bar | Gil / CBS 8/31 · CBS public · FantasyPros · ESPN · Sleeper · Yahoo · Consensus |
+| Persistence | `localStorage` key `draft-helper:adp-source` |
+| Rec rules | Unchanged. 12/13 pile, never Jacobs / Taylor / TE, never Kaleb Johnson as a stash |
+
+Refresh from the public web (no passwords):
+
+```bash
+npm run refresh-adp
+```
+
+Writes dated files. Gil must-write ADPs always overwrite parsed CBS Avg Pos on `data/players.json`.
+
+| File | Role |
+| --- | --- |
+| `data/players.json` | Default board (CBS public 8/31 + Gil flags/notes) |
+| `data/adp-gil.json` | Same default board, dated |
+| `data/adp-cbs-public.json` | Raw public CBS draft averages (same page; not a second consensus vote) |
+| `data/adp-espn.json` | ESPN public PPR league-defaults API |
+| `data/adp-yahoo.json` | Yahoo public `draft_analysis` API (no login) |
+| `data/adp-fantasypros.json` | **Skipped 8/31** — public HTML is a 5-row preview; JSON API is 403 without a key |
+| `data/adp-sleeper.json` | **Skipped 8/31** — Sleeper players API has no ADP field; not faked |
+| `data/adp-consensus.json` | Mean of Gil + ESPN + Yahoo only |
+| `data/adp-sources.json` | Catalog, banners, skip reasons |
+
+Do not treat Consensus or ESPN/Yahoo as a live CBS feed. If a source is skipped, the button is disabled and the skip reason is in the tooltip + this README.
 
 ## Data layer (Gil diffs here)
 
@@ -89,18 +122,19 @@ Swap boards without rewriting UI:
 | File | Contents |
 | --- | --- |
 | `data/leagues.json` | Settings, scoring, roster, draft order, URLs |
-| `data/players.json` | ~200 sample 2026 players with `overallRank` / `adp` |
+| `data/players.json` | 2026 players — CBS 8/31 ADP + Gil notes |
 | `data/keepers.json` | All 24 Gable keepers (round cost + team) |
 | `data/rec-rules.json` | Gable 12/13 RB pile, 36/37, 60/61, R8+; Cobra slot-3 rules |
 | `data/meta.json` | ADP banner copy + default-league cutoff |
+| `data/adp-*.json` | Extra public ADP boards (see above) |
 
 ## Gable rec (precomputed, 75s)
 
-- **12/13** — two RBs from leftover of CMC, Cook, Chase Brown, Henry, Barkley, Hampton, Jeanty. No TE/QB. Fade Jacobs.
+- **12/13** — two RBs from leftover of CMC, Cook, Chase Brown, Henry, Barkley, Hampton, Jeanty. No TE/QB. Never Jacobs. Never Taylor. Live CBS 8/31: Cook/Henry/CMC ~7–8 (often gone); doorstep Saquon + Chase Brown; then Hampton / Jeanty (Q).
 - **36/37** — WR/RB (ARSB, Lamb, Jefferson, London, AJ Brown, Rice, Nico, Nabers, leftover Henry). Never TE. (R4 37 is Bowers **KEPT**.)
-- **60/61** — Tuten or Jadarian Price + WR. Maye is kept.
-- **R8+** — Dobbins, Carnell Tate, Mike Washington Jr., MarShawn Lloyd, Shaheed.
-- **DST/K last.** DEN DST ADP 90 is a trap.
+- **60/61** — Tuten (51) or Price (53) are R5, not sleepers. Price is SEA lead (Charbonnet PUP ≥4). Prefer Price slightly if both there. Maye is kept.
+- **R8+** — Dobbins, Tate, Lloyd (~107 / R9), Shaheed. Washington Jr. only if Jeanty already drafted. Kaleb Johnson is **not** a 12-team pick / not a stash.
+- **DST/K last.** DEN DST is a trap.
 
 Ben starts: TE done (Bowers), one WR (Burden, groin Q). Holes: QB, RB, RB, WR, WR, FLEX, K, DST. Waiver **1 of 12** does not reset — post-draft FA queue is the recovery lever.
 

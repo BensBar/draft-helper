@@ -10,7 +10,8 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "refresh-adp": "node scripts/refresh-adp.mjs"
   },
   "dependencies": {
     "next": "^15.5.2",

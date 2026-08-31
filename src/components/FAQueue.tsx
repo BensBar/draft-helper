@@ -27,7 +27,7 @@ export function FAQueue({
           <li className="text-xs text-[#8b8b9a]">Board is stripped. You already grabbed the sleepers.</li>
         ) : (
           players.map((p) => (
-            <li key={p.id} className="flex items-center gap-2 text-sm">
+            <li key={p.id} className="flex items-center gap-2 text-sm" title={p.notes ?? undefined}>
               <span className={`${POS_CLASS[p.position]} text-[10px] font-bold px-1`}>{p.position}</span>
               <span className="truncate">{p.name}</span>
               {p.sleeper ? <span className="text-[#c6ff00] text-[10px]">SLEEPER</span> : null}

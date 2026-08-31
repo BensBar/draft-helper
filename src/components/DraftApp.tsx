@@ -79,7 +79,7 @@ export function DraftApp({
 
   return (
     <div className="min-h-screen">
-      <SampleBanner text={meta.adpBanner} />
+      <SampleBanner text={meta.adpBanner} news={meta.newsBanner} />
       <StickyHeader
         leagues={leagues}
         league={draft.league}

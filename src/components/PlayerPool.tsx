@@ -95,7 +95,7 @@ export function PlayerPool({
                       {p.position}
                     </span>
                   </td>
-                  <td className="px-2 py-1">
+                  <td className="px-2 py-1" title={p.notes ?? undefined}>
                     {p.name}
                     {p.sleeper ? (
                       <span className="ml-2 text-[10px] text-[#c6ff00]">SLEEPER</span>

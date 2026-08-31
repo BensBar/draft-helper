@@ -62,6 +62,11 @@ export function GiantRec({
               </span>
             ) : null}
           </div>
+          {player.notes ? (
+            <p data-testid="rec-notes" className="mt-2 text-sm text-[#ffb703] max-w-3xl">
+              {player.notes}
+            </p>
+          ) : null}
         </>
       ) : (
         <h1 className="font-[family-name:var(--font-display)] text-6xl leading-none text-[#8b8b9a]">

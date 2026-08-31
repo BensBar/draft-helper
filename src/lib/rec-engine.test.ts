@@ -54,6 +54,9 @@ describe("Gable rec engine — picks 12/13", () => {
     expect(rec12.queue.every((p) => RB12.includes(p.id))).toBe(true);
     expect(rec12.queue.some((p) => p.id === "brock-bowers")).toBe(false);
     expect(rec12.queue.some((p) => p.id === "josh-allen")).toBe(false);
+    expect(rec12.queue.map((p) => p.id)).toEqual(RB12);
+    expect(rec12.queue.some((p) => p.id === "ashton-jeanty")).toBe(true);
+    expect(rec12.queue.some((p) => p.id === "jonathan-taylor")).toBe(false);
     expect(rec12.queue.some((p) => p.id === "josh-jacobs")).toBe(false);
     expect(rec12.player!.id).toBe("christian-mccaffrey");
 
@@ -103,14 +106,17 @@ describe("Gable rec engine — picks 12/13", () => {
 
   it("fades Jacobs even if he is the only remaining early RB", () => {
     const taken = new Set(players.filter((p) => p.id !== "josh-jacobs").map((p) => p.id));
-    const rec = recommendGable({
-      rules: rules.gable,
-      players,
-      takenIds: taken,
-      overallPick: 12,
-      teams: 12,
-    });
-    expect(rec.player?.id).not.toBe("josh-jacobs");
+    for (const overall of [12, 13, 36, 60, 85, 192]) {
+      const rec = recommendGable({
+        rules: rules.gable,
+        players,
+        takenIds: taken,
+        overallPick: overall,
+        teams: 12,
+      });
+      expect(rec.player?.id).not.toBe("josh-jacobs");
+      expect(rec.queue.every((p) => p.id !== "josh-jacobs")).toBe(true);
+    }
   });
 });
 
@@ -155,6 +161,23 @@ describe("Cobra rec engine — slot is drawn, never assumed 3", () => {
     expect(rec.player!.id).not.toBe("josh-allen");
     expect(rec.queue.every((p) => p.id !== "josh-allen")).toBe(true);
     expect(["RB", "WR"]).toContain(rec.player!.position);
+  });
+
+  it("never recommends Jacobs even if he falls", () => {
+    const taken = new Set(players.filter((p) => p.id !== "josh-jacobs").map((p) => p.id));
+    for (const overall of [3, 22, 27, 50, 80, 180]) {
+      const rec = recommendCobra({
+        rules: rules.cobra,
+        players,
+        takenIds: taken,
+        overallPick: overall,
+        teams: 12,
+        rounds: 16,
+        benSlot: 3,
+      });
+      expect(rec.player?.id).not.toBe("josh-jacobs");
+      expect(rec.queue.every((p) => p.id !== "josh-jacobs")).toBe(true);
+    }
   });
 
   it("recommendNext uses the drawn slot, not a hardcoded 3", () => {

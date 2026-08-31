@@ -46,7 +46,7 @@
           "derrick-henry"
         ],
         "neverPositions": ["TE", "QB", "K", "DST"],
-        "neverIds": [],
+        "neverIds": ["josh-jacobs"],
         "why": "36/37 — WR/RB only. Explosive skill for distance + 100-yd bonuses. Never TE."
       },
       {
@@ -58,7 +58,7 @@
         "from": ["bhayshul-tuten", "jadarian-price"],
         "preferThen": ["WR"],
         "neverPositions": ["TE", "QB", "K", "DST"],
-        "neverIds": ["drake-maye"],
+        "neverIds": ["drake-maye", "josh-jacobs"],
         "why": "60/61 — Tuten (ADP 56) or Price (58) plus a WR. Maye is kept."
       },
       {
@@ -73,14 +73,14 @@
         ],
         "positions": ["RB", "WR", "QB", "TE"],
         "neverPositions": ["K", "DST"],
-        "neverIds": ["den-dst"],
-        "why": "R8+ board: Dobbins, Tate, Mike Washington Jr., Lloyd, Shaheed. DST/K last. DEN DST is a trap."
+        "neverIds": ["den-dst", "josh-jacobs"],
+        "why": "R8+ board: Dobbins, Tate, Mike Washington Jr., Lloyd, Shaheed. GB exposure is Lloyd (Chris Brooks), not Jacobs. DST/K last. DEN DST is a trap."
       },
       {
         "id": "late",
         "rounds": [16, 17],
         "positions": ["K", "DST", "QB", "RB", "WR", "TE"],
-        "neverIds": ["den-dst"],
+        "neverIds": ["den-dst", "josh-jacobs"],
         "why": "K/DST last. Skip Denver — ADP 90 is a trap."
       }
     ],
@@ -88,6 +88,7 @@
     "trapIds": ["den-dst"]
   },
   "cobra": {
+    "fadeIds": ["josh-jacobs"],
     "slot3Round1": {
       "from": ["jahmyr-gibbs", "bijan-robinson", "jamarr-chase"],
       "elseFrom": ["jonathan-taylor", "puka-nacua"],
@@ -95,15 +96,15 @@
     },
     "round2": {
       "positions": ["RB", "WR"],
-      "neverIds": ["josh-allen"],
-      "why": "Round 2 — best remaining RB/WR. Do not take Josh Allen here."
+      "neverIds": ["josh-allen", "josh-jacobs"],
+      "why": "Round 2 — best remaining RB/WR. Do not take Josh Allen here. Do not draft Jacobs even if he falls."
     },
     "mid": {
       "positions": ["WR", "RB"],
-      "why": "All-play 3WR+FLEX — do not punt weeks. Explosive WR/RB for +2 at 50 and 100-yd bonuses."
+      "why": "All-play 3WR+FLEX — do not punt weeks. Explosive WR/RB for bonuses. Never Jacobs; GB stash is Lloyd."
     },
     "waitOnQbUntilRound": 7,
     "kDstLastRounds": 2,
-    "neverEarlyIds": ["josh-allen"]
+    "neverEarlyIds": ["josh-allen", "josh-jacobs"]
   }
 }

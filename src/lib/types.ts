@@ -103,6 +103,9 @@ export interface Meta {
   adpBanner: string;
   adpFetched: string;
   adpScoring: string;
+  newsDate: string;
+  updated: string;
+  newsBanner: string;
   defaultLeagueId: string;
   gableDefaultUntil: string;
   author: string;
@@ -142,6 +145,7 @@ export interface GableRecRules {
 }
 
 export interface CobraRecRules {
+  fadeIds: string[];
   slot3Round1: { from: string[]; elseFrom: string[]; why: string };
   round2: { positions: Position[]; neverIds: string[]; why: string };
   mid: { positions: Position[]; why: string };

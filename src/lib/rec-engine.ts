@@ -38,6 +38,12 @@ function reject(
   return pool.filter((p) => !banned.has(p.id) && !pos.has(p.position));
 }
 
+function dropBanned(pool: Player[], ...idLists: Array<string[] | undefined>): Player[] {
+  const banned = new Set(idLists.flatMap((ids) => ids ?? []));
+  if (banned.size === 0) return pool;
+  return pool.filter((p) => !banned.has(p.id));
+}
+
 function windowForGable(rules: GableRecRules, overallPick: number, teams: number): RecWindow {
   const round = overallPickToRound(overallPick, teams);
   const byPick = rules.windows.find((w) => w.picks?.includes(overallPick));
@@ -55,7 +61,7 @@ export function recommendGable(args: {
   teams: number;
 }): RecResult {
   const { rules, players, takenIds, overallPick, teams } = args;
-  const pool = available(players, takenIds);
+  const pool = dropBanned(available(players, takenIds), rules.fadeIds, rules.trapIds);
   const window = windowForGable(rules, overallPick, teams);
   const cleaned = reject(pool, window.neverIds, window.neverPositions);
 
@@ -76,7 +82,7 @@ export function recommendGable(args: {
     queue = cleaned.filter((p) => !LATE.includes(p.position));
   }
 
-  queue = queue.filter((p) => !rules.trapIds.includes(p.id));
+  queue = dropBanned(queue, rules.fadeIds, rules.trapIds);
 
   return {
     player: queue[0] ?? null,
@@ -96,7 +102,7 @@ export function recommendCobra(args: {
   benSlot: number;
 }): RecResult {
   const { rules, players, takenIds, overallPick, teams, rounds, benSlot } = args;
-  const pool = available(players, takenIds);
+  const pool = dropBanned(available(players, takenIds), rules.fadeIds);
   const round = overallPickToRound(overallPick, teams);
   const lastRounds = rules.kDstLastRounds;
 

@@ -48,7 +48,8 @@
       "overallRank": 5,
       "adp": 5.26,
       "kept": true,
-      "injury": "inj"
+      "injury": "inj",
+      "notes": "Avoided exempt list. Still Personal Conduct review; groin improving; Wk1 available for now. Gable keeper (Smoochy) — locked out of Gable pool."
     },
     {
       "id": "jaxon-smith-njigba",
@@ -130,7 +131,9 @@
       "position": "RB",
       "nflTeam": "LV",
       "overallRank": 15,
-      "adp": 16.57
+      "adp": 16.57,
+      "injury": "ankle / Wk1 Q",
+      "notes": "Still ankle. Kubiak 8/28 counting on him Wk1, not guaranteed. Stays on the Gable 12/13 pile — not a fade."
     },
     {
       "id": "justin-jefferson",
@@ -222,7 +225,8 @@
       "overallRank": 53,
       "adp": 27.86,
       "fade": true,
-      "notes": "FADE — charges; ADP 28 vs rank ~53"
+      "injury": "Exempt 8/30 — OUT Wk1",
+      "notes": "Exempt list 8/30 — OUT to open season, not a final suspension. Packers traded a 2028 6th to PIT for Kaleb Johnson. MarShawn Lloyd expected to lead GB with Chris Brooks. FADE everywhere — never draft."
     },
     {
       "id": "brock-bowers",
@@ -733,9 +737,10 @@
       "id": "kaleb-johnson",
       "name": "Kaleb Johnson",
       "position": "RB",
-      "nflTeam": "PIT",
+      "nflTeam": "GB",
       "overallRank": 89,
-      "adp": 89.1
+      "adp": 89.1,
+      "notes": "Late dart only. GB traded a 2028 6th to PIT 8/31. Not the Jacobs replacement — Lloyd is the stash."
     },
     {
       "id": "den-dst",
@@ -1236,7 +1241,8 @@
       "nflTeam": "GB",
       "overallRank": 149,
       "adp": 149,
-      "sleeper": true
+      "sleeper": true,
+      "notes": "GB stash — expected to lead with Chris Brooks. Not Jacobs. Gable R8+; Cobra if you want GB exposure."
     },
     {
       "id": "drake-maye",

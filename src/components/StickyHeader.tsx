@@ -18,6 +18,7 @@ export function StickyHeader({
   onReset,
   canUndo,
   onLeague,
+  onScenarios,
 }: {
   leagues: League[];
   league: League;
@@ -35,6 +36,7 @@ export function StickyHeader({
   onReset: () => void;
   canUndo: boolean;
   onLeague: (id: string) => void;
+  onScenarios?: () => void;
 }) {
   const urgent = remaining <= 15;
   return (
@@ -106,6 +108,16 @@ export function StickyHeader({
           >
             RESET 75
           </button>
+          {onScenarios ? (
+            <button
+              type="button"
+              data-testid="scenarios-open"
+              onClick={onScenarios}
+              className="px-3 py-2 bg-[#c6ff00] text-black font-[family-name:var(--font-label)] tracking-wider"
+            >
+              SCENARIOS
+            </button>
+          ) : null}
           <button
             type="button"
             data-testid="undo"

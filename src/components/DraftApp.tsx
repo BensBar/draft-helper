@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useAdpSource } from "@/hooks/useAdpSource";
 import { useCbsSync } from "@/hooks/useCbsSync";
 import { useClock } from "@/hooks/useClock";
 import { useDraft } from "@/hooks/useDraft";
 import type { AdpBoard, AdpSourcesFile } from "@/lib/adp";
+import type { ScenarioTree } from "@/lib/scenarios";
 import type { KeepersFile, League, Meta, Player } from "@/lib/types";
 import { AdpSourceBar } from "./AdpSourceBar";
 import { CbsSyncBar } from "./CbsSyncBar";
@@ -17,6 +18,7 @@ import { OnTheClock } from "./OnTheClock";
 import { PlayerPool } from "./PlayerPool";
 import { RosterNeeds } from "./RosterNeeds";
 import { SampleBanner } from "./SampleBanner";
+import { ScenariosOverlay } from "./ScenariosOverlay";
 import { SlotPicker } from "./SlotPicker";
 import { StickyHeader } from "./StickyHeader";
 
@@ -27,6 +29,8 @@ export function DraftApp({
   meta,
   adpSources,
   adpBoards,
+  scenariosGable,
+  scenariosCobra,
   initialLeagueId,
 }: {
   leagues: League[];
@@ -35,9 +39,12 @@ export function DraftApp({
   meta: Meta;
   adpSources: AdpSourcesFile;
   adpBoards: Record<string, AdpBoard>;
+  scenariosGable: ScenarioTree;
+  scenariosCobra: ScenarioTree;
   initialLeagueId: string;
 }) {
   void _keepers;
+  const [scenariosOpen, setScenariosOpen] = useState(false);
   const adp = useAdpSource(players, adpSources, adpBoards, meta.adpBanner);
   const draft = useDraft(adp.players, initialLeagueId);
   const cbs = useCbsSync({
@@ -126,6 +133,7 @@ export function DraftApp({
         }}
         canUndo={draft.canUndo}
         onLeague={draft.setLeagueId}
+        onScenarios={() => setScenariosOpen(true)}
       />
 
       {draft.league.slotIsDrawn ? (
@@ -183,6 +191,16 @@ export function DraftApp({
           />
         </div>
       </main>
+
+      {scenariosOpen ? (
+        <ScenariosOverlay
+          gable={scenariosGable}
+          cobra={scenariosCobra}
+          players={adp.players}
+          defaultLeagueId={draft.leagueId}
+          onClose={() => setScenariosOpen(false)}
+        />
+      ) : null}
     </div>
   );
 }

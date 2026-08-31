@@ -11,7 +11,10 @@ import adpEspn from "../../data/adp-espn.json";
 import adpSleeper from "../../data/adp-sleeper.json";
 import adpYahoo from "../../data/adp-yahoo.json";
 import adpConsensus from "../../data/adp-consensus.json";
+import scenariosGableFile from "../../data/scenarios-gable.json";
+import scenariosCobraFile from "../../data/scenarios-cobra.json";
 import type { AdpBoard, AdpSourcesFile } from "./adp";
+import type { ScenarioTree } from "./scenarios";
 import type { KeepersFile, League, Meta, Player, RecRulesFile } from "./types";
 
 export const leagues = leaguesFile.leagues as League[];
@@ -29,6 +32,8 @@ export const adpBoards: Record<string, AdpBoard> = {
   yahoo: adpYahoo as AdpBoard,
   consensus: adpConsensus as AdpBoard,
 };
+export const scenariosGable = scenariosGableFile as ScenarioTree;
+export const scenariosCobra = scenariosCobraFile as ScenarioTree;
 
 export function leagueById(id: string): League {
   const league = leagues.find((l) => l.id === id);

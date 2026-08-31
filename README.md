@@ -24,10 +24,27 @@ Open [http://localhost:3000](http://localhost:3000). Laptop-first. No auth. No l
 
 | Script | What |
 | --- | --- |
-| `npm run dev` | Next.js App Router |
+| `npm run dev` | Next.js App Router at [http://localhost:3000](http://localhost:3000) |
 | `npm run typecheck` | `tsc --noEmit` |
 | `npm test` | Snake math + rec engine |
-| `npm run build` | Production build |
+| `npm run build` | Static export to `out/` (no Pages path prefix) |
+
+`next start` is not used for this app. GitHub Pages (and `npx serve out`) host the `out/` folder. JSON boards are bundled at build time from `data/`.
+
+## GitHub Pages
+
+Live URL: **https://bensbar.github.io/draft-helper/**
+
+This is a **private** repo. Keep it private. GitHub Pages on a private repository requires **GitHub Pro** (or Team / Enterprise) on the account that owns the repo.
+
+Enable hosting once (does not change visibility):
+
+1. Repo **Settings → Pages**
+2. **Build and deployment → Source:** GitHub Actions
+
+Pushes to `main` run `.github/workflows/pages.yml`: `npm ci`, `next build` with `GITHUB_PAGES=true` (so assets resolve under `/draft-helper/`), then `actions/upload-pages-artifact` + `actions/deploy-pages`.
+
+Local `npm run dev` is unchanged — still [http://localhost:3000](http://localhost:3000), no `/draft-helper` prefix.
 
 ## How Ben uses it
 

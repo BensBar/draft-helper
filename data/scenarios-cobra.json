@@ -1,0 +1,76 @@
+{
+  "leagueId": "cobra",
+  "title": "COBRA SCENARIOS",
+  "subtitle": "Slot unknown until 9/10 kickoff · never hardcode pick 3 · Gable first",
+  "rootId": "cobra-0",
+  "livePicks": [],
+  "keeperSkips": [],
+  "pile": ["jahmyr-gibbs", "bijan-robinson", "jamarr-chase", "jonathan-taylor", "puka-nacua"],
+  "neverAt1213": {
+    "ids": ["josh-jacobs", "josh-allen", "kaleb-johnson"],
+    "positions": []
+  },
+  "nodes": [
+    {
+      "id": "cobra-0",
+      "section": "pre-draft",
+      "trigger": "Cobra slot is drawn at kickoff. Do not assume 3. Study Gable first.",
+      "why": "Slot unknown until 9/10. Wait to draw 1–12. Lloyd not Johnson. Wait QB ~R7. K/DST last.",
+      "picks": [],
+      "forks": [
+        { "id": "cobra-slot-3", "label": "IF you draw slot 3" },
+        { "id": "cobra-other-slot", "label": "IF you draw any other slot" },
+        { "id": "cobra-r2", "label": "Round 2 (every slot)" }
+      ]
+    },
+    {
+      "id": "cobra-slot-3",
+      "section": "r1",
+      "trigger": "Slot 3 — leftover Gibbs/Bijan/Chase, else Taylor/Nacua.",
+      "why": "Only if CBS draws 3. Smash leftover of Gibbs / Bijan / Chase. Else Taylor or Nacua.",
+      "picks": [
+        {
+          "overall": 3,
+          "mode": "listed",
+          "from": ["jahmyr-gibbs", "bijan-robinson", "jamarr-chase", "jonathan-taylor", "puka-nacua"],
+          "take": 1,
+          "never": ["josh-jacobs", "josh-allen", "kaleb-johnson"]
+        }
+      ],
+      "forks": [{ "id": "cobra-r2", "label": "Next: Round 2" }]
+    },
+    {
+      "id": "cobra-other-slot",
+      "section": "r1",
+      "trigger": "Any slot except 3 — smash leftover elite RB/WR. Wait on QB.",
+      "why": "Do not run the slot-3 script. Best remaining Gibbs/Bijan/Chase/Taylor/Nacua or next skill. Never Jacobs.",
+      "picks": [
+        {
+          "overall": 1,
+          "mode": "best-adp",
+          "from": ["jahmyr-gibbs", "bijan-robinson", "jamarr-chase", "jonathan-taylor", "puka-nacua"],
+          "thenPositions": ["RB", "WR"],
+          "take": 1,
+          "never": ["josh-jacobs", "josh-allen", "kaleb-johnson"]
+        }
+      ],
+      "forks": [{ "id": "cobra-r2", "label": "Next: Round 2" }]
+    },
+    {
+      "id": "cobra-r2",
+      "section": "r2",
+      "trigger": "Round 2 — best remaining RB/WR.",
+      "why": "Never Allen. Never Jacobs. Lloyd not Johnson. Wait QB ~R7. K/DST last.",
+      "picks": [
+        {
+          "overall": 22,
+          "mode": "best-adp",
+          "thenPositions": ["RB", "WR"],
+          "take": 1,
+          "never": ["josh-allen", "josh-jacobs", "kaleb-johnson"]
+        }
+      ],
+      "forks": [{ "id": "cobra-0", "label": "Back to Cobra opening" }]
+    }
+  ]
+}

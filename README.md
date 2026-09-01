@@ -26,7 +26,7 @@ Open [http://localhost:3000](http://localhost:3000). Laptop-first. No auth. No l
 | --- | --- |
 | `npm run dev` | Next.js App Router at [http://localhost:3000](http://localhost:3000) |
 | `npm run typecheck` | `tsc --noEmit` |
-| `npm test` | Snake math + rec engine + ADP overlay |
+| `npm test` | Snake math + rec engine + ADP overlay + scenarios |
 | `npm run refresh-adp` | Re-fetch public ADP into `data/adp-*.json` and refresh `data/players.json` (Gil must-write values always win) |
 | `npm run build` | Static export to `out/` (no Pages path prefix) |
 
@@ -54,6 +54,7 @@ Local `npm run dev` is unchanged — still [http://localhost:3000](http://localh
 3. When it is Ben's turn the **ON THE CLOCK** banner hits and the giant rec is the smash pick (75s clock; Gable robot autodrafts if he misses).
 4. **Undo** if you mis-click. State persists in `localStorage` per league.
 5. After 9/3, switch to **Cobra**, draw the live slot 1–12, and the rec engine + whose-turn math recompute from that slot.
+6. **SCENARIOS** (header) is prep — tap trigger chips for if-this-then-that. GiantRec stays the live path. Overlay does not change rec-engine rules.
 
 Keyboard: `Enter` / `D` mark highlighted player drafted · `U` undo · `↑↓` pool · `/` search · `C` clock.
 
@@ -127,6 +128,18 @@ Swap boards without rewriting UI:
 | `data/rec-rules.json` | Gable 12/13 RB pile, 36/37, 60/61, R8+; Cobra slot-3 rules |
 | `data/meta.json` | ADP banner copy + default-league cutoff |
 | `data/adp-*.json` | Extra public ADP boards (see above) |
+| `data/scenarios-gable.json` | Gable if-this-then-that tree (Gil drop-in copy) |
+| `data/scenarios-cobra.json` | Thin Cobra tree — slot drawn at kickoff, not pick 3 |
+
+## Scenarios (prep overlay)
+
+Header **SCENARIOS** opens a prep overlay. GiantRec / next-8 / pool stay the live path underneath.
+
+- **Gable first.** Tap trigger chips (S1–S5, S-36, S-60, S-84, S-109, S180, cheat sheet). Each page is TRIGGER → PICK → WHY → NEXT FORK.
+- Pick 36 is a **single** live pick. 37 = Bowers KEPT skip. 108 = Burden KEPT skip.
+- Ordering inside a locked set follows the selected ADP source, except listed else-chains (Saquon else Chase Brown) and **Price over Tuten**.
+- Swap copy in `data/scenarios-gable.json` / `data/scenarios-cobra.json` without rewriting UI.
+- Rec-engine from-lists stay locked. Never Jacobs / Taylor / TE / QB at 12/13. Do not stash Kaleb Johnson.
 
 ## Gable rec (precomputed, 75s)
 

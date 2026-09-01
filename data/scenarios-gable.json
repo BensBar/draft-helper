@@ -1,0 +1,545 @@
+{
+  "leagueId": "gable",
+  "title": "GABLE SCENARIOS",
+  "subtitle": "Slot 12 · 17 rounds · 75s robot ON · Bowers + Burden KEPT · CBS 8/31 ADP",
+  "rootId": "page-0",
+  "livePicks": [12, 13, 36, 60, 61, 84, 85, 109, 132, 133, 156, 157, 180, 181, 204],
+  "keeperSkips": [
+    { "overall": 37, "playerId": "brock-bowers", "note": "Bowers KEPT skip" },
+    { "overall": 108, "playerId": "luther-burden", "note": "Burden KEPT skip" }
+  ],
+  "pile": [
+    "james-cook",
+    "derrick-henry",
+    "christian-mccaffrey",
+    "saquon-barkley",
+    "chase-brown",
+    "omarion-hampton",
+    "ashton-jeanty"
+  ],
+  "neverAt1213": {
+    "ids": ["josh-jacobs", "jonathan-taylor", "kaleb-johnson"],
+    "positions": ["TE", "QB"]
+  },
+  "nodes": [
+    {
+      "id": "page-0",
+      "section": "pre-draft",
+      "trigger": "Pre-draft. Queue the 12/13 pile before the 75s robot steals it. Clock C to start when CBS is on the clock.",
+      "why": "Queue Cook, Henry, CMC, Saquon, Chase Brown, Hampton, Jeanty. CMC is Q Wk1 undisclosed but still in the pile. Take TWO from the pile. NEVER Jacobs, Taylor, TE, QB.",
+      "picks": [
+        {
+          "overall": 12,
+          "mode": "listed",
+          "from": [
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "saquon-barkley",
+            "chase-brown",
+            "omarion-hampton",
+            "ashton-jeanty"
+          ],
+          "take": 2,
+          "never": ["josh-jacobs", "jonathan-taylor", "kaleb-johnson"],
+          "neverPositions": ["TE", "QB"]
+        }
+      ],
+      "notes": [
+        "LIVE Ben picks: 12, 13, 36, (37=Bowers KEPT skip), 60, 61, 84, 85, (108=Burden KEPT skip), 109, 132, 133, 156, 157, 180, 181, 204.",
+        "12/13 PILE order: Cook 7.30 > Henry 7.77 > CMC 8.03 (Q) > Saquon 11.95 > Chase Brown 12.81 > Hampton 19.17 > Jeanty 21.93 (ankle Q)."
+      ],
+      "forks": [
+        { "id": "s1", "label": "S1 — Cook/Henry/CMC still at 12" },
+        { "id": "s2", "label": "S2 — only Saquon and/or Chase Brown" },
+        { "id": "s3", "label": "S3 — WR run" },
+        { "id": "s4", "label": "S4 — RB run" },
+        { "id": "s5", "label": "S5 — panic, pile empty" },
+        { "id": "cheat", "label": "ONE-SCREEN CHEAT" }
+      ]
+    },
+    {
+      "id": "s1",
+      "section": "12/13",
+      "window": "r12r13",
+      "trigger": "S1 — Cook or Henry or CMC still at 12",
+      "why": "CBS 7–8 smash. Do not take ARSB/Lamb if a pile RB is up.",
+      "picks": [
+        {
+          "overall": 12,
+          "mode": "listed",
+          "from": ["james-cook", "derrick-henry", "christian-mccaffrey"],
+          "take": 1,
+          "never": ["josh-jacobs", "jonathan-taylor", "kaleb-johnson", "amon-ra-st-brown", "ceedee-lamb"],
+          "neverPositions": ["TE", "QB", "WR"]
+        },
+        {
+          "overall": 13,
+          "mode": "listed",
+          "from": ["james-cook", "derrick-henry", "christian-mccaffrey", "saquon-barkley", "chase-brown"],
+          "excludePriorPicks": true,
+          "take": 1,
+          "never": ["josh-jacobs", "jonathan-taylor", "kaleb-johnson"],
+          "neverPositions": ["TE", "QB"]
+        }
+      ],
+      "forks": [{ "id": "s-36-default", "label": "Next: S-36 with two RBs" }]
+    },
+    {
+      "id": "s2",
+      "section": "12/13",
+      "window": "r12r13",
+      "trigger": "S2 — Cook+Henry+CMC gone; Saquon and/or Chase Brown up",
+      "why": "Live CBS doorstep 11.95/12.81. ARSB ~11.86 screaming — ignore. Have Burden, no RB.",
+      "picks": [
+        {
+          "overall": 12,
+          "mode": "listed",
+          "from": ["saquon-barkley", "chase-brown"],
+          "take": 1,
+          "never": ["josh-jacobs", "jonathan-taylor", "kaleb-johnson", "amon-ra-st-brown"],
+          "neverPositions": ["TE", "QB", "WR"]
+        },
+        {
+          "overall": 13,
+          "mode": "listed",
+          "from": ["saquon-barkley", "chase-brown", "omarion-hampton", "ashton-jeanty"],
+          "excludePriorPicks": true,
+          "take": 1,
+          "never": ["josh-jacobs", "jonathan-taylor", "kaleb-johnson", "amon-ra-st-brown"],
+          "neverPositions": ["TE", "QB", "WR"]
+        }
+      ],
+      "forks": [{ "id": "s-36-default", "label": "Next: S-36" }]
+    },
+    {
+      "id": "s3",
+      "section": "12/13",
+      "window": "r12r13",
+      "trigger": "S3 — WR run (ARSB/Lamb/JJ flying, RBs falling)",
+      "why": "STILL two pile RBs. Do not correct into WR. The WR gift is pick 36.",
+      "picks": [
+        {
+          "overall": 12,
+          "mode": "listed",
+          "from": [
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "saquon-barkley",
+            "chase-brown",
+            "omarion-hampton",
+            "ashton-jeanty"
+          ],
+          "take": 1,
+          "never": ["josh-jacobs", "jonathan-taylor", "kaleb-johnson"],
+          "neverPositions": ["TE", "QB", "WR"]
+        },
+        {
+          "overall": 13,
+          "mode": "listed",
+          "from": [
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "saquon-barkley",
+            "chase-brown",
+            "omarion-hampton",
+            "ashton-jeanty"
+          ],
+          "excludePriorPicks": true,
+          "take": 1,
+          "never": ["josh-jacobs", "jonathan-taylor", "kaleb-johnson"],
+          "neverPositions": ["TE", "QB", "WR"]
+        }
+      ],
+      "forks": [{ "id": "s-36-wr-fallers", "label": "Next: S-36-WR-fallers" }]
+    },
+    {
+      "id": "s4",
+      "section": "12/13",
+      "window": "r12r13",
+      "trigger": "S4 — RB run. Cook/Henry/CMC/Saquon/Chase Brown all gone",
+      "why": "12 Hampton. 13 Jeanty. If Jeanty gone: Breece Hall then next RB except Jacobs. If you took Jeanty, Washington Jr. is a late cuff not a 60/61 spend.",
+      "picks": [
+        {
+          "overall": 12,
+          "mode": "listed",
+          "from": ["omarion-hampton"],
+          "take": 1,
+          "never": ["josh-jacobs", "jonathan-taylor", "kaleb-johnson"],
+          "neverPositions": ["TE", "QB", "WR"]
+        },
+        {
+          "overall": 13,
+          "mode": "listed-then-adp",
+          "from": ["ashton-jeanty", "breece-hall"],
+          "thenPositions": ["RB"],
+          "take": 1,
+          "never": ["josh-jacobs", "jonathan-taylor", "kaleb-johnson"],
+          "neverPositions": ["TE", "QB", "WR"]
+        }
+      ],
+      "forks": [{ "id": "s-36-rb-run", "label": "Next: S-36-RB-run" }]
+    },
+    {
+      "id": "s5",
+      "section": "12/13",
+      "window": "r12r13",
+      "trigger": "S5 — panic, pile empty including Hampton/Jeanty",
+      "why": "Best remaining RBs, never Jacobs, never WR/TE/QB. Recover WR at 36 and 60/61.",
+      "picks": [
+        {
+          "overall": 12,
+          "mode": "best-adp",
+          "thenPositions": ["RB"],
+          "take": 1,
+          "gone": [
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "saquon-barkley",
+            "chase-brown",
+            "omarion-hampton",
+            "ashton-jeanty"
+          ],
+          "never": ["josh-jacobs", "jonathan-taylor", "kaleb-johnson"],
+          "neverPositions": ["TE", "QB", "WR"]
+        },
+        {
+          "overall": 13,
+          "mode": "best-adp",
+          "thenPositions": ["RB"],
+          "excludePriorPicks": true,
+          "take": 1,
+          "gone": [
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "saquon-barkley",
+            "chase-brown",
+            "omarion-hampton",
+            "ashton-jeanty"
+          ],
+          "never": ["josh-jacobs", "jonathan-taylor", "kaleb-johnson"],
+          "neverPositions": ["TE", "QB", "WR"]
+        }
+      ],
+      "forks": [{ "id": "s-36-rb-run", "label": "Next: S-36-RB-run" }]
+    },
+    {
+      "id": "s-36-default",
+      "section": "36",
+      "window": "r36",
+      "trigger": "S-36-default — only ONE live pick (37 is Bowers KEPT). Two pile RBs on roster.",
+      "why": "Best leftover ARSB, Lamb, Jefferson, London, AJ Brown, Rice, Nico. Skip Nabers if he is the “best” and still ACL/Wk1 Q. Never TE/QB/Jacobs.",
+      "picks": [
+        {
+          "overall": 36,
+          "mode": "best-adp",
+          "from": [
+            "amon-ra-st-brown",
+            "ceedee-lamb",
+            "justin-jefferson",
+            "drake-london",
+            "aj-brown",
+            "rashee-rice",
+            "nico-collins",
+            "malik-nabers"
+          ],
+          "skipIfInjured": [{ "id": "malik-nabers", "match": "ACL" }],
+          "take": 1,
+          "never": ["josh-jacobs", "kaleb-johnson"],
+          "neverPositions": ["TE", "QB"]
+        }
+      ],
+      "forks": [{ "id": "s-60-default", "label": "Next: S-60" }]
+    },
+    {
+      "id": "s-36-wr-fallers",
+      "section": "36",
+      "window": "r36",
+      "trigger": "S-36-WR-fallers — 36 is a SINGLE live pick (37=Bowers skip).",
+      "why": "If 12/13 was RB-friendly (WRs fell): smash leftover ARSB/Lamb/JJ/London. If 12/13 was WR run (RBs fell to you): STILL a WR unless a pile RB lasted. Do not take a 3rd RB at 36 unless WR board is Rice/Nabers-only AND a true RB2 like Hall is there AND you already have two of Hampton/Jeanty. Prefer WR.",
+      "picks": [
+        {
+          "overall": 36,
+          "mode": "best-adp",
+          "from": ["amon-ra-st-brown", "ceedee-lamb", "justin-jefferson", "drake-london"],
+          "take": 1,
+          "never": ["josh-jacobs", "kaleb-johnson"],
+          "neverPositions": ["TE", "QB"]
+        }
+      ],
+      "forks": [{ "id": "s-60-default", "label": "Next: S-60" }]
+    },
+    {
+      "id": "s-36-rb-run",
+      "section": "36",
+      "window": "r36",
+      "trigger": "S-36-RB-run — Hampton+Jeanty or worse. 36 is ONE live pick.",
+      "why": "Best WR. Do not fix RB unless a pile RB lasted. WR scarcity after keepers.",
+      "picks": [
+        {
+          "overall": 36,
+          "mode": "best-adp",
+          "from": [
+            "amon-ra-st-brown",
+            "ceedee-lamb",
+            "justin-jefferson",
+            "drake-london",
+            "aj-brown",
+            "rashee-rice",
+            "nico-collins"
+          ],
+          "take": 1,
+          "never": ["josh-jacobs", "kaleb-johnson"],
+          "neverPositions": ["TE", "QB"]
+        }
+      ],
+      "forks": [{ "id": "s-60-default", "label": "Next: S-60" }]
+    },
+    {
+      "id": "s-60-default",
+      "section": "60/61",
+      "trigger": "S-60-default — Price / Tuten are R5, not sleepers.",
+      "why": "60 Price if up else Tuten else best WR. 61: the other of Price/Tuten else WR. Slight prefer Price (SEA lead, Charbonnet PUP ≥4). Maye kept. Never QB/TE/Jacobs.",
+      "picks": [
+        {
+          "overall": 60,
+          "mode": "prefer-listed",
+          "from": ["jadarian-price", "bhayshul-tuten"],
+          "prefer": ["jadarian-price"],
+          "thenPositions": ["WR"],
+          "take": 1,
+          "never": ["josh-jacobs", "kaleb-johnson", "drake-maye", "mike-washington-jr"],
+          "neverPositions": ["TE", "QB"]
+        },
+        {
+          "overall": 61,
+          "mode": "prefer-listed",
+          "from": ["jadarian-price", "bhayshul-tuten"],
+          "prefer": ["jadarian-price"],
+          "excludePriorPicks": true,
+          "thenPositions": ["WR"],
+          "take": 1,
+          "never": ["josh-jacobs", "kaleb-johnson", "drake-maye", "mike-washington-jr"],
+          "neverPositions": ["TE", "QB"]
+        }
+      ],
+      "forks": [
+        { "id": "s-60-zero-rb3", "label": "Price AND Tuten gone" },
+        { "id": "s-60-jeanty-owner", "label": "You have Jeanty" },
+        { "id": "s-84-default", "label": "Next: S-84" }
+      ]
+    },
+    {
+      "id": "s-60-zero-rb3",
+      "section": "60/61",
+      "trigger": "S-60-zero-rb3 — Price AND Tuten gone.",
+      "why": "WR+WR, or WR + wait on Dobbins to 84 (CBS 74 — do not reach to 60).",
+      "picks": [
+        {
+          "overall": 60,
+          "mode": "best-adp",
+          "thenPositions": ["WR"],
+          "take": 1,
+          "never": ["josh-jacobs", "kaleb-johnson", "jk-dobbins", "mike-washington-jr"],
+          "neverPositions": ["TE", "QB"]
+        },
+        {
+          "overall": 61,
+          "mode": "best-adp",
+          "thenPositions": ["WR"],
+          "excludePriorPicks": true,
+          "take": 1,
+          "never": ["josh-jacobs", "kaleb-johnson", "jk-dobbins", "mike-washington-jr"],
+          "neverPositions": ["TE", "QB"]
+        }
+      ],
+      "forks": [{ "id": "s-84-default", "label": "Next: S-84-dobbins" }]
+    },
+    {
+      "id": "s-60-jeanty-owner",
+      "section": "60/61",
+      "trigger": "S-60-jeanty-owner — you took Jeanty. Do NOT spend 60/61 on Washington Jr (ADP 123).",
+      "why": "Price/Tuten/WR. Cuff at 109+ if still there.",
+      "picks": [
+        {
+          "overall": 60,
+          "mode": "prefer-listed",
+          "from": ["jadarian-price", "bhayshul-tuten"],
+          "prefer": ["jadarian-price"],
+          "thenPositions": ["WR"],
+          "take": 1,
+          "never": ["josh-jacobs", "kaleb-johnson", "mike-washington-jr"],
+          "neverPositions": ["TE", "QB"]
+        },
+        {
+          "overall": 61,
+          "mode": "prefer-listed",
+          "from": ["jadarian-price", "bhayshul-tuten"],
+          "prefer": ["jadarian-price"],
+          "excludePriorPicks": true,
+          "thenPositions": ["WR"],
+          "take": 1,
+          "never": ["josh-jacobs", "kaleb-johnson", "mike-washington-jr"],
+          "neverPositions": ["TE", "QB"]
+        }
+      ],
+      "forks": [{ "id": "s-84-default", "label": "Next: S-84" }]
+    },
+    {
+      "id": "s-84-default",
+      "section": "84/85",
+      "trigger": "S-84-default — Dobbins if up. Else Tate. Else best WR/RB.",
+      "why": "Lloyd ADP 107 usually wait to 109 unless he is on the board here — then WR at 84, Lloyd at 85 if you have no GB back. QB allowed first time, only if a starter fell (pass TD is 5, waiting is correct). Never DEN DST, Jacobs, K.",
+      "picks": [
+        {
+          "overall": 84,
+          "mode": "listed-then-adp",
+          "from": ["jk-dobbins", "carnell-tate"],
+          "thenPositions": ["WR", "RB"],
+          "take": 1,
+          "never": ["josh-jacobs", "kaleb-johnson", "den-dst"],
+          "neverPositions": ["K", "DST"]
+        },
+        {
+          "overall": 85,
+          "mode": "listed-then-adp",
+          "from": ["jk-dobbins", "carnell-tate", "marshawn-lloyd"],
+          "excludePriorPicks": true,
+          "thenPositions": ["WR", "RB"],
+          "take": 1,
+          "never": ["josh-jacobs", "kaleb-johnson", "den-dst"],
+          "neverPositions": ["K", "DST"]
+        }
+      ],
+      "forks": [{ "id": "s-109", "label": "Next: S-109" }]
+    },
+    {
+      "id": "s-109",
+      "section": "109",
+      "trigger": "S-109 — one live pick (108 is Burden KEPT skip).",
+      "why": "QB if you have none and a starter is there. Else Lloyd if up. Else Washington Jr if you have Jeanty. Else Tate/Shaheed/best WR. Never Jacobs. Never K/DST.",
+      "picks": [
+        {
+          "overall": 109,
+          "mode": "listed-then-adp",
+          "from": ["marshawn-lloyd", "mike-washington-jr", "carnell-tate", "rashid-shaheed"],
+          "thenPositions": ["QB", "WR", "RB"],
+          "take": 1,
+          "never": ["josh-jacobs", "kaleb-johnson", "jaydon-blue"],
+          "neverPositions": ["K", "DST"]
+        }
+      ],
+      "notes": [
+        "Next 132/133 fill QB/FLEX/Lloyd/Washington/Shaheed. Fade Jaydon Blue (waived)."
+      ],
+      "forks": [
+        { "id": "s-132", "label": "Next: 132/133" },
+        { "id": "s-180", "label": "Skip to S180/181 + 204" }
+      ]
+    },
+    {
+      "id": "s-132",
+      "section": "132",
+      "trigger": "132/133 — fill QB/FLEX/Lloyd/Washington/Shaheed.",
+      "why": "Fade Jaydon Blue (waived). Never Jacobs. Never K/DST until the last two.",
+      "picks": [
+        {
+          "overall": 132,
+          "mode": "listed-then-adp",
+          "from": ["marshawn-lloyd", "mike-washington-jr", "rashid-shaheed"],
+          "thenPositions": ["QB", "WR", "RB", "TE"],
+          "take": 1,
+          "never": ["josh-jacobs", "kaleb-johnson", "jaydon-blue"],
+          "neverPositions": ["K", "DST"]
+        },
+        {
+          "overall": 133,
+          "mode": "listed-then-adp",
+          "from": ["marshawn-lloyd", "mike-washington-jr", "rashid-shaheed"],
+          "excludePriorPicks": true,
+          "thenPositions": ["QB", "WR", "RB", "TE"],
+          "take": 1,
+          "never": ["josh-jacobs", "kaleb-johnson", "jaydon-blue"],
+          "neverPositions": ["K", "DST"]
+        }
+      ],
+      "forks": [{ "id": "s-180", "label": "Next: S180/181 + 204" }]
+    },
+    {
+      "id": "s-180",
+      "section": "late",
+      "trigger": "S180/181 + 204 — K and DST last.",
+      "why": "Skip Denver DST. If QB still empty, take QB before K — illegal roster scores 0. Don't let the robot pick K with an empty QB.",
+      "picks": [
+        {
+          "overall": 180,
+          "mode": "best-adp",
+          "thenPositions": ["K", "DST"],
+          "take": 1,
+          "never": ["den-dst", "josh-jacobs", "kaleb-johnson"]
+        },
+        {
+          "overall": 181,
+          "mode": "best-adp",
+          "thenPositions": ["K", "DST"],
+          "excludePriorPicks": true,
+          "take": 1,
+          "never": ["den-dst", "josh-jacobs", "kaleb-johnson"]
+        },
+        {
+          "overall": 204,
+          "mode": "best-adp",
+          "thenPositions": ["K", "DST"],
+          "excludePriorPicks": true,
+          "take": 1,
+          "never": ["den-dst", "josh-jacobs", "kaleb-johnson"]
+        }
+      ],
+      "forks": [
+        { "id": "cheat", "label": "ONE-SCREEN CHEAT" },
+        { "id": "page-0", "label": "Back to opening" }
+      ]
+    },
+    {
+      "id": "cheat",
+      "section": "cheat",
+      "trigger": "ONE-SCREEN CHEAT",
+      "why": "12 best pile RB. 13 second pile RB. 36 best WR (skip Nabers if still Q). 60/61 Price then Tuten then WR. 84/85 Dobbins / Tate / Lloyd-if-falling. 109 QB or Lloyd or Jeanty-cuff. Last K/DST, never DEN, never Jacobs.",
+      "picks": [
+        {
+          "overall": 12,
+          "mode": "listed",
+          "from": [
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "saquon-barkley",
+            "chase-brown",
+            "omarion-hampton",
+            "ashton-jeanty"
+          ],
+          "take": 2,
+          "never": ["josh-jacobs", "jonathan-taylor", "kaleb-johnson"],
+          "neverPositions": ["TE", "QB"]
+        }
+      ],
+      "forks": [
+        { "id": "page-0", "label": "Opening forks" },
+        { "id": "s1", "label": "S1" },
+        { "id": "s2", "label": "S2" },
+        { "id": "s3", "label": "S3" },
+        { "id": "s4", "label": "S4" },
+        { "id": "s5", "label": "S5" },
+        { "id": "s-36-default", "label": "S-36" },
+        { "id": "s-60-default", "label": "S-60" },
+        { "id": "s-84-default", "label": "S-84" },
+        { "id": "s-109", "label": "S-109" },
+        { "id": "s-180", "label": "S180" }
+      ]
+    }
+  ]
+}

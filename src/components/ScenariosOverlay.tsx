@@ -79,8 +79,12 @@ export function ScenariosOverlay({
           </h2>
           <p className="mt-1 text-sm text-[#8b8b9a]">{tree.subtitle}</p>
           {treeId === "cobra" ? (
-            <p className="mt-1 text-xs text-[#ffb703]">Gable first. Cobra slot is drawn at kickoff — not pick 3 by default.</p>
-          ) : null}
+            <p className="mt-1 text-xs text-[#ffb703]">
+              Slot unknown until kickoff — tap 1–12. Never hardcoded pick 3. Gable tab is historical.
+            </p>
+          ) : (
+            <p className="mt-1 text-xs text-[#8b8b9a]">Gable historical — keepers locked. Cobra night is the other tab.</p>
+          )}
         </div>
 
         <section className="border border-[#c6ff00]/40 bg-[#0c0c12] p-4" data-testid="scenario-page">
@@ -107,7 +111,7 @@ export function ScenariosOverlay({
                     className="border border-[#232333] bg-[#12121a] p-3"
                   >
                     <p className="font-[family-name:var(--font-mono)] text-[11px] text-[#8b8b9a]">
-                      OVERALL {slot.overall}
+                      {slot.label ?? `OVERALL ${slot.overall}`}
                     </p>
                     {slot.players.length === 0 ? (
                       <p className="text-[#8b8b9a]">Best remaining in the locked set.</p>

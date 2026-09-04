@@ -6,7 +6,15 @@ import adpEspn from "../../data/adp-espn.json";
 import adpYahoo from "../../data/adp-yahoo.json";
 import adpFantasypros from "../../data/adp-fantasypros.json";
 import adpSleeper from "../../data/adp-sleeper.json";
-import { applyAdpSource, rankedPlayersForSource, resolveAdpSourceId, type AdpBoard, type AdpSourcesFile } from "./adp";
+import adpCbsPublic from "../../data/adp-cbs-public.json";
+import {
+  applyAdpSource,
+  defaultAdpSourceForLeague,
+  rankedPlayersForSource,
+  resolveAdpSourceId,
+  type AdpBoard,
+  type AdpSourcesFile,
+} from "./adp";
 import type { Player } from "./types";
 
 const players = playersFile.players as Player[];
@@ -93,6 +101,10 @@ describe("source overlay", () => {
     expect((adpSleeper as AdpBoard).players).toHaveLength(0);
     expect(resolveAdpSourceId(catalog, "fantasypros")).toBe("gil");
     expect(resolveAdpSourceId(catalog, "sleeper")).toBe("gil");
+    expect(resolveAdpSourceId(catalog, "fantasypros", "cobra")).toBe("cbs-public");
+    expect(defaultAdpSourceForLeague(catalog, "cobra")).toBe("cbs-public");
+    expect((adpCbsPublic as AdpBoard).scoring).toBe("Non-PPR");
+    expect((adpCbsPublic as AdpBoard).fetched).toBe("2026-09-04");
     const ranked = rankedPlayersForSource(players, catalog, boards, "fantasypros");
     expect(ranked.find((p) => p.id === "james-cook")?.adp).toBe(7.3);
   });

@@ -4,12 +4,10 @@ Flashy CBS draft-room companion for **Ben Stoll**. Open this **next to** the CBS
 
 Leagues:
 
-- **Gable** (default through Thu 9/3/2026 8:00pm ET) — Stan Gable's All Americans, Ben's Bar Bruskis, pick 12
-- **Cobra** — Cobra Craig, Ben's Bar, slot drawn at kickoff (1–12 picker, never hardcoded)
+- **Cobra** (default after Thu 9/3/2026) — Cobra Craig, Ben's Bar, live snake Thu 9/10/2026 5:00pm ET, 16 rounds, $165, all-play, half-PPR, pass TD 6, **no keepers**, slot drawn at kickoff (1–12 picker, never hardcoded)
+- **Gable** (historical) — Stan Gable's All Americans, Ben's Bar Bruskis, pick 12, keepers locked
 
-Default ranks are **CBS public draft averages** fetched Mon 8/31/2026 from [the public ADP page](https://www.cbssports.com/fantasy/football/draft/averages/) (no login), plus Gil's must-write numbers. The banner is honest:
-
-> CBS public ADP Aug 31 2026 — Gil's board (not a live draft feed)
+Cobra default ranks are **CBS public Non-PPR** fetched Fri 9/4/2026 from [the public ADP page](https://www.cbssports.com/fantasy/football/draft/averages/) (no login). That page is Non-PPR; CBS PPR is a separate toggle. CBS has **no public half-PPR** board. Gable still uses Gil's 8/31 must-write board. The banner is honest about whichever source is selected.
 
 This is **not** a live CBS draft-room ADP stream. Switch sources in the ADP SOURCE bar — that only reorders value, not rec-engine rules.
 
@@ -49,12 +47,12 @@ Local `npm run dev` is unchanged — still [http://localhost:3000](http://localh
 
 ## How Ben uses it
 
-1. Lands on **Gable**. Bowers + Burden are already on his roster. All 24 keepers are **KEPT** on the board and out of the pool.
-2. CBS starts. Click whoever just went — they leave the pool and fill the current overall pick.
-3. When it is Ben's turn the **ON THE CLOCK** banner hits and the giant rec is the smash pick (75s clock; Gable robot autodrafts if he misses).
-4. **Undo** if you mis-click. State persists in `localStorage` per league.
-5. After 9/3, switch to **Cobra**, draw the live slot 1–12, and the rec engine + whose-turn math recompute from that slot.
-6. **SCENARIOS** (header) is prep — tap trigger chips for if-this-then-that. GiantRec stays the live path. Overlay does not change rec-engine rules.
+1. Lands on **Cobra** (after 9/3). Slot is unknown — **DRAW YOUR SLOT 1–12** at kickoff. Never assume pick 3. GABLE tab is the historical keepers board.
+2. Optional: paste a ranked **ROBOT / PRELOAD QUEUE** (full names, one per line) before the 75s clock. Smash uses that order once a slot is drawn. Josh Jacobs / Kaleb Johnson are stripped.
+3. Open CBS (`ck22.football.cbssports.com`), click **COPY BOOKMARKLET** once on the draft page (or paste taken names). Companion does not scrape CBS.
+4. When it is Ben's turn the **ON THE CLOCK** banner hits and the giant rec is the named smash pick. Queue works for any slot 1–12.
+5. **Undo** if you mis-click. State persists in `localStorage` per league.
+6. **SCENARIOS** (header) is prep — tap slot 1–12 chips for if-this-then-that. GiantRec stays the live path. Overlay does not change rec-engine rules.
 
 Keyboard: `Enter` / `D` mark highlighted player drafted · `U` undo · `↑↓` pool · `/` search · `C` clock.
 
@@ -70,29 +68,29 @@ GitHub Pages is **static**. The browser cannot fetch `cbssports.com` (CORS), we 
 2. Click **COPY BOOKMARKLET** in the CBS SYNC bar.
 3. Add a bookmark on the bookmarks bar. Edit it and paste the copied `javascript:…` as the URL. Name it `Ben draft sync`.
 
-### Live draft (Gable Thu 9/3/2026 8:00pm ET)
+### Live draft (Cobra Thu 9/10/2026 5:00pm ET)
 
-1. Keep the companion open (Gable).
-2. Open the CBS draft room (`*.football.cbssports.com` — Gable host `gable.football.cbssports.com`, Cobra `ck22.football.cbssports.com`).
+1. Keep the companion open (**Cobra**). Draw slot 1–12 when CBS draws it.
+2. Open the CBS draft room (`ck22.football.cbssports.com`). Gable historical: `gable.football.cbssports.com`.
 3. Click **Ben draft sync** once. Leave both tabs open. It polls every ~2s.
 4. After each CBS pick, GiantRec / next-8 recompute from the remaining pool. Ben does **not** click that player in the companion.
-5. CBS is source of truth: a full replay **replaces** live `takenIds` only. Keepers stay locked from `data/keepers.json` and are never ingested again.
+5. CBS is source of truth: a full replay **replaces** live `takenIds` only. Cobra has **no keepers**. On Gable, keepers stay locked from `data/keepers.json`.
 6. Unmatched CBS names show in a small list — search the pool and mark them, or fix the paste.
-7. If the bookmarklet cannot run: **HOW-TO / PASTE** and paste names (one per line).
+7. If the bookmarklet cannot run: **HOW-TO / PASTE** and paste names (one per line, full names).
 
 Optional: Chrome → `chrome://extensions` → Developer mode → Load unpacked → `extension/` in this repo. Same postMessage path. No CBS login in the extension.
 
-The ADP banner stays honest about **whose board** is selected (Gil/CBS 8/31 by default). Sync is **picks only**, not a live ADP feed.
+The ADP banner stays honest about **whose board** is selected (Cobra = CBS Non-PPR 9/4; Gable = Gil/CBS 8/31). Sync is **picks only**, not a live ADP feed.
 
 ## ADP sources
 
-Default board is **Gil / CBS 8/31** (`data/players.json`). Other public sources are extras — they change ADP/ordering of eligible players only.
+Cobra default is **CBS Non-PPR Sep 4 2026** (`data/adp-cbs-public.json`) — closest CBS board; CBS has no public half-PPR / pass-TD-6 ADP. Gable default is **Gil / CBS 8/31** (`data/players.json`). Other public sources are extras — they change ADP/ordering of eligible players only.
 
 | Control | What |
 | --- | --- |
-| **ADP SOURCE** bar | Gil / CBS 8/31 · CBS public · FantasyPros · ESPN · Sleeper · Yahoo · Consensus |
-| Persistence | `localStorage` key `draft-helper:adp-source` |
-| Rec rules | Unchanged. 12/13 pile, never Jacobs / Taylor / TE, never Kaleb Johnson as a stash |
+| **ADP SOURCE** bar | Gil / CBS 8/31 · CBS Non-PPR 9/4 · CBS PPR 9/4 · FantasyPros · ESPN · Sleeper · Yahoo · Consensus |
+| Persistence | `localStorage` key `draft-helper:adp-source:<leagueId>` |
+| Rec rules | Unchanged. Never Jacobs. MarShawn Lloyd not Kaleb Johnson. Cobra never Josh Allen in R2. |
 
 Refresh from the public web (no passwords):
 
@@ -104,9 +102,10 @@ Writes dated files. Gil must-write ADPs always overwrite parsed CBS Avg Pos on `
 
 | File | Role |
 | --- | --- |
-| `data/players.json` | Default board (CBS public 8/31 + Gil flags/notes) |
-| `data/adp-gil.json` | Same default board, dated |
-| `data/adp-cbs-public.json` | Raw public CBS draft averages (same page; not a second consensus vote) |
+| `data/players.json` | Gable historical board (CBS public 8/31 + Gil flags/notes) |
+| `data/adp-gil.json` | Same Gable board, dated |
+| `data/adp-cbs-public.json` | **Cobra default** — CBS Non-PPR Sep 4 2026 (no Gil overlay) |
+| `data/adp-cbs-ppr.json` | CBS PPR Sep 4 2026 extra toggle |
 | `data/adp-espn.json` | ESPN public PPR league-defaults API |
 | `data/adp-yahoo.json` | Yahoo public `draft_analysis` API (no login) |
 | `data/adp-fantasypros.json` | **Skipped 8/31** — public HTML is a 5-row preview; JSON API is 403 without a key |
@@ -125,17 +124,17 @@ Swap boards without rewriting UI:
 | `data/leagues.json` | Settings, scoring, roster, draft order, URLs |
 | `data/players.json` | 2026 players — CBS 8/31 ADP + Gil notes |
 | `data/keepers.json` | All 24 Gable keepers (round cost + team) |
-| `data/rec-rules.json` | Gable 12/13 RB pile, 36/37, 60/61, R8+; Cobra slot-3 rules |
+| `data/rec-rules.json` | Gable 12/13 RB pile, 36/37, 60/61, R8+; Cobra named leftover + never Allen in R2 |
 | `data/meta.json` | ADP banner copy + default-league cutoff |
 | `data/adp-*.json` | Extra public ADP boards (see above) |
 | `data/scenarios-gable.json` | Gable if-this-then-that tree (Gil drop-in copy) |
-| `data/scenarios-cobra.json` | Thin Cobra tree — slot drawn at kickoff, not pick 3 |
+| `data/scenarios-cobra.json` | Cobra if-this-then-that — slots 1–12, R2 never Allen, mid, Lloyd, K/DST |
 
 ## Scenarios (prep overlay)
 
 Header **SCENARIOS** opens a prep overlay. GiantRec / next-8 / pool stay the live path underneath.
 
-- **Gable first.** Tap trigger chips (S1–S5, S-36, S-60, S-84, S-109, S180, cheat sheet). Each page is TRIGGER → PICK → WHY → NEXT FORK.
+- **Cobra night:** tap slot chips 1–12 (not pick 3 by default), then R2 / mid / Lloyd / K/DST / cheat. Gable tab is historical (S1–S5, S-36, S-60, S-84, S-109, S180). Each page is TRIGGER → PICK → WHY → NEXT FORK.
 - Pick 36 is a **single** live pick. 37 = Bowers KEPT skip. 108 = Burden KEPT skip.
 - Ordering inside a locked set follows the selected ADP source, except listed else-chains (Saquon else Chase Brown) and **Price over Tuten**.
 - Swap copy in `data/scenarios-gable.json` / `data/scenarios-cobra.json` without rewriting UI.
@@ -153,4 +152,4 @@ Ben starts: TE done (Bowers), one WR (Burden, groin Q). Holes: QB, RB, RB, WR, W
 
 ## Cobra rec
 
-3WR + FLEX all-play. Explosive WR/RB for 50-yd TD and 100-yd bonuses. Wait on QB. K/DST last two. If he draws **3**: leftover of Gibbs / Bijan / Chase, else Taylor / Nacua; round 2 best remaining RB/WR — do **not** take Josh Allen in R2.
+3WR + FLEX all-play. Smash leftover **Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase / Jonathan Taylor / Puka Nacua**. Wait on Josh Allen until ~R7. K/DST last two. If he draws **3**: leftover of Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase, else Jonathan Taylor / Puka Nacua. Round 2 leftover skill — do **not** take Josh Allen. Never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson. Slot is unknown until kickoff — picker 1–12, never hardcoded.

@@ -45,6 +45,19 @@ function dropBanned(pool: Player[], ...idLists: Array<string[] | undefined>): Pl
   return pool.filter((p) => !banned.has(p.id));
 }
 
+function namedList(queue: Player[], n = 5): string {
+  return queue
+    .slice(0, n)
+    .map((p) => p.name)
+    .join(" / ");
+}
+
+function namedWhy(lead: string, queue: Player[], tail: string, n = 5): string {
+  const names = namedList(queue, n);
+  if (!names) return `${lead} ${tail}`.replace(/\s+/g, " ").trim();
+  return `${lead} ${names}. ${tail}`.replace(/\s+/g, " ").trim();
+}
+
 function windowForGable(rules: GableRecRules, overallPick: number, teams: number): RecWindow {
   const round = overallPickToRound(overallPick, teams);
   const byPick = rules.windows.find((w) => w.picks?.includes(overallPick));
@@ -109,10 +122,15 @@ export function recommendCobra(args: {
 
   if (round > rounds - lastRounds) {
     const kd = byPositions(pool, LATE);
+    const queue = (kd.length ? kd : pool).slice(0, 8);
     return {
       player: kd[0] ?? pool[0] ?? null,
-      why: "K/DST last two rounds. Do not spend an earlier pick here.",
-      queue: (kd.length ? kd : pool).slice(0, 8),
+      why: namedWhy(
+        "K/DST last two —",
+        queue,
+        "Do not spend an earlier pick here. Never Josh Jacobs.",
+      ),
+      queue,
       windowId: "cobra-late",
     };
   }
@@ -121,10 +139,11 @@ export function recommendCobra(args: {
     const leftovers = byIds(pool, rules.slot3Round1.from);
     const fallback = byIds(pool, rules.slot3Round1.elseFrom);
     const queue = leftovers.length ? leftovers : fallback;
+    const shown = (queue.length ? queue : byPositions(pool, SKILL)).slice(0, 8);
     return {
       player: queue[0] ?? byPositions(pool, SKILL)[0] ?? null,
-      why: rules.slot3Round1.why,
-      queue: (queue.length ? queue : byPositions(pool, SKILL)).slice(0, 8),
+      why: namedWhy(rules.slot3Round1.why + " On the board:", shown, "Never Josh Jacobs."),
+      queue: shown,
       windowId: "cobra-slot3-r1",
     };
   }
@@ -133,7 +152,11 @@ export function recommendCobra(args: {
     const skill = reject(byPositions(pool, SKILL), rules.neverEarlyIds);
     return {
       player: skill[0] ?? null,
-      why: "Smash leftover elite RB/WR. Wait on QB.",
+      why: namedWhy(
+        "Smash leftover",
+        skill,
+        "Wait on Josh Allen until ~R7. Never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      ),
       queue: skill.slice(0, 8),
       windowId: "cobra-r1",
     };
@@ -143,7 +166,11 @@ export function recommendCobra(args: {
     const skill = reject(byPositions(pool, rules.round2.positions), rules.round2.neverIds);
     return {
       player: skill[0] ?? null,
-      why: rules.round2.why,
+      why: namedWhy(
+        "Round 2 leftover",
+        skill,
+        "Do not take Josh Allen. Never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      ),
       queue: skill.slice(0, 8),
       windowId: "cobra-r2",
     };
@@ -153,7 +180,11 @@ export function recommendCobra(args: {
     const skill = reject(byPositions(pool, rules.mid.positions), ["josh-allen"]);
     return {
       player: skill[0] ?? null,
-      why: rules.mid.why,
+      why: namedWhy(
+        "All-play leftover",
+        skill,
+        "Wait on Josh Allen until ~R7. Never Josh Jacobs. GB stash is MarShawn Lloyd, not Kaleb Johnson.",
+      ),
       queue: skill.slice(0, 8),
       windowId: "cobra-mid",
     };
@@ -162,7 +193,11 @@ export function recommendCobra(args: {
   const skillFirst = pool.filter((p) => !LATE.includes(p.position));
   return {
     player: skillFirst[0] ?? pool[0] ?? null,
-    why: "Best remaining skill. Still wait on K/DST until the last two.",
+    why: namedWhy(
+      "Best remaining",
+      skillFirst,
+      "Josh Allen is allowed now if you still need a QB. Still wait on K/DST. Never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+    ),
     queue: skillFirst.slice(0, 8),
     windowId: "cobra-late-mid",
   };

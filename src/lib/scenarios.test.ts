@@ -141,14 +141,48 @@ describe("Rec-engine from-lists stay locked", () => {
   });
 });
 
-describe("Cobra short tree", () => {
+describe("Cobra slot tree", () => {
   it("does not hardcode pick 3 as the default path", () => {
     expect(cobra.rootId).toBe("cobra-0");
     expect(cobra.nodes.find((n) => n.id === cobra.rootId)?.trigger).toMatch(/drawn at kickoff/i);
+    expect(cobra.subtitle).toMatch(/never hardcode pick 3/i);
     expect(cobra.nodes.find((n) => n.id === "cobra-slot-3")).toBeTruthy();
     const r2 = resolveScenario(cobra, "cobra-r2", players);
     expect(r2.slots.flatMap((s) => s.players).every((p) => p.id !== "josh-allen")).toBe(true);
     expect(r2.slots.flatMap((s) => s.players).every((p) => p.id !== "josh-jacobs")).toBe(true);
     expect(r2.slots.flatMap((s) => s.players).every((p) => p.id !== "kaleb-johnson")).toBe(true);
+    expect(r2.node.picks[0]?.label).toMatch(/not pick 3/i);
+  });
+
+  it("has a 1–12 slot page with snake overalls and named piles", () => {
+    for (let slot = 1; slot <= 12; slot++) {
+      const node = cobra.nodes.find((n) => n.id === `cobra-slot-${slot}`);
+      expect(node, `slot ${slot}`).toBeTruthy();
+      expect(node!.picks[0]?.overall).toBe(slot);
+      const r2 = slot === 12 ? 13 : 25 - slot;
+      expect(node!.picks[1]?.overall).toBe(r2);
+      expect(node!.why).toMatch(/Jahmyr Gibbs|Bijan Robinson|Ja'Marr Chase|Jonathan Taylor|Puka Nacua|James Cook|Saquon Barkley/);
+      expect(node!.why).not.toMatch(/\ba WR\b/);
+    }
+    const slot1 = resolveScenario(cobra, "cobra-slot-1", players);
+    expect(slot1.slots[0]?.players[0]?.id).toBe("jahmyr-gibbs");
+    const slot12 = resolveScenario(cobra, "cobra-slot-12", players);
+    expect(slot12.slots[0]?.overall).toBe(12);
+    expect(slot12.slots[1]?.overall).toBe(13);
+  });
+
+  it("never recommends Jacobs, Allen in R2, or Kaleb anywhere", () => {
+    for (const node of cobra.nodes) {
+      const resolved = resolveScenario(cobra, node.id, players);
+      const ids = allResolvedPlayers(resolved).map((p) => p.id);
+      expect(ids, node.id).not.toContain("josh-jacobs");
+      expect(ids, node.id).not.toContain("kaleb-johnson");
+    }
+    const r2 = allResolvedPlayers(resolveScenario(cobra, "cobra-r2", players)).map((p) => p.id);
+    expect(r2).not.toContain("josh-allen");
+    for (let slot = 1; slot <= 12; slot++) {
+      const second = resolveScenario(cobra, `cobra-slot-${slot}`, players).slots[1];
+      expect(second.players.every((p) => p.id !== "josh-allen"), `slot ${slot} R2`).toBe(true);
+    }
   });
 });

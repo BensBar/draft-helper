@@ -65,3 +65,10 @@ if(!tip){tip=document.createElement('div');tip.id='bensbar-sync-tip';tip.textCon
 
 export const BOOKMARKLET_HOW_TO =
   "Open this companion, open the CBS live draft, click the bookmarklet once. It keeps polling. Paste names if CBS blocks it.";
+
+export function bookmarkletHowTo(league: { id: string; url: string; name: string }): string {
+  if (league.id === "cobra") {
+    return `Cobra night: keep this tab open, open ${league.url} (ck22.football.cbssports.com), click COPY BOOKMARKLET → save as a bookmark → click it once on the CBS draft page. It polls every ~2s. If CBS blocks it, paste taken names (one per line) in HOW-TO / PASTE. Slot is drawn at kickoff — set 1–12 here first. Sync is picks only, not ADP.`;
+  }
+  return `${BOOKMARKLET_HOW_TO} Works on ${league.url}. Bookmarklet polls every 2s. CBS is the source of truth — keepers stay locked from JSON. Sample ADP banner is still not a live CBS feed.`;
+}

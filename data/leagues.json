@@ -17,6 +17,7 @@
       "benSlot": 12,
       "slotIsDrawn": false,
       "robot": true,
+      "defaultAdpSourceId": "gil",
       "scoringLabel": "HALF-PPR · Pass TD 5",
       "scoring": {
         "reception": 0.5,
@@ -109,10 +110,11 @@
       "draftType": "snake",
       "format": "all-play",
       "divisions": 0,
-      "buyIn": null,
+      "buyIn": 165,
       "benSlot": null,
       "slotIsDrawn": true,
       "robot": false,
+      "defaultAdpSourceId": "cbs-public",
       "scoringLabel": "HALF-PPR · ALL-PLAY · TD 6",
       "scoring": {
         "reception": 0.5,
@@ -142,9 +144,10 @@
         ]
       },
       "scoringNotes": [
-        "3WR + FLEX all-play: do not punt weeks.",
-        "Explosive WR/RB for 50-yd TD and 100-yd bonuses.",
-        "Wait on QB. K/DST last two rounds."
+        "NO KEEPERS · 16 rounds · $165 · all-play · live snake Thu 9/10/2026 5:00pm ET.",
+        "HALF-PPR · pass TD 6 · rush/rec TD 6. Smash leftover Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase / Jonathan Taylor / Puka Nacua.",
+        "Slot drawn at kickoff — use the 1–12 picker. Never hardcoded pick 3.",
+        "Never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson. Never Josh Allen in R2. Wait on Josh Allen / QB until ~R7. K/DST last two."
       ],
       "roster": {
         "qb": 1,

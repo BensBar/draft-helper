@@ -78,6 +78,7 @@ export interface League {
   benSlot: number | null;
   slotIsDrawn: boolean;
   robot: boolean;
+  defaultAdpSourceId?: string;
   scoringLabel: string;
   scoring: LeagueScoring;
   scoringNotes: string[];

@@ -1,76 +1,1471 @@
 {
   "leagueId": "cobra",
   "title": "COBRA SCENARIOS",
-  "subtitle": "Slot unknown until 9/10 kickoff · never hardcode pick 3 · Gable first",
+  "subtitle": "Slot unknown until Thu 9/10/2026 5:00pm ET · picker 1–12 · never hardcode pick 3 · CBS Non-PPR 9/4",
   "rootId": "cobra-0",
   "livePicks": [],
   "keeperSkips": [],
-  "pile": ["jahmyr-gibbs", "bijan-robinson", "jamarr-chase", "jonathan-taylor", "puka-nacua"],
+  "pile": [
+    "jahmyr-gibbs",
+    "bijan-robinson",
+    "jamarr-chase",
+    "jonathan-taylor",
+    "puka-nacua",
+    "james-cook",
+    "derrick-henry",
+    "christian-mccaffrey"
+  ],
   "neverAt1213": {
-    "ids": ["josh-jacobs", "josh-allen", "kaleb-johnson"],
+    "ids": [
+      "josh-jacobs",
+      "josh-allen",
+      "kaleb-johnson"
+    ],
     "positions": []
   },
   "nodes": [
     {
       "id": "cobra-0",
       "section": "pre-draft",
-      "trigger": "Cobra slot is drawn at kickoff. Do not assume 3. Study Gable first.",
-      "why": "Slot unknown until 9/10. Wait to draw 1–12. Lloyd not Johnson. Wait QB ~R7. K/DST last.",
+      "trigger": "Cobra slot is drawn at kickoff. Do not assume 3. Tap 1–12 after the CBS draw.",
+      "why": "Unknown until Thu 9/10/2026 5:00pm ET. Rec + whose-turn recompute from the picker. Never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson. Never Josh Allen in R2. Wait on Josh Allen until ~R7. K/DST last two.",
       "picks": [],
+      "notes": [
+        "NO KEEPERS · 16 rounds · $165 · half-PPR · pass TD 6 · all-play.",
+        "R1 smash leftover Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase / Jonathan Taylor / Puka Nacua.",
+        "Preload a ranked robot queue before the 75s clock if CBS autodrafts."
+      ],
       "forks": [
-        { "id": "cobra-slot-3", "label": "IF you draw slot 3" },
-        { "id": "cobra-other-slot", "label": "IF you draw any other slot" },
-        { "id": "cobra-r2", "label": "Round 2 (every slot)" }
+        {
+          "id": "cobra-slot-1",
+          "label": "IF you draw slot 1"
+        },
+        {
+          "id": "cobra-slot-2",
+          "label": "IF you draw slot 2"
+        },
+        {
+          "id": "cobra-slot-3",
+          "label": "IF you draw slot 3"
+        },
+        {
+          "id": "cobra-slot-4",
+          "label": "IF you draw slot 4"
+        },
+        {
+          "id": "cobra-slot-5",
+          "label": "IF you draw slot 5"
+        },
+        {
+          "id": "cobra-slot-6",
+          "label": "IF you draw slot 6"
+        },
+        {
+          "id": "cobra-slot-7",
+          "label": "IF you draw slot 7"
+        },
+        {
+          "id": "cobra-slot-8",
+          "label": "IF you draw slot 8"
+        },
+        {
+          "id": "cobra-slot-9",
+          "label": "IF you draw slot 9"
+        },
+        {
+          "id": "cobra-slot-10",
+          "label": "IF you draw slot 10"
+        },
+        {
+          "id": "cobra-slot-11",
+          "label": "IF you draw slot 11"
+        },
+        {
+          "id": "cobra-slot-12",
+          "label": "IF you draw slot 12"
+        },
+        {
+          "id": "cobra-r2",
+          "label": "Round 2 (every slot — never Josh Allen)"
+        },
+        {
+          "id": "cobra-mid",
+          "label": "R3–R6 mid (wait QB)"
+        },
+        {
+          "id": "cobra-late",
+          "label": "K/DST last two"
+        },
+        {
+          "id": "cobra-cheat",
+          "label": "ONE-SCREEN CHEAT"
+        }
+      ]
+    },
+    {
+      "id": "cobra-slot-1",
+      "section": "r1",
+      "trigger": "Slot 1 — live picks 1, 24, 25, 48… (16 rounds, no keepers).",
+      "why": "Slot 1 — smash Jahmyr Gibbs if he is there, else Bijan Robinson / Ja'Marr Chase. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "picks": [
+        {
+          "overall": 1,
+          "mode": "listed",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase"
+          ],
+          "take": 1,
+          "never": [
+            "josh-jacobs",
+            "josh-allen",
+            "kaleb-johnson"
+          ]
+        },
+        {
+          "overall": 24,
+          "mode": "best-adp",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "jaxon-smith-njigba",
+            "amon-ra-st-brown",
+            "saquon-barkley",
+            "chase-brown",
+            "devon-achane",
+            "ceedee-lamb",
+            "omarion-hampton",
+            "justin-jefferson",
+            "drake-london"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
+          "take": 1,
+          "never": [
+            "josh-allen",
+            "josh-jacobs",
+            "kaleb-johnson"
+          ],
+          "excludePriorPicks": true
+        }
+      ],
+      "notes": [
+        "Live snake for slot 1: 1, 24, 25, 48, 49, 72, 73, 96, 97, 120, 121, 144, 145, 168, 169, 192."
+      ],
+      "forks": [
+        {
+          "id": "cobra-r2",
+          "label": "Round 2 (every slot)"
+        },
+        {
+          "id": "cobra-mid",
+          "label": "Next: mid rounds"
+        },
+        {
+          "id": "cobra-late",
+          "label": "Skip to K/DST last"
+        },
+        {
+          "id": "cobra-cheat",
+          "label": "ONE-SCREEN CHEAT"
+        }
+      ]
+    },
+    {
+      "id": "cobra-slot-2",
+      "section": "r1",
+      "trigger": "Slot 2 — live picks 2, 23, 26, 47… (16 rounds, no keepers).",
+      "why": "Slot 2 — leftover Jahmyr Gibbs / Bijan Robinson, else Ja'Marr Chase. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "picks": [
+        {
+          "overall": 2,
+          "mode": "listed",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase"
+          ],
+          "take": 1,
+          "never": [
+            "josh-jacobs",
+            "josh-allen",
+            "kaleb-johnson"
+          ]
+        },
+        {
+          "overall": 23,
+          "mode": "best-adp",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "jaxon-smith-njigba",
+            "amon-ra-st-brown",
+            "saquon-barkley",
+            "chase-brown",
+            "devon-achane",
+            "ceedee-lamb",
+            "omarion-hampton",
+            "justin-jefferson",
+            "drake-london"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
+          "take": 1,
+          "never": [
+            "josh-allen",
+            "josh-jacobs",
+            "kaleb-johnson"
+          ],
+          "excludePriorPicks": true
+        }
+      ],
+      "notes": [
+        "Live snake for slot 2: 2, 23, 26, 47, 50, 71, 74, 95, 98, 119, 122, 143, 146, 167, 170, 191."
+      ],
+      "forks": [
+        {
+          "id": "cobra-r2",
+          "label": "Round 2 (every slot)"
+        },
+        {
+          "id": "cobra-mid",
+          "label": "Next: mid rounds"
+        },
+        {
+          "id": "cobra-late",
+          "label": "Skip to K/DST last"
+        },
+        {
+          "id": "cobra-cheat",
+          "label": "ONE-SCREEN CHEAT"
+        }
       ]
     },
     {
       "id": "cobra-slot-3",
       "section": "r1",
-      "trigger": "Slot 3 — leftover Gibbs/Bijan/Chase, else Taylor/Nacua.",
-      "why": "Only if CBS draws 3. Smash leftover of Gibbs / Bijan / Chase. Else Taylor or Nacua.",
+      "trigger": "Slot 3 — live picks 3, 22, 27, 46… (16 rounds, no keepers).",
+      "why": "Slot 3 only if CBS draws 3. Smash leftover Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase, else Jonathan Taylor or Puka Nacua. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
       "picks": [
         {
           "overall": 3,
           "mode": "listed",
-          "from": ["jahmyr-gibbs", "bijan-robinson", "jamarr-chase", "jonathan-taylor", "puka-nacua"],
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua"
+          ],
           "take": 1,
-          "never": ["josh-jacobs", "josh-allen", "kaleb-johnson"]
+          "never": [
+            "josh-jacobs",
+            "josh-allen",
+            "kaleb-johnson"
+          ]
+        },
+        {
+          "overall": 22,
+          "mode": "best-adp",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "jaxon-smith-njigba",
+            "amon-ra-st-brown",
+            "saquon-barkley",
+            "chase-brown",
+            "devon-achane",
+            "ceedee-lamb",
+            "omarion-hampton",
+            "justin-jefferson",
+            "drake-london"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
+          "take": 1,
+          "never": [
+            "josh-allen",
+            "josh-jacobs",
+            "kaleb-johnson"
+          ],
+          "excludePriorPicks": true
         }
       ],
-      "forks": [{ "id": "cobra-r2", "label": "Next: Round 2" }]
+      "notes": [
+        "Live snake for slot 3: 3, 22, 27, 46, 51, 70, 75, 94, 99, 118, 123, 142, 147, 166, 171, 190."
+      ],
+      "forks": [
+        {
+          "id": "cobra-r2",
+          "label": "Round 2 (every slot)"
+        },
+        {
+          "id": "cobra-mid",
+          "label": "Next: mid rounds"
+        },
+        {
+          "id": "cobra-late",
+          "label": "Skip to K/DST last"
+        },
+        {
+          "id": "cobra-cheat",
+          "label": "ONE-SCREEN CHEAT"
+        }
+      ]
+    },
+    {
+      "id": "cobra-slot-4",
+      "section": "r1",
+      "trigger": "Slot 4 — live picks 4, 21, 28, 45… (16 rounds, no keepers).",
+      "why": "Slot 4 — leftover Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase / Jonathan Taylor / Puka Nacua. Never Josh Jacobs. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "picks": [
+        {
+          "overall": 4,
+          "mode": "best-adp",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
+          "take": 1,
+          "never": [
+            "josh-jacobs",
+            "josh-allen",
+            "kaleb-johnson"
+          ]
+        },
+        {
+          "overall": 21,
+          "mode": "best-adp",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "jaxon-smith-njigba",
+            "amon-ra-st-brown",
+            "saquon-barkley",
+            "chase-brown",
+            "devon-achane",
+            "ceedee-lamb",
+            "omarion-hampton",
+            "justin-jefferson",
+            "drake-london"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
+          "take": 1,
+          "never": [
+            "josh-allen",
+            "josh-jacobs",
+            "kaleb-johnson"
+          ],
+          "excludePriorPicks": true
+        }
+      ],
+      "notes": [
+        "Live snake for slot 4: 4, 21, 28, 45, 52, 69, 76, 93, 100, 117, 124, 141, 148, 165, 172, 189."
+      ],
+      "forks": [
+        {
+          "id": "cobra-r2",
+          "label": "Round 2 (every slot)"
+        },
+        {
+          "id": "cobra-mid",
+          "label": "Next: mid rounds"
+        },
+        {
+          "id": "cobra-late",
+          "label": "Skip to K/DST last"
+        },
+        {
+          "id": "cobra-cheat",
+          "label": "ONE-SCREEN CHEAT"
+        }
+      ]
+    },
+    {
+      "id": "cobra-slot-5",
+      "section": "r1",
+      "trigger": "Slot 5 — live picks 5, 20, 29, 44… (16 rounds, no keepers).",
+      "why": "Slot 5 — leftover of Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase / Jonathan Taylor / Puka Nacua / James Cook. Never Josh Jacobs. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "picks": [
+        {
+          "overall": 5,
+          "mode": "best-adp",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
+          "take": 1,
+          "never": [
+            "josh-jacobs",
+            "josh-allen",
+            "kaleb-johnson"
+          ]
+        },
+        {
+          "overall": 20,
+          "mode": "best-adp",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "jaxon-smith-njigba",
+            "amon-ra-st-brown",
+            "saquon-barkley",
+            "chase-brown",
+            "devon-achane",
+            "ceedee-lamb",
+            "omarion-hampton",
+            "justin-jefferson",
+            "drake-london"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
+          "take": 1,
+          "never": [
+            "josh-allen",
+            "josh-jacobs",
+            "kaleb-johnson"
+          ],
+          "excludePriorPicks": true
+        }
+      ],
+      "notes": [
+        "Live snake for slot 5: 5, 20, 29, 44, 53, 68, 77, 92, 101, 116, 125, 140, 149, 164, 173, 188."
+      ],
+      "forks": [
+        {
+          "id": "cobra-r2",
+          "label": "Round 2 (every slot)"
+        },
+        {
+          "id": "cobra-mid",
+          "label": "Next: mid rounds"
+        },
+        {
+          "id": "cobra-late",
+          "label": "Skip to K/DST last"
+        },
+        {
+          "id": "cobra-cheat",
+          "label": "ONE-SCREEN CHEAT"
+        }
+      ]
+    },
+    {
+      "id": "cobra-slot-6",
+      "section": "r1",
+      "trigger": "Slot 6 — live picks 6, 19, 30, 43… (16 rounds, no keepers).",
+      "why": "Slot 6 — leftover Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase / Jonathan Taylor / Puka Nacua / James Cook / Derrick Henry. Never Josh Jacobs. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "picks": [
+        {
+          "overall": 6,
+          "mode": "best-adp",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
+          "take": 1,
+          "never": [
+            "josh-jacobs",
+            "josh-allen",
+            "kaleb-johnson"
+          ]
+        },
+        {
+          "overall": 19,
+          "mode": "best-adp",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "jaxon-smith-njigba",
+            "amon-ra-st-brown",
+            "saquon-barkley",
+            "chase-brown",
+            "devon-achane",
+            "ceedee-lamb",
+            "omarion-hampton",
+            "justin-jefferson",
+            "drake-london"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
+          "take": 1,
+          "never": [
+            "josh-allen",
+            "josh-jacobs",
+            "kaleb-johnson"
+          ],
+          "excludePriorPicks": true
+        }
+      ],
+      "notes": [
+        "Live snake for slot 6: 6, 19, 30, 43, 54, 67, 78, 91, 102, 115, 126, 139, 150, 163, 174, 187."
+      ],
+      "forks": [
+        {
+          "id": "cobra-r2",
+          "label": "Round 2 (every slot)"
+        },
+        {
+          "id": "cobra-mid",
+          "label": "Next: mid rounds"
+        },
+        {
+          "id": "cobra-late",
+          "label": "Skip to K/DST last"
+        },
+        {
+          "id": "cobra-cheat",
+          "label": "ONE-SCREEN CHEAT"
+        }
+      ]
+    },
+    {
+      "id": "cobra-slot-7",
+      "section": "r1",
+      "trigger": "Slot 7 — live picks 7, 18, 31, 42… (16 rounds, no keepers).",
+      "why": "Slot 7 — leftover Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey / Ja'Marr Chase. Never Josh Jacobs. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "picks": [
+        {
+          "overall": 7,
+          "mode": "best-adp",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "jaxon-smith-njigba",
+            "amon-ra-st-brown",
+            "saquon-barkley",
+            "chase-brown",
+            "omarion-hampton"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
+          "take": 1,
+          "never": [
+            "josh-jacobs",
+            "josh-allen",
+            "kaleb-johnson"
+          ]
+        },
+        {
+          "overall": 18,
+          "mode": "best-adp",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "jaxon-smith-njigba",
+            "amon-ra-st-brown",
+            "saquon-barkley",
+            "chase-brown",
+            "devon-achane",
+            "ceedee-lamb",
+            "omarion-hampton",
+            "justin-jefferson",
+            "drake-london"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
+          "take": 1,
+          "never": [
+            "josh-allen",
+            "josh-jacobs",
+            "kaleb-johnson"
+          ],
+          "excludePriorPicks": true
+        }
+      ],
+      "notes": [
+        "Live snake for slot 7: 7, 18, 31, 42, 55, 66, 79, 90, 103, 114, 127, 138, 151, 162, 175, 186."
+      ],
+      "forks": [
+        {
+          "id": "cobra-r2",
+          "label": "Round 2 (every slot)"
+        },
+        {
+          "id": "cobra-mid",
+          "label": "Next: mid rounds"
+        },
+        {
+          "id": "cobra-late",
+          "label": "Skip to K/DST last"
+        },
+        {
+          "id": "cobra-cheat",
+          "label": "ONE-SCREEN CHEAT"
+        }
+      ]
+    },
+    {
+      "id": "cobra-slot-8",
+      "section": "r1",
+      "trigger": "Slot 8 — live picks 8, 17, 32, 41… (16 rounds, no keepers).",
+      "why": "Slot 8 — leftover James Cook / Derrick Henry / Christian McCaffrey / Puka Nacua / Jaxon Smith-Njigba. Never Josh Jacobs. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "picks": [
+        {
+          "overall": 8,
+          "mode": "best-adp",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "jaxon-smith-njigba",
+            "amon-ra-st-brown",
+            "saquon-barkley",
+            "chase-brown",
+            "omarion-hampton"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
+          "take": 1,
+          "never": [
+            "josh-jacobs",
+            "josh-allen",
+            "kaleb-johnson"
+          ]
+        },
+        {
+          "overall": 17,
+          "mode": "best-adp",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "jaxon-smith-njigba",
+            "amon-ra-st-brown",
+            "saquon-barkley",
+            "chase-brown",
+            "devon-achane",
+            "ceedee-lamb",
+            "omarion-hampton",
+            "justin-jefferson",
+            "drake-london"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
+          "take": 1,
+          "never": [
+            "josh-allen",
+            "josh-jacobs",
+            "kaleb-johnson"
+          ],
+          "excludePriorPicks": true
+        }
+      ],
+      "notes": [
+        "Live snake for slot 8: 8, 17, 32, 41, 56, 65, 80, 89, 104, 113, 128, 137, 152, 161, 176, 185."
+      ],
+      "forks": [
+        {
+          "id": "cobra-r2",
+          "label": "Round 2 (every slot)"
+        },
+        {
+          "id": "cobra-mid",
+          "label": "Next: mid rounds"
+        },
+        {
+          "id": "cobra-late",
+          "label": "Skip to K/DST last"
+        },
+        {
+          "id": "cobra-cheat",
+          "label": "ONE-SCREEN CHEAT"
+        }
+      ]
+    },
+    {
+      "id": "cobra-slot-9",
+      "section": "r1",
+      "trigger": "Slot 9 — live picks 9, 16, 33, 40… (16 rounds, no keepers).",
+      "why": "Slot 9 — leftover Christian McCaffrey / Jaxon Smith-Njigba / Amon-Ra St. Brown / Saquon Barkley. Never Josh Jacobs. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "picks": [
+        {
+          "overall": 9,
+          "mode": "best-adp",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "jaxon-smith-njigba",
+            "amon-ra-st-brown",
+            "saquon-barkley",
+            "chase-brown",
+            "omarion-hampton"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
+          "take": 1,
+          "never": [
+            "josh-jacobs",
+            "josh-allen",
+            "kaleb-johnson"
+          ]
+        },
+        {
+          "overall": 16,
+          "mode": "best-adp",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "jaxon-smith-njigba",
+            "amon-ra-st-brown",
+            "saquon-barkley",
+            "chase-brown",
+            "devon-achane",
+            "ceedee-lamb",
+            "omarion-hampton",
+            "justin-jefferson",
+            "drake-london"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
+          "take": 1,
+          "never": [
+            "josh-allen",
+            "josh-jacobs",
+            "kaleb-johnson"
+          ],
+          "excludePriorPicks": true
+        }
+      ],
+      "notes": [
+        "Live snake for slot 9: 9, 16, 33, 40, 57, 64, 81, 88, 105, 112, 129, 136, 153, 160, 177, 184."
+      ],
+      "forks": [
+        {
+          "id": "cobra-r2",
+          "label": "Round 2 (every slot)"
+        },
+        {
+          "id": "cobra-mid",
+          "label": "Next: mid rounds"
+        },
+        {
+          "id": "cobra-late",
+          "label": "Skip to K/DST last"
+        },
+        {
+          "id": "cobra-cheat",
+          "label": "ONE-SCREEN CHEAT"
+        }
+      ]
+    },
+    {
+      "id": "cobra-slot-10",
+      "section": "r1",
+      "trigger": "Slot 10 — live picks 10, 15, 34, 39… (16 rounds, no keepers).",
+      "why": "Slot 10 — leftover Amon-Ra St. Brown / Saquon Barkley / Chase Brown / Jaxon Smith-Njigba. Never Josh Jacobs. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "picks": [
+        {
+          "overall": 10,
+          "mode": "best-adp",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "jaxon-smith-njigba",
+            "amon-ra-st-brown",
+            "saquon-barkley",
+            "chase-brown",
+            "omarion-hampton"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
+          "take": 1,
+          "never": [
+            "josh-jacobs",
+            "josh-allen",
+            "kaleb-johnson"
+          ]
+        },
+        {
+          "overall": 15,
+          "mode": "best-adp",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "jaxon-smith-njigba",
+            "amon-ra-st-brown",
+            "saquon-barkley",
+            "chase-brown",
+            "devon-achane",
+            "ceedee-lamb",
+            "omarion-hampton",
+            "justin-jefferson",
+            "drake-london"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
+          "take": 1,
+          "never": [
+            "josh-allen",
+            "josh-jacobs",
+            "kaleb-johnson"
+          ],
+          "excludePriorPicks": true
+        }
+      ],
+      "notes": [
+        "Live snake for slot 10: 10, 15, 34, 39, 58, 63, 82, 87, 106, 111, 130, 135, 154, 159, 178, 183."
+      ],
+      "forks": [
+        {
+          "id": "cobra-r2",
+          "label": "Round 2 (every slot)"
+        },
+        {
+          "id": "cobra-mid",
+          "label": "Next: mid rounds"
+        },
+        {
+          "id": "cobra-late",
+          "label": "Skip to K/DST last"
+        },
+        {
+          "id": "cobra-cheat",
+          "label": "ONE-SCREEN CHEAT"
+        }
+      ]
+    },
+    {
+      "id": "cobra-slot-11",
+      "section": "r1",
+      "trigger": "Slot 11 — live picks 11, 14, 35, 38… (16 rounds, no keepers).",
+      "why": "Slot 11 — leftover Saquon Barkley / Chase Brown / Omarion Hampton / Amon-Ra St. Brown. Never Josh Jacobs. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "picks": [
+        {
+          "overall": 11,
+          "mode": "best-adp",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "jaxon-smith-njigba",
+            "amon-ra-st-brown",
+            "saquon-barkley",
+            "chase-brown",
+            "omarion-hampton"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
+          "take": 1,
+          "never": [
+            "josh-jacobs",
+            "josh-allen",
+            "kaleb-johnson"
+          ]
+        },
+        {
+          "overall": 14,
+          "mode": "best-adp",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "jaxon-smith-njigba",
+            "amon-ra-st-brown",
+            "saquon-barkley",
+            "chase-brown",
+            "devon-achane",
+            "ceedee-lamb",
+            "omarion-hampton",
+            "justin-jefferson",
+            "drake-london"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
+          "take": 1,
+          "never": [
+            "josh-allen",
+            "josh-jacobs",
+            "kaleb-johnson"
+          ],
+          "excludePriorPicks": true
+        }
+      ],
+      "notes": [
+        "Live snake for slot 11: 11, 14, 35, 38, 59, 62, 83, 86, 107, 110, 131, 134, 155, 158, 179, 182."
+      ],
+      "forks": [
+        {
+          "id": "cobra-r2",
+          "label": "Round 2 (every slot)"
+        },
+        {
+          "id": "cobra-mid",
+          "label": "Next: mid rounds"
+        },
+        {
+          "id": "cobra-late",
+          "label": "Skip to K/DST last"
+        },
+        {
+          "id": "cobra-cheat",
+          "label": "ONE-SCREEN CHEAT"
+        }
+      ]
+    },
+    {
+      "id": "cobra-slot-12",
+      "section": "r1",
+      "trigger": "Slot 12 — live picks 12, 13, 36, 37… (16 rounds, no keepers).",
+      "why": "Slot 12 — turn double-up. Leftover Saquon Barkley / Chase Brown / Omarion Hampton / Christian McCaffrey. Never Josh Jacobs. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "picks": [
+        {
+          "overall": 12,
+          "mode": "best-adp",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "jaxon-smith-njigba",
+            "amon-ra-st-brown",
+            "saquon-barkley",
+            "chase-brown",
+            "omarion-hampton"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
+          "take": 1,
+          "never": [
+            "josh-jacobs",
+            "josh-allen",
+            "kaleb-johnson"
+          ]
+        },
+        {
+          "overall": 13,
+          "mode": "best-adp",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "jaxon-smith-njigba",
+            "amon-ra-st-brown",
+            "saquon-barkley",
+            "chase-brown",
+            "devon-achane",
+            "ceedee-lamb",
+            "omarion-hampton",
+            "justin-jefferson",
+            "drake-london"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
+          "take": 1,
+          "never": [
+            "josh-allen",
+            "josh-jacobs",
+            "kaleb-johnson"
+          ],
+          "excludePriorPicks": true
+        }
+      ],
+      "notes": [
+        "Live snake for slot 12: 12, 13, 36, 37, 60, 61, 84, 85, 108, 109, 132, 133, 156, 157, 180, 181."
+      ],
+      "forks": [
+        {
+          "id": "cobra-r2",
+          "label": "Round 2 (every slot)"
+        },
+        {
+          "id": "cobra-mid",
+          "label": "Next: mid rounds"
+        },
+        {
+          "id": "cobra-late",
+          "label": "Skip to K/DST last"
+        },
+        {
+          "id": "cobra-cheat",
+          "label": "ONE-SCREEN CHEAT"
+        }
+      ]
     },
     {
       "id": "cobra-other-slot",
       "section": "r1",
-      "trigger": "Any slot except 3 — smash leftover elite RB/WR. Wait on QB.",
-      "why": "Do not run the slot-3 script. Best remaining Gibbs/Bijan/Chase/Taylor/Nacua or next skill. Never Jacobs.",
+      "trigger": "Any slot except 3 — smash leftover Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase / Jonathan Taylor / Puka Nacua. Wait on Josh Allen.",
+      "why": "Do not run the slot-3 script unless CBS draws 3. Best remaining named pile or next skill. Never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
       "picks": [
         {
           "overall": 1,
+          "label": "R1 · any slot except 3",
           "mode": "best-adp",
-          "from": ["jahmyr-gibbs", "bijan-robinson", "jamarr-chase", "jonathan-taylor", "puka-nacua"],
-          "thenPositions": ["RB", "WR"],
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
           "take": 1,
-          "never": ["josh-jacobs", "josh-allen", "kaleb-johnson"]
+          "never": [
+            "josh-jacobs",
+            "josh-allen",
+            "kaleb-johnson"
+          ]
         }
       ],
-      "forks": [{ "id": "cobra-r2", "label": "Next: Round 2" }]
+      "forks": [
+        {
+          "id": "cobra-r2",
+          "label": "Next: Round 2"
+        }
+      ]
     },
     {
       "id": "cobra-r2",
       "section": "r2",
-      "trigger": "Round 2 — best remaining RB/WR.",
-      "why": "Never Allen. Never Jacobs. Lloyd not Johnson. Wait QB ~R7. K/DST last.",
+      "trigger": "Round 2 — every slot. Best remaining RB/WR. Never Josh Allen.",
+      "why": "Do not take Josh Allen in R2 from any slot. Never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson. Smash leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey / Jaxon Smith-Njigba / Amon-Ra St. Brown.",
       "picks": [
         {
-          "overall": 22,
+          "overall": 0,
+          "label": "R2 · overall = snake of your draw (not pick 3)",
           "mode": "best-adp",
-          "thenPositions": ["RB", "WR"],
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua",
+            "james-cook",
+            "derrick-henry",
+            "christian-mccaffrey",
+            "jaxon-smith-njigba",
+            "amon-ra-st-brown",
+            "saquon-barkley",
+            "chase-brown",
+            "devon-achane",
+            "ceedee-lamb",
+            "omarion-hampton",
+            "justin-jefferson",
+            "drake-london"
+          ],
+          "thenPositions": [
+            "RB",
+            "WR"
+          ],
           "take": 1,
-          "never": ["josh-allen", "josh-jacobs", "kaleb-johnson"]
+          "never": [
+            "josh-allen",
+            "josh-jacobs",
+            "kaleb-johnson"
+          ]
         }
       ],
-      "forks": [{ "id": "cobra-0", "label": "Back to Cobra opening" }]
+      "forks": [
+        {
+          "id": "cobra-mid",
+          "label": "Next: mid rounds"
+        },
+        {
+          "id": "cobra-0",
+          "label": "Back to Cobra opening"
+        }
+      ]
+    },
+    {
+      "id": "cobra-mid",
+      "section": "mid",
+      "trigger": "R3–R6 — all-play. Best remaining named skill. Wait on Josh Allen until ~R7.",
+      "why": "3WR + FLEX. Smash leftover Amon-Ra St. Brown / CeeDee Lamb / Justin Jefferson / Drake London / Jadarian Price / Bhayshul Tuten. Never Josh Jacobs. Never Josh Allen here. GB stash later is MarShawn Lloyd, not Kaleb Johnson.",
+      "picks": [
+        {
+          "overall": 0,
+          "label": "R3–R6 · overall depends on slot",
+          "mode": "best-adp",
+          "from": [
+            "amon-ra-st-brown",
+            "ceedee-lamb",
+            "justin-jefferson",
+            "drake-london",
+            "aj-brown",
+            "rashee-rice",
+            "nico-collins",
+            "jadarian-price",
+            "bhayshul-tuten"
+          ],
+          "thenPositions": [
+            "WR",
+            "RB"
+          ],
+          "take": 3,
+          "never": [
+            "josh-jacobs",
+            "josh-allen",
+            "kaleb-johnson"
+          ],
+          "neverPositions": [
+            "QB",
+            "TE",
+            "K",
+            "DST"
+          ]
+        }
+      ],
+      "forks": [
+        {
+          "id": "cobra-late-mid",
+          "label": "R7–R14 (QB window / Lloyd)"
+        },
+        {
+          "id": "cobra-late",
+          "label": "K/DST last two"
+        }
+      ]
+    },
+    {
+      "id": "cobra-late-mid",
+      "section": "late-mid",
+      "trigger": "R7–R14 — first QB window. MarShawn Lloyd if GB is open. Not Kaleb Johnson.",
+      "why": "If you still have no QB, take a starter (Josh Allen is allowed now). Else Carnell Tate / J.K. Dobbins / MarShawn Lloyd / Rashid Shaheed. Never Josh Jacobs. Never Kaleb Johnson. Never K/DST until the last two.",
+      "picks": [
+        {
+          "overall": 0,
+          "label": "R7–R14 · overall depends on slot",
+          "mode": "listed-then-adp",
+          "from": [
+            "jadarian-price",
+            "bhayshul-tuten",
+            "jk-dobbins",
+            "carnell-tate",
+            "marshawn-lloyd",
+            "rashid-shaheed"
+          ],
+          "thenPositions": [
+            "QB",
+            "WR",
+            "RB"
+          ],
+          "take": 3,
+          "never": [
+            "josh-jacobs",
+            "kaleb-johnson"
+          ],
+          "neverPositions": [
+            "K",
+            "DST"
+          ]
+        }
+      ],
+      "forks": [
+        {
+          "id": "cobra-late",
+          "label": "Next: K/DST last two"
+        }
+      ]
+    },
+    {
+      "id": "cobra-late",
+      "section": "late",
+      "trigger": "Last two rounds — K and DST only.",
+      "why": "Do not spend an earlier pick on a kicker or DST. Never Josh Jacobs. Never Kaleb Johnson.",
+      "picks": [
+        {
+          "overall": 0,
+          "label": "R15–R16 · last two",
+          "mode": "best-adp",
+          "thenPositions": [
+            "K",
+            "DST"
+          ],
+          "take": 2,
+          "never": [
+            "josh-jacobs",
+            "kaleb-johnson"
+          ],
+          "neverPositions": [
+            "QB",
+            "RB",
+            "WR",
+            "TE"
+          ]
+        }
+      ],
+      "forks": [
+        {
+          "id": "cobra-cheat",
+          "label": "ONE-SCREEN CHEAT"
+        },
+        {
+          "id": "cobra-0",
+          "label": "Back to Cobra opening"
+        }
+      ]
+    },
+    {
+      "id": "cobra-cheat",
+      "section": "cheat",
+      "trigger": "ONE-SCREEN CHEAT — Cobra, slot unknown until kickoff.",
+      "why": "Draw 1–12. R1 leftover Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase / Jonathan Taylor / Puka Nacua. R2 leftover RB/WR — never Josh Allen, never Josh Jacobs. Mid: Amon-Ra St. Brown / CeeDee Lamb / Justin Jefferson / Drake London / Price / Tuten. R7+ Josh Allen ok; MarShawn Lloyd not Kaleb Johnson. Last two K/DST.",
+      "picks": [
+        {
+          "overall": 0,
+          "label": "R1 pile (any slot)",
+          "mode": "listed",
+          "from": [
+            "jahmyr-gibbs",
+            "bijan-robinson",
+            "jamarr-chase",
+            "jonathan-taylor",
+            "puka-nacua"
+          ],
+          "take": 5,
+          "never": [
+            "josh-jacobs",
+            "josh-allen",
+            "kaleb-johnson"
+          ]
+        }
+      ],
+      "forks": [
+        {
+          "id": "cobra-slot-1",
+          "label": "IF you draw slot 1"
+        },
+        {
+          "id": "cobra-slot-2",
+          "label": "IF you draw slot 2"
+        },
+        {
+          "id": "cobra-slot-3",
+          "label": "IF you draw slot 3"
+        },
+        {
+          "id": "cobra-slot-4",
+          "label": "IF you draw slot 4"
+        },
+        {
+          "id": "cobra-slot-5",
+          "label": "IF you draw slot 5"
+        },
+        {
+          "id": "cobra-slot-6",
+          "label": "IF you draw slot 6"
+        },
+        {
+          "id": "cobra-slot-7",
+          "label": "IF you draw slot 7"
+        },
+        {
+          "id": "cobra-slot-8",
+          "label": "IF you draw slot 8"
+        },
+        {
+          "id": "cobra-slot-9",
+          "label": "IF you draw slot 9"
+        },
+        {
+          "id": "cobra-slot-10",
+          "label": "IF you draw slot 10"
+        },
+        {
+          "id": "cobra-slot-11",
+          "label": "IF you draw slot 11"
+        },
+        {
+          "id": "cobra-slot-12",
+          "label": "IF you draw slot 12"
+        },
+        {
+          "id": "cobra-r2",
+          "label": "R2"
+        },
+        {
+          "id": "cobra-mid",
+          "label": "Mid"
+        },
+        {
+          "id": "cobra-late-mid",
+          "label": "Lloyd / QB"
+        },
+        {
+          "id": "cobra-late",
+          "label": "K/DST"
+        },
+        {
+          "id": "cobra-0",
+          "label": "Opening"
+        }
+      ]
     }
   ]
 }

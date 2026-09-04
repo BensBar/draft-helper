@@ -6,6 +6,7 @@ import recRulesFile from "../../data/rec-rules.json";
 import adpSourcesFile from "../../data/adp-sources.json";
 import adpGil from "../../data/adp-gil.json";
 import adpCbsPublic from "../../data/adp-cbs-public.json";
+import adpCbsPpr from "../../data/adp-cbs-ppr.json";
 import adpFantasypros from "../../data/adp-fantasypros.json";
 import adpEspn from "../../data/adp-espn.json";
 import adpSleeper from "../../data/adp-sleeper.json";
@@ -26,6 +27,7 @@ export const adpSources = adpSourcesFile as AdpSourcesFile;
 export const adpBoards: Record<string, AdpBoard> = {
   gil: adpGil as AdpBoard,
   "cbs-public": adpCbsPublic as AdpBoard,
+  "cbs-ppr": adpCbsPpr as AdpBoard,
   fantasypros: adpFantasypros as AdpBoard,
   espn: adpEspn as AdpBoard,
   sleeper: adpSleeper as AdpBoard,

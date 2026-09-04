@@ -1,12 +1,12 @@
 {
-  "adpBanner": "CBS public ADP Aug 31 2026 — Gil's board (not a live draft feed)",
-  "adpFetched": "2026-08-31",
-  "adpScoring": "PPR",
-  "newsDate": "2026-08-31",
-  "updated": "2026-08-31",
-  "newsBanner": "Gil 8/31 — Jacobs EXEMPT 8/30: OUT to open season, not a final suspension. Never draft him. GB stash = MarShawn Lloyd (+ Chris Brooks). Kaleb Johnson is not a 12-team pick. Jeanty ankle / Wk1 Q — still on the 12/13 pile. CBS live 8/31 Cook/Henry/CMC going 7–8 so 12/13 smash is Saquon + Chase Brown (ARSB is the WR sitting on the turn). Price/Tuten are R5. Lloyd is R9. Jacobs 38 CEL still fade.",
-  "defaultLeagueId": "gable",
+  "adpBanner": "CBS Non-PPR ADP Sep 4 2026 — Cobra default (closest CBS; no public half-PPR). Gil 8/31 stays on Gable.",
+  "adpFetched": "2026-09-04",
+  "adpScoring": "Non-PPR (Cobra default) · Gil 8/31 PPR-labeled board for Gable",
+  "newsDate": "2026-09-04",
+  "updated": "2026-09-04",
+  "newsBanner": "COBRA Thu 9/10/2026 5:00pm ET — slot drawn at kickoff (picker 1–12, never pick 3). CBS Non-PPR ADP Sep 4. Never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson. Never Josh Allen in R2. Gable is historical (keepers + Gil 8/31).",
+  "defaultLeagueId": "cobra",
   "gableDefaultUntil": "2026-09-03",
   "author": "Gil",
-  "disclaimer": "CBS public draft averages, fetched Aug 31 2026. Not a live CBS draft-room feed. Companion sits next to the CBS draft room — it does not replace it."
+  "disclaimer": "Cobra default ADP is CBS public Non-PPR averages, fetched Sep 4 2026 (https://www.cbssports.com/fantasy/football/draft/averages/). CBS has no public half-PPR board. Not a live CBS draft-room feed. Companion sits next to the CBS draft room — it does not replace it."
 }

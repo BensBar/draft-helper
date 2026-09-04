@@ -23,7 +23,7 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "LIVE DRAFT COMPANION — Ben Stoll",
   description:
-    "CBS draft-room companion for Stan Gable's All Americans and Cobra Craig. Sample ADP, not live CBS.",
+    "CBS draft-room companion for Cobra Craig (Thu 9/10/2026) and Gable historical. Sample ADP, not live CBS.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

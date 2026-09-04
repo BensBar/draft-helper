@@ -255,6 +255,47 @@ describe("Cobra rec engine — slot is drawn, never assumed 3", () => {
     }
   });
 
+  it("names leftover players in why for every slot 1–12", () => {
+    for (const slot of [1, 2, 4, 6, 8, 12] as const) {
+      const rec = recommendCobra({
+        rules: rules.cobra,
+        players,
+        takenIds: new Set(),
+        overallPick: slot,
+        teams: 12,
+        rounds: 16,
+        benSlot: slot,
+      });
+      expect(rec.player).not.toBeNull();
+      expect(rec.why).toMatch(/Jahmyr Gibbs|Bijan Robinson|Ja'Marr Chase|Jonathan Taylor|Puka Nacua/);
+      expect(rec.why).not.toMatch(/\ba WR\b/);
+      expect(rec.why).not.toMatch(/\ban RB\b/);
+      expect(rec.queue.every((p) => p.id !== "josh-jacobs")).toBe(true);
+      expect(rec.queue.every((p) => p.id !== "kaleb-johnson")).toBe(true);
+      expect(rec.windowId).toBe("cobra-r1");
+    }
+  });
+
+  it("never recommends Josh Allen in R2 for any slot", () => {
+    for (const slot of [1, 5, 8, 12] as const) {
+      const r2 = slot === 12 ? 13 : 25 - slot;
+      const rec = recommendCobra({
+        rules: rules.cobra,
+        players,
+        takenIds: new Set(),
+        overallPick: r2,
+        teams: 12,
+        rounds: 16,
+        benSlot: slot,
+      });
+      expect(rec.windowId).toBe("cobra-r2");
+      expect(rec.player!.id).not.toBe("josh-allen");
+      expect(rec.queue.every((p) => p.id !== "josh-allen")).toBe(true);
+      expect(rec.why).toMatch(/Josh Allen/);
+      expect(rec.why).toMatch(/MarShawn Lloyd/);
+    }
+  });
+
   it("recommendNext uses the drawn slot, not a hardcoded 3", () => {
     const slot12Pick = recommendNext({
       league: cobra,

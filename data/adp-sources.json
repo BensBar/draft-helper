@@ -1,27 +1,41 @@
 {
   "defaultSourceId": "gil",
-  "fetched": "2026-08-31",
-  "scoring": "PPR",
-  "notes": "Default is Gil's CBS 8/31 board (data/players.json). Other files are extras. Consensus averages unique publishers only.",
+  "leagueDefaults": {
+    "gable": "gil",
+    "cobra": "cbs-public"
+  },
+  "fetched": "2026-09-04",
+  "scoring": "mixed",
+  "notes": "Cobra default is CBS public Non-PPR (data/adp-cbs-public.json, Sep 4 2026) — closest CBS board; CBS has no public half-PPR / pass-TD-6 ADP. Gable default remains Gil's 8/31 board (data/players.json). Consensus averages unique publishers only (Gil + ESPN + Yahoo).",
   "sources": [
     {
       "id": "gil",
       "label": "Gil / CBS 8/31",
-      "banner": "CBS public ADP Aug 31 2026 — Gil's board (not a live draft feed)",
+      "banner": "Gil / CBS 8/31 — Gable historical board (must-write ADP, not a live draft feed)",
       "fetched": "2026-08-31",
-      "scoring": "PPR",
+      "scoring": "CBS public + Gil",
       "status": "ok",
       "file": "adp-gil.json",
       "blend": true
     },
     {
       "id": "cbs-public",
-      "label": "CBS public",
-      "banner": "CBS public draft averages Aug 31 2026 — not a live draft feed",
-      "fetched": "2026-08-31",
-      "scoring": "PPR",
+      "label": "CBS Non-PPR 9/4",
+      "banner": "CBS Non-PPR ADP Sep 4 2026 — Cobra default. Closest CBS (no public half-PPR). Not a live draft feed.",
+      "fetched": "2026-09-04",
+      "scoring": "Non-PPR",
       "status": "ok",
       "file": "adp-cbs-public.json",
+      "blend": false
+    },
+    {
+      "id": "cbs-ppr",
+      "label": "CBS PPR 9/4",
+      "banner": "CBS PPR ADP Sep 4 2026 — extra toggle. Cobra scoring is half-PPR / pass TD 6.",
+      "fetched": "2026-09-04",
+      "scoring": "PPR",
+      "status": "ok",
+      "file": "adp-cbs-ppr.json",
       "blend": false
     },
     {
@@ -60,9 +74,9 @@
     {
       "id": "yahoo",
       "label": "Yahoo",
-      "banner": "Yahoo public draft analysis ADP Aug 31 2026",
+      "banner": "Yahoo public draft analysis ADP Aug 31 2026 — usually half-PPR shaped, not CBS",
       "fetched": "2026-08-31",
-      "scoring": "Yahoo",
+      "scoring": "Yahoo (half-PPR typical)",
       "status": "ok",
       "skipReason": null,
       "file": "adp-yahoo.json",

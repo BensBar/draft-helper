@@ -6,11 +6,13 @@ export function GiantRec({
   why,
   onClock,
   pickLabel,
+  waitLabel = "WAIT",
 }: {
   player: Player | null;
   why: string;
   onClock: boolean;
   pickLabel: string;
+  waitLabel?: string;
 }) {
   return (
     <section
@@ -69,8 +71,11 @@ export function GiantRec({
           ) : null}
         </>
       ) : (
-        <h1 className="font-[family-name:var(--font-display)] text-6xl leading-none text-[#8b8b9a]">
-          WAIT
+        <h1
+          data-testid="rec-wait"
+          className="font-[family-name:var(--font-display)] text-6xl leading-none text-[#8b8b9a]"
+        >
+          {waitLabel}
         </h1>
       )}
       <p data-testid="rec-why" className="mt-4 text-lg leading-snug text-[#d8d4c8] max-w-3xl">

@@ -4,6 +4,7 @@ export type ScenarioPickMode = "listed" | "best-adp" | "listed-then-adp" | "pref
 
 export interface ScenarioPickRule {
   overall: number;
+  label?: string;
   mode: ScenarioPickMode;
   from?: string[];
   prefer?: string[];
@@ -52,6 +53,7 @@ export interface ScenarioTree {
 
 export interface ResolvedSlot {
   overall: number;
+  label?: string;
   players: Player[];
 }
 
@@ -155,7 +157,7 @@ export function resolveScenario(tree: ScenarioTree, nodeId: string, players: Pla
     }
     const chosen = takeFrom(rule, players, rule.excludePriorPicks ? taken : new Set());
     for (const p of chosen) taken.add(p.id);
-    slots.push({ overall: rule.overall, players: chosen });
+    slots.push({ overall: rule.overall, label: rule.label, players: chosen });
   }
   return { node, slots };
 }

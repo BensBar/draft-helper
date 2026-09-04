@@ -1,15 +1,32 @@
 "use client";
 
 import { useState } from "react";
-import { BOOKMARKLET_HOW_TO, buildBookmarkletHref } from "@/lib/cbs-bookmarklet";
+import { bookmarkletHowTo, buildBookmarkletHref } from "@/lib/cbs-bookmarklet";
 import type { CbsSyncUi } from "@/hooks/useCbsSync";
+import type { League } from "@/lib/types";
+
+function statusLine(status: CbsSyncUi, league: League): string {
+  const last = status.lastName ? `last ${status.lastName}` : "no pick yet";
+  const unmatched = status.unmatched.length;
+  const host = league.id === "cobra" ? "ck22.football.cbssports.com" : "gable.football.cbssports.com";
+  if (status.state === "idle") {
+    return `idle · waiting — open HOW-TO, click the bookmarklet on ${host}`;
+  }
+  if (status.state === "listening") {
+    return `listening · bookmarklet not seen yet · paste names if CBS blocks it · ${host}`;
+  }
+  const via = status.source === "paste" ? "paste" : status.source === "extension" ? "extension" : "bookmarklet";
+  return `synced via ${via} · ${last} · ${status.liveCount} live · ${unmatched} unmatched`;
+}
 
 export function CbsSyncBar({
   status,
   onPaste,
+  league,
 }: {
   status: CbsSyncUi;
   onPaste: (text: string) => void;
+  league: League;
 }) {
   const [open, setOpen] = useState(false);
   const [paste, setPaste] = useState("");
@@ -26,8 +43,8 @@ export function CbsSyncBar({
     }
   };
 
-  const last = status.lastName ? `last ${status.lastName}` : "no pick yet";
   const unmatched = status.unmatched.length;
+  const cobra = league.id === "cobra";
 
   return (
     <section
@@ -39,13 +56,7 @@ export function CbsSyncBar({
           CBS SYNC
         </span>
         <span data-testid="cbs-sync-status" className="text-[#d8d4c8]">
-          {status.state === "idle" ? "idle" : status.state === "listening" ? "listening" : "connected"}
-          {" · "}
-          {last}
-          {" · "}
-          {status.liveCount} live
-          {" · "}
-          {unmatched} unmatched
+          {statusLine(status, league)}
         </span>
         <button
           type="button"
@@ -69,17 +80,26 @@ export function CbsSyncBar({
       </div>
       {open ? (
         <div className="mt-2 grid gap-2 md:grid-cols-[1fr_1fr] text-[12px] text-[#a8a4b0]">
-          <p>
-            {BOOKMARKLET_HOW_TO} Works on <code>*.football.cbssports.com</code> draft rooms (Gable +
-            Cobra). Bookmarklet polls every 2s. CBS is the source of truth — keepers stay locked from
-            JSON. Sample ADP banner is still not a live CBS feed.
-          </p>
+          <div className="space-y-1">
+            <p>{bookmarkletHowTo(league)}</p>
+            {cobra ? (
+              <p className="text-[#ffb703]">
+                Paste fallback: one full name per line (Jahmyr Gibbs, not “a WR”). CBS is source of
+                truth. No scrape/CORS backend — bookmarklet only.
+              </p>
+            ) : (
+              <p>
+                Works on <code>*.football.cbssports.com</code>. Bookmarklet polls every 2s. Keepers
+                stay locked from JSON. ADP banner is not a live CBS feed.
+              </p>
+            )}
+          </div>
           <div>
             <textarea
               data-testid="cbs-paste"
               value={paste}
               onChange={(e) => setPaste(e.target.value)}
-              placeholder="Paste names, one per line, if the bookmarklet can't run"
+              placeholder="Paste taken names, one per line, if the bookmarklet can't run"
               className="w-full min-h-16 bg-[#12121a] border border-[#2a2a3a] px-2 py-1 text-[#f4f1ea] outline-none focus:border-[#c6ff00]"
             />
             <button

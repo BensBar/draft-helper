@@ -139,7 +139,10 @@ export function StickyHeader({
       </div>
       <p className="px-3 pb-2 text-[11px] text-[#8b8b9a]">
         {league.scoringLabel} · {league.format.toUpperCase()} · {league.teams} tm · {league.rounds} rd
-        {league.robot ? " · ROBOT ON · 75s" : ""} · Companion only — not CBS.
+        {league.id === "cobra" ? " · NO KEEPERS · SLOT 1–12" : ""}
+        {league.buyIn ? ` · $${league.buyIn}` : ""}
+        {league.robot ? " · ROBOT ON · 75s" : league.clockSeconds ? ` · ${league.clockSeconds}s CLOCK` : ""}{" "}
+        · Companion only — not CBS.
         <span className="ml-3 text-[#5a5a6a]">
           Keys: Enter/D draft · U undo · ↑↓ pool · / search · C clock
         </span>

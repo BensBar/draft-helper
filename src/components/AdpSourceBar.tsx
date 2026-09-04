@@ -4,10 +4,12 @@ export function AdpSourceBar({
   sources,
   selectedId,
   onSelect,
+  leagueHint,
 }: {
   sources: AdpSourceInfo[];
   selectedId: string;
   onSelect: (id: string) => void;
+  leagueHint?: string;
 }) {
   return (
     <div
@@ -17,6 +19,11 @@ export function AdpSourceBar({
       <span className="font-[family-name:var(--font-label)] text-[10px] tracking-[0.25em] text-[#8b8b9a] mr-1">
         ADP SOURCE
       </span>
+      {leagueHint ? (
+        <span data-testid="adp-league-default" className="text-[10px] text-[#8b8b9a] mr-2">
+          {leagueHint}
+        </span>
+      ) : null}
       {sources.map((s) => {
         const active = s.id === selectedId;
         const skipped = s.status !== "ok";

@@ -19,7 +19,9 @@ export function DraftBoard({
   return (
     <section data-testid="draft-board" className="border border-[#232333] bg-[#0c0c12] p-2 overflow-auto">
       <p className="font-[family-name:var(--font-label)] tracking-[0.3em] text-xs text-[#8b8b9a] px-1 mb-2">
-        BOARD · KEEPERS LOCKED
+        {league.id === "cobra"
+          ? "BOARD · NO KEEPERS · 16 ROUNDS"
+          : "BOARD · KEEPERS LOCKED"}
       </p>
       <table className="w-full text-[10px] border-collapse">
         <thead>

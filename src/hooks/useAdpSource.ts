@@ -2,8 +2,9 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import {
-  ADP_SOURCE_KEY,
+  adpSourceKey,
   bannerForSource,
+  defaultAdpSourceForLeague,
   rankedPlayersForSource,
   resolveAdpSourceId,
   type AdpBoard,
@@ -16,26 +17,28 @@ export function useAdpSource(
   catalog: AdpSourcesFile,
   boards: Record<string, AdpBoard>,
   fallbackBanner: string,
+  leagueId?: string,
 ) {
-  const [sourceId, setSourceIdState] = useState(catalog.defaultSourceId);
+  const leagueDefault = defaultAdpSourceForLeague(catalog, leagueId);
+  const [sourceId, setSourceIdState] = useState(leagueDefault);
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
-    const saved = window.localStorage.getItem(ADP_SOURCE_KEY);
-    setSourceIdState(resolveAdpSourceId(catalog, saved));
+    const saved = window.localStorage.getItem(adpSourceKey(leagueId));
+    setSourceIdState(resolveAdpSourceId(catalog, saved, leagueId));
     setHydrated(true);
-  }, [catalog]);
+  }, [catalog, leagueId]);
 
   useEffect(() => {
     if (!hydrated) return;
-    window.localStorage.setItem(ADP_SOURCE_KEY, sourceId);
-  }, [hydrated, sourceId]);
+    window.localStorage.setItem(adpSourceKey(leagueId), sourceId);
+  }, [hydrated, sourceId, leagueId]);
 
   const setSourceId = useCallback(
     (id: string) => {
-      setSourceIdState(resolveAdpSourceId(catalog, id));
+      setSourceIdState(resolveAdpSourceId(catalog, id, leagueId));
     },
-    [catalog],
+    [catalog, leagueId],
   );
 
   const players = useMemo(
@@ -48,5 +51,5 @@ export function useAdpSource(
     [catalog, sourceId, fallbackBanner],
   );
 
-  return { sourceId, setSourceId, players, banner, catalog };
+  return { sourceId, setSourceId, players, banner, catalog, leagueDefault };
 }

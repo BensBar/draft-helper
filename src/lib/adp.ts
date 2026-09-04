@@ -39,6 +39,7 @@ export interface AdpSourceInfo {
 
 export interface AdpSourcesFile {
   defaultSourceId: string;
+  leagueDefaults?: Record<string, string>;
   fetched: string;
   scoring: string;
   notes?: string;
@@ -47,17 +48,33 @@ export interface AdpSourcesFile {
 
 export const ADP_SOURCE_KEY = "draft-helper:adp-source";
 
+export function adpSourceKey(leagueId?: string): string {
+  return leagueId ? `${ADP_SOURCE_KEY}:${leagueId}` : ADP_SOURCE_KEY;
+}
+
+export function defaultAdpSourceForLeague(catalog: AdpSourcesFile, leagueId?: string): string {
+  if (leagueId && catalog.leagueDefaults?.[leagueId]) return catalog.leagueDefaults[leagueId];
+  return catalog.defaultSourceId;
+}
+
 export function sourceById(catalog: AdpSourcesFile, id: string): AdpSourceInfo | undefined {
   return catalog.sources.find((s) => s.id === id);
 }
 
-export function resolveAdpSourceId(catalog: AdpSourcesFile, requested: string | null): string {
+export function resolveAdpSourceId(
+  catalog: AdpSourcesFile,
+  requested: string | null,
+  leagueId?: string,
+): string {
   if (requested) {
     const hit = sourceById(catalog, requested);
     if (hit?.status === "ok") return hit.id;
   }
-  const fallback = sourceById(catalog, catalog.defaultSourceId);
+  const fallbackId = defaultAdpSourceForLeague(catalog, leagueId);
+  const fallback = sourceById(catalog, fallbackId);
   if (fallback?.status === "ok") return fallback.id;
+  const global = sourceById(catalog, catalog.defaultSourceId);
+  if (global?.status === "ok") return global.id;
   return catalog.sources.find((s) => s.status === "ok")?.id ?? catalog.defaultSourceId;
 }
 

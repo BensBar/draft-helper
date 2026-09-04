@@ -5,7 +5,8 @@
  *   npm run refresh-adp
  *
  * Gil's must-write CBS 8/31 numbers always win on data/players.json
- * (the default board). Other sources write extras only.
+ * (Gable historical board). Cobra default is raw CBS Non-PPR in
+ * data/adp-cbs-public.json (no Gil overlay). CBS PPR is an extra toggle.
  */
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -208,7 +209,10 @@ async function main() {
 
   const playersDoc = JSON.parse(readFileSync(join(DATA, "players.json"), "utf8"));
 
-  // --- CBS public draft averages (same page Gil used) ---
+  // --- CBS public draft averages ---
+  // Default /averages/ page is Non-PPR. PPR lives at /ppr/both/h2h/all/.
+  // CBS has no public half-PPR board (404). Cobra default = raw Non-PPR, no Gil overlay.
+  const CBS_TODAY = "2026-09-04";
   let cbsRows = [];
   let cbsSkip = null;
   try {
@@ -223,53 +227,95 @@ async function main() {
     cbsSkip = String(err);
   }
 
+  let cbsPprRows = [];
+  let cbsPprSkip = null;
+  try {
+    const cbsPpr = await fetchText("https://www.cbssports.com/fantasy/football/draft/averages/ppr/both/h2h/all/");
+    writeFileSync(join(CACHE, "cbs-averages-ppr.html"), cbsPpr.text);
+    if (!cbsPpr.ok) cbsPprSkip = `HTTP ${cbsPpr.status}`;
+    else {
+      cbsPprRows = parseCbsAverages(cbsPpr.text);
+      if (cbsPprRows.length < 50) cbsPprSkip = `parsed only ${cbsPprRows.length} rows`;
+    }
+  } catch (err) {
+    cbsPprSkip = String(err);
+  }
+
   if (cbsSkip) {
     boards["cbs-public"] = boardFile({
       id: "cbs-public",
-      source: "CBS Sports public draft averages",
+      source: "CBS Sports public draft averages — Non-PPR",
       url: "https://www.cbssports.com/fantasy/football/draft/averages/",
-      fetched: FETCHED,
-      scoring: "PPR",
+      fetched: CBS_TODAY,
+      scoring: "Non-PPR",
       status: "skipped",
       skipReason: cbsSkip,
       players: [],
     });
     catalog.push({
       id: "cbs-public",
-      label: "CBS public",
-      banner: `CBS public ADP skipped — ${cbsSkip}`,
-      fetched: FETCHED,
-      scoring: "PPR",
+      label: "CBS Non-PPR 9/4",
+      banner: `CBS Non-PPR ADP skipped — ${cbsSkip}`,
+      fetched: CBS_TODAY,
+      scoring: "Non-PPR",
       status: "skipped",
       skipReason: cbsSkip,
       file: "adp-cbs-public.json",
       blend: false,
     });
   } else {
-    const ranked = applyMustWrite(cbsRows)
-      .sort((a, b) => a.adp - b.adp)
-      .map((p, i) => ({ ...p, overallRank: i + 1 }));
+    const ranked = cbsRows.sort((a, b) => a.adp - b.adp).map((p, i) => ({ ...p, overallRank: i + 1 }));
     boards["cbs-public"] = boardFile({
       id: "cbs-public",
-      source: "CBS Sports public draft averages",
+      source: "CBS Sports public draft averages — Non-PPR",
       url: "https://www.cbssports.com/fantasy/football/draft/averages/",
-      fetched: FETCHED,
-      scoring: "PPR",
+      fetched: CBS_TODAY,
+      scoring: "Non-PPR",
       status: "ok",
-      notes: "Public page, no login. Gil must-write 8/31 values overlay the parsed Avg Pos where listed.",
+      notes:
+        "Public CBS Non-PPR averages (default /averages/ page). No login. No Gil overlay. Closest CBS board to Cobra half-PPR / pass TD 6 — CBS has no public half-PPR ADP.",
       players: ranked,
     });
     catalog.push({
       id: "cbs-public",
-      label: "CBS public",
-      banner: "CBS public draft averages Aug 31 2026 — not a live draft feed",
-      fetched: FETCHED,
-      scoring: "PPR",
+      label: "CBS Non-PPR 9/4",
+      banner: "CBS Non-PPR ADP Sep 4 2026 — Cobra default. Closest CBS (no public half-PPR). Not a live draft feed.",
+      fetched: CBS_TODAY,
+      scoring: "Non-PPR",
       status: "ok",
       file: "adp-cbs-public.json",
       blend: false,
     });
   }
+
+  boards["cbs-ppr"] = boardFile({
+    id: "cbs-ppr",
+    source: "CBS Sports public draft averages — PPR",
+    url: "https://www.cbssports.com/fantasy/football/draft/averages/ppr/both/h2h/all/",
+    fetched: CBS_TODAY,
+    scoring: "PPR",
+    status: cbsPprSkip ? "skipped" : "ok",
+    skipReason: cbsPprSkip,
+    notes: cbsPprSkip
+      ? null
+      : "Public CBS PPR averages. Extra toggle — Cobra default is Non-PPR.",
+    players: cbsPprSkip
+      ? []
+      : cbsPprRows.sort((a, b) => a.adp - b.adp).map((p, i) => ({ ...p, overallRank: i + 1 })),
+  });
+  catalog.push({
+    id: "cbs-ppr",
+    label: "CBS PPR 9/4",
+    banner: cbsPprSkip
+      ? `CBS PPR ADP skipped — ${cbsPprSkip}`
+      : "CBS PPR ADP Sep 4 2026 — extra toggle. Cobra scoring is half-PPR / pass TD 6.",
+    fetched: CBS_TODAY,
+    scoring: "PPR",
+    status: cbsPprSkip ? "skipped" : "ok",
+    skipReason: cbsPprSkip,
+    file: "adp-cbs-ppr.json",
+    blend: false,
+  });
 
   // --- FantasyPros public PPR ADP HTML ---
   let fpRows = [];
@@ -604,10 +650,11 @@ async function main() {
 
   writeJson(join(DATA, "adp-sources.json"), {
     defaultSourceId: "gil",
-    fetched: FETCHED,
-    scoring: "PPR",
+    leagueDefaults: { gable: "gil", cobra: "cbs-public" },
+    fetched: CBS_TODAY,
+    scoring: "mixed",
     notes:
-      "Default is Gil's CBS 8/31 board (data/players.json). Other files are extras. Consensus averages unique publishers only.",
+      "Cobra default is CBS public Non-PPR (data/adp-cbs-public.json). Gable default remains Gil's 8/31 board (data/players.json). Consensus averages unique publishers only (Gil + ESPN + Yahoo).",
     sources: catalog,
   });
 

@@ -92,16 +92,16 @@
     "slot3Round1": {
       "from": ["jahmyr-gibbs", "bijan-robinson", "jamarr-chase"],
       "elseFrom": ["jonathan-taylor", "puka-nacua"],
-      "why": "Slot 3 smash — leftover of Gibbs / Bijan / Chase, else Taylor or Nacua."
+      "why": "Slot 3 only — leftover Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase, else Jonathan Taylor or Puka Nacua."
     },
     "round2": {
       "positions": ["RB", "WR"],
       "neverIds": ["josh-allen", "josh-jacobs"],
-      "why": "Round 2 — best remaining RB/WR. Do not take Josh Allen here. Do not draft Jacobs even if he falls."
+      "why": "Round 2 — leftover skill. Do not take Josh Allen. Never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson."
     },
     "mid": {
       "positions": ["WR", "RB"],
-      "why": "All-play 3WR+FLEX — do not punt weeks. Explosive WR/RB for bonuses. Never Jacobs; GB stash is Lloyd."
+      "why": "All-play 3WR+FLEX. Wait on Josh Allen until ~R7. Never Josh Jacobs. GB stash is MarShawn Lloyd, not Kaleb Johnson."
     },
     "waitOnQbUntilRound": 7,
     "kDstLastRounds": 2,

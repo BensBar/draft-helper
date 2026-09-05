@@ -128,7 +128,7 @@ export function recommendCobra(args: {
       why: namedWhy(
         "K/DST last two —",
         queue,
-        "Do not spend an earlier pick here. Never Josh Jacobs.",
+        "Do not spend an earlier pick here. Fade Josh Jacobs (CEL).",
       ),
       queue,
       windowId: "cobra-late",
@@ -142,7 +142,7 @@ export function recommendCobra(args: {
     const shown = (queue.length ? queue : byPositions(pool, SKILL)).slice(0, 8);
     return {
       player: queue[0] ?? byPositions(pool, SKILL)[0] ?? null,
-      why: namedWhy(rules.slot3Round1.why + " On the board:", shown, "Never Josh Jacobs."),
+      why: namedWhy(rules.slot3Round1.why + " On the board:", shown, "Fade Josh Jacobs (CEL)."),
       queue: shown,
       windowId: "cobra-slot3-r1",
     };
@@ -155,7 +155,7 @@ export function recommendCobra(args: {
       why: namedWhy(
         "Smash leftover",
         skill,
-        "Wait on Josh Allen until ~R7. Never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+        "Wait on Josh Allen until ~R7. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson.",
       ),
       queue: skill.slice(0, 8),
       windowId: "cobra-r1",
@@ -169,7 +169,7 @@ export function recommendCobra(args: {
       why: namedWhy(
         "Round 2 leftover",
         skill,
-        "Do not take Josh Allen. Never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+        "Do not take Josh Allen. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson.",
       ),
       queue: skill.slice(0, 8),
       windowId: "cobra-r2",
@@ -183,7 +183,7 @@ export function recommendCobra(args: {
       why: namedWhy(
         "All-play leftover",
         skill,
-        "Wait on Josh Allen until ~R7. Never Josh Jacobs. GB stash is MarShawn Lloyd, not Kaleb Johnson.",
+        "Wait on Josh Allen until ~R7. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson.",
       ),
       queue: skill.slice(0, 8),
       windowId: "cobra-mid",
@@ -196,7 +196,7 @@ export function recommendCobra(args: {
     why: namedWhy(
       "Best remaining",
       skillFirst,
-      "Josh Allen is allowed now if you still need a QB. Still wait on K/DST. Never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "Josh Allen is allowed now if you still need a QB. Still wait on K/DST. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson.",
     ),
     queue: skillFirst.slice(0, 8),
     windowId: "cobra-late-mid",

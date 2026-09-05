@@ -21,6 +21,7 @@ describe("ranked pre-queue", () => {
     const why = prequeueWhy(parsed.matched);
     expect(why).toMatch(/Jahmyr Gibbs/);
     expect(why).toMatch(/Bijan Robinson/);
+    expect(why).toMatch(/CEL/);
     expect(why).not.toMatch(/\ba WR\b/);
   });
 

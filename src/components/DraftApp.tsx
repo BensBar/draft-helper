@@ -126,7 +126,7 @@ export function DraftApp({
 
   const adpHint =
     draft.league.id === "cobra"
-      ? "Cobra default: CBS Non-PPR 9/4"
+      ? "Cobra default: CBS Non-PPR 9/5 (Gil both/h2h/all)"
       : "Gable default: Gil / CBS 8/31";
 
   return (
@@ -297,8 +297,16 @@ function LeagueSettings({ league }: { league: League }) {
       )}
       {cobra ? (
         <p>
-          · ADP default: CBS Non-PPR Sep 4 2026 (closest CBS; no public half-PPR). Switch sources
-          above.
+          · ADP default: CBS Non-PPR{" "}
+          <a
+            href="https://www.cbssports.com/fantasy/football/draft/averages/both/h2h/all/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-[#2ef5ff] hover:underline"
+          >
+            both/h2h/all
+          </a>{" "}
+          Sep 5 2026 (Gil). No public half-PPR. Switch sources above.
         </p>
       ) : null}
       <p>

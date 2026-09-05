@@ -1,12 +1,12 @@
 {
-  "adpBanner": "CBS Non-PPR ADP Sep 4 2026 — Cobra default (closest CBS; no public half-PPR). Gil 8/31 stays on Gable.",
-  "adpFetched": "2026-09-04",
-  "adpScoring": "Non-PPR (Cobra default) · Gil 8/31 PPR-labeled board for Gable",
-  "newsDate": "2026-09-04",
-  "updated": "2026-09-04",
-  "newsBanner": "COBRA Thu 9/10/2026 5:00pm ET — slot drawn at kickoff (picker 1–12, never pick 3). CBS Non-PPR ADP Sep 4. Never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson. Never Josh Allen in R2. Gable is historical (keepers + Gil 8/31).",
+  "adpBanner": "CBS Non-PPR ADP Sep 5 2026 — Cobra default from Gil's board (both/h2h/all). No public half-PPR. Gil 8/31 stays on Gable.",
+  "adpFetched": "2026-09-05",
+  "adpScoring": "Non-PPR (Cobra default) · Gil 8/31 board for Gable",
+  "newsDate": "2026-09-05",
+  "updated": "2026-09-05",
+  "newsBanner": "COBRA Thu 9/10/2026 5:00pm ET — Ben's Bar · ck22 · 16 rd · NO keepers · slot unknown (picker 1–12). Fade Josh Jacobs (CEL). MarShawn Lloyd climbing (~87) but still a reach — never Kaleb Johnson. Never a vague WR. Never Josh Allen in R2.",
   "defaultLeagueId": "cobra",
   "gableDefaultUntil": "2026-09-03",
   "author": "Gil",
-  "disclaimer": "Cobra default ADP is CBS public Non-PPR averages, fetched Sep 4 2026 (https://www.cbssports.com/fantasy/football/draft/averages/). CBS has no public half-PPR board. Not a live CBS draft-room feed. Companion sits next to the CBS draft room — it does not replace it."
+  "disclaimer": "Cobra default ADP is CBS public Non-PPR from https://www.cbssports.com/fantasy/football/draft/averages/both/h2h/all/ fetched Sep 5 2026. CBS has no public half-PPR board. Not a live CBS draft-room feed. Live app: https://bensbar.github.io/draft-helper/"
 }

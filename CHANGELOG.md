@@ -1,5 +1,15 @@
 # Changelog
 
+## Gil Cobra facts — Sep 5 2026
+
+Locked from Gil’s Cobra audit (operational handoff is Carlos/Gil, not app UI):
+
+- League: `ck22.football.cbssports.com` · Ben’s Bar · Thu 9/10/2026 5:00pm ET · 16 rounds · **NO keepers** · slot **unknown** until the draw (picker 1–12).
+- Cobra ADP source is Gil’s CBS Non-PPR page: https://www.cbssports.com/fantasy/football/draft/averages/both/h2h/all/ (refetched Sep 5; same board as 9/4 numbers).
+- Live app: https://bensbar.github.io/draft-helper/
+- UI copy: **fade Josh Jacobs (CEL)**; **MarShawn Lloyd climbing (~87) but still a reach** — never confuse with Kaleb Johnson; never a vague WR.
+- Night handoff stays human: watch → 2 picks out **ONE full name + search** → Ben clicks. Preload the robot queue before kickoff.
+
 ## Cobra night prep — Thu 9/10/2026 5:00pm ET
 
 Draft-helper now lands on **Cobra Craig** after Gable (9/3). Gable stays as a historical keepers board.

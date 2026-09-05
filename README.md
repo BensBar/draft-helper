@@ -7,7 +7,9 @@ Leagues:
 - **Cobra** (default after Thu 9/3/2026) — Cobra Craig, Ben's Bar, live snake Thu 9/10/2026 5:00pm ET, 16 rounds, $165, all-play, half-PPR, pass TD 6, **no keepers**, slot drawn at kickoff (1–12 picker, never hardcoded)
 - **Gable** (historical) — Stan Gable's All Americans, Ben's Bar Bruskis, pick 12, keepers locked
 
-Cobra default ranks are **CBS public Non-PPR** fetched Fri 9/4/2026 from [the public ADP page](https://www.cbssports.com/fantasy/football/draft/averages/) (no login). That page is Non-PPR; CBS PPR is a separate toggle. CBS has **no public half-PPR** board. Gable still uses Gil's 8/31 must-write board. The banner is honest about whichever source is selected.
+Cobra default ranks are **CBS public Non-PPR** fetched Sat 9/5/2026 from Gil’s board: [draft/averages/both/h2h/all](https://www.cbssports.com/fantasy/football/draft/averages/both/h2h/all/) (no login). CBS PPR is a separate toggle. CBS has **no public half-PPR** board. Gable still uses Gil's 8/31 must-write board. The banner is honest about whichever source is selected.
+
+Draft-night **handoff is operational** (Carlos/Gil), not an app feature: watch the CBS board → two picks out call **one full name + search** → Ben clicks. Preload the robot queue before kickoff. Live app: [bensbar.github.io/draft-helper](https://bensbar.github.io/draft-helper/).
 
 This is **not** a live CBS draft-room ADP stream. Switch sources in the ADP SOURCE bar — that only reorders value, not rec-engine rules.
 
@@ -84,11 +86,11 @@ The ADP banner stays honest about **whose board** is selected (Cobra = CBS Non-P
 
 ## ADP sources
 
-Cobra default is **CBS Non-PPR Sep 4 2026** (`data/adp-cbs-public.json`) — closest CBS board; CBS has no public half-PPR / pass-TD-6 ADP. Gable default is **Gil / CBS 8/31** (`data/players.json`). Other public sources are extras — they change ADP/ordering of eligible players only.
+Cobra default is **CBS Non-PPR Sep 5 2026** from [both/h2h/all](https://www.cbssports.com/fantasy/football/draft/averages/both/h2h/all/) (`data/adp-cbs-public.json`) — closest CBS board; CBS has no public half-PPR / pass-TD-6 ADP. Gable default is **Gil / CBS 8/31** (`data/players.json`). Other public sources are extras — they change ADP/ordering of eligible players only.
 
 | Control | What |
 | --- | --- |
-| **ADP SOURCE** bar | Gil / CBS 8/31 · CBS Non-PPR 9/4 · CBS PPR 9/4 · FantasyPros · ESPN · Sleeper · Yahoo · Consensus |
+| **ADP SOURCE** bar | Gil / CBS 8/31 · CBS Non-PPR 9/5 · CBS PPR 9/4 · FantasyPros · ESPN · Sleeper · Yahoo · Consensus |
 | Persistence | `localStorage` key `draft-helper:adp-source:<leagueId>` |
 | Rec rules | Unchanged. Never Jacobs. MarShawn Lloyd not Kaleb Johnson. Cobra never Josh Allen in R2. |
 
@@ -104,7 +106,7 @@ Writes dated files. Gil must-write ADPs always overwrite parsed CBS Avg Pos on `
 | --- | --- |
 | `data/players.json` | Gable historical board (CBS public 8/31 + Gil flags/notes) |
 | `data/adp-gil.json` | Same Gable board, dated |
-| `data/adp-cbs-public.json` | **Cobra default** — CBS Non-PPR Sep 4 2026 (no Gil overlay) |
+| `data/adp-cbs-public.json` | **Cobra default** — CBS Non-PPR Sep 5 2026 from [both/h2h/all](https://www.cbssports.com/fantasy/football/draft/averages/both/h2h/all/) |
 | `data/adp-cbs-ppr.json` | CBS PPR Sep 4 2026 extra toggle |
 | `data/adp-espn.json` | ESPN public PPR league-defaults API |
 | `data/adp-yahoo.json` | Yahoo public `draft_analysis` API (no login) |
@@ -152,4 +154,4 @@ Ben starts: TE done (Bowers), one WR (Burden, groin Q). Holes: QB, RB, RB, WR, W
 
 ## Cobra rec
 
-3WR + FLEX all-play. Smash leftover **Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase / Jonathan Taylor / Puka Nacua**. Wait on Josh Allen until ~R7. K/DST last two. If he draws **3**: leftover of Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase, else Jonathan Taylor / Puka Nacua. Round 2 leftover skill — do **not** take Josh Allen. Never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson. Slot is unknown until kickoff — picker 1–12, never hardcoded.
+3WR + FLEX all-play. Smash leftover **Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase / Jonathan Taylor / Puka Nacua**. Wait on Josh Allen until ~R7. K/DST last two. If he draws **3**: leftover of Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase, else Jonathan Taylor / Puka Nacua. Round 2 leftover skill — do **not** take Josh Allen. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing (CBS Non-PPR ~87) but still a reach — never confuse with Kaleb Johnson. Slot is unknown until kickoff — picker 1–12, never hardcoded.

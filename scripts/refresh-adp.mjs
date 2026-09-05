@@ -212,11 +212,11 @@ async function main() {
   // --- CBS public draft averages ---
   // Default /averages/ page is Non-PPR. PPR lives at /ppr/both/h2h/all/.
   // CBS has no public half-PPR board (404). Cobra default = raw Non-PPR, no Gil overlay.
-  const CBS_TODAY = "2026-09-04";
+  const CBS_TODAY = "2026-09-05";
   let cbsRows = [];
   let cbsSkip = null;
   try {
-    const cbs = await fetchText("https://www.cbssports.com/fantasy/football/draft/averages/");
+    const cbs = await fetchText("https://www.cbssports.com/fantasy/football/draft/averages/both/h2h/all/");
     writeFileSync(join(CACHE, "cbs-averages.html"), cbs.text);
     if (!cbs.ok) cbsSkip = `HTTP ${cbs.status}`;
     else {
@@ -245,7 +245,7 @@ async function main() {
     boards["cbs-public"] = boardFile({
       id: "cbs-public",
       source: "CBS Sports public draft averages — Non-PPR",
-      url: "https://www.cbssports.com/fantasy/football/draft/averages/",
+      url: "https://www.cbssports.com/fantasy/football/draft/averages/both/h2h/all/",
       fetched: CBS_TODAY,
       scoring: "Non-PPR",
       status: "skipped",
@@ -268,7 +268,7 @@ async function main() {
     boards["cbs-public"] = boardFile({
       id: "cbs-public",
       source: "CBS Sports public draft averages — Non-PPR",
-      url: "https://www.cbssports.com/fantasy/football/draft/averages/",
+      url: "https://www.cbssports.com/fantasy/football/draft/averages/both/h2h/all/",
       fetched: CBS_TODAY,
       scoring: "Non-PPR",
       status: "ok",

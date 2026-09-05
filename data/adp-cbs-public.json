@@ -1,12 +1,12 @@
 {
   "id": "cbs-public",
   "source": "CBS Sports public draft averages \u2014 Non-PPR",
-  "url": "https://www.cbssports.com/fantasy/football/draft/averages/",
-  "fetched": "2026-09-04",
+  "url": "https://www.cbssports.com/fantasy/football/draft/averages/both/h2h/all/",
+  "fetched": "2026-09-05",
   "scoring": "Non-PPR",
   "status": "ok",
   "skipReason": null,
-  "notes": "Public CBS Non-PPR averages (default /averages/ page). Fetched Sep 4 2026. No login. No Gil overlay. Closest CBS board to Cobra half-PPR / pass TD 6 \u2014 CBS has no public half-PPR ADP. Not a live draft-room feed.",
+  "notes": "Gil-locked CBS Non-PPR board: https://www.cbssports.com/fantasy/football/draft/averages/both/h2h/all/ fetched Sep 5 2026. No login. No Gil overlay. Closest CBS to Cobra half-PPR / pass TD 6 \u2014 CBS has no public half-PPR ADP. Not a live draft-room feed.",
   "playerCount": 213,
   "players": [
     {

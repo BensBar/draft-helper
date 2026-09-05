@@ -22,6 +22,8 @@ describe("league defaults after Gable night", () => {
   });
 
   it("keeps Cobra slot unknown and never hardcodes pick 3", () => {
+    expect(cobra.url).toBe("https://ck22.football.cbssports.com");
+    expect(cobra.teamName).toBe("Ben's Bar");
     expect(cobra.benSlot).toBeNull();
     expect(cobra.slotIsDrawn).toBe(true);
     expect(cobra.rounds).toBe(16);
@@ -39,7 +41,7 @@ describe("league defaults after Gable night", () => {
     expect(defaultAdpSourceForLeague(catalog, "gable")).toBe("gil");
     const cbs = catalog.sources.find((s) => s.id === "cbs-public")!;
     expect(cbs.scoring).toBe("Non-PPR");
-    expect(cbs.fetched).toBe("2026-09-04");
+    expect(cbs.fetched).toBe("2026-09-05");
     expect(cbs.label).toMatch(/Non-PPR/);
     const ppr = catalog.sources.find((s) => s.id === "cbs-ppr")!;
     expect(ppr.status).toBe("ok");

@@ -1,7 +1,7 @@
 {
   "leagueId": "cobra",
   "title": "COBRA SCENARIOS",
-  "subtitle": "Slot unknown until Thu 9/10/2026 5:00pm ET · picker 1–12 · never hardcode pick 3 · CBS Non-PPR 9/4",
+  "subtitle": "Slot unknown until Thu 9/10/2026 5:00pm ET · picker 1–12 · never hardcode pick 3 · CBS Non-PPR both/h2h/all 9/5",
   "rootId": "cobra-0",
   "livePicks": [],
   "keeperSkips": [],
@@ -28,12 +28,12 @@
       "id": "cobra-0",
       "section": "pre-draft",
       "trigger": "Cobra slot is drawn at kickoff. Do not assume 3. Tap 1–12 after the CBS draw.",
-      "why": "Unknown until Thu 9/10/2026 5:00pm ET. Rec + whose-turn recompute from the picker. Never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson. Never Josh Allen in R2. Wait on Josh Allen until ~R7. K/DST last two.",
+      "why": "Unknown until Thu 9/10/2026 5:00pm ET. Rec + whose-turn recompute from the picker. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson. Never Josh Allen in R2. Wait on Josh Allen until ~R7. K/DST last two.",
       "picks": [],
       "notes": [
         "NO KEEPERS · 16 rounds · $165 · half-PPR · pass TD 6 · all-play.",
         "R1 smash leftover Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase / Jonathan Taylor / Puka Nacua.",
-        "Preload a ranked robot queue before the 75s clock if CBS autodrafts."
+        "Preload a ranked robot queue before kickoff. Handoff is operational (Carlos/Gil), not the app: watch → 2 picks out ONE full name + search → Ben clicks."
       ],
       "forks": [
         {
@@ -106,7 +106,7 @@
       "id": "cobra-slot-1",
       "section": "r1",
       "trigger": "Slot 1 — live picks 1, 24, 25, 48… (16 rounds, no keepers).",
-      "why": "Slot 1 — smash Jahmyr Gibbs if he is there, else Bijan Robinson / Ja'Marr Chase. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "why": "Slot 1 — smash Jahmyr Gibbs if he is there, else Bijan Robinson / Ja'Marr Chase. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson.",
       "picks": [
         {
           "overall": 1,
@@ -184,7 +184,7 @@
       "id": "cobra-slot-2",
       "section": "r1",
       "trigger": "Slot 2 — live picks 2, 23, 26, 47… (16 rounds, no keepers).",
-      "why": "Slot 2 — leftover Jahmyr Gibbs / Bijan Robinson, else Ja'Marr Chase. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "why": "Slot 2 — leftover Jahmyr Gibbs / Bijan Robinson, else Ja'Marr Chase. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson.",
       "picks": [
         {
           "overall": 2,
@@ -262,7 +262,7 @@
       "id": "cobra-slot-3",
       "section": "r1",
       "trigger": "Slot 3 — live picks 3, 22, 27, 46… (16 rounds, no keepers).",
-      "why": "Slot 3 only if CBS draws 3. Smash leftover Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase, else Jonathan Taylor or Puka Nacua. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "why": "Slot 3 only if CBS draws 3. Smash leftover Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase, else Jonathan Taylor or Puka Nacua. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson.",
       "picks": [
         {
           "overall": 3,
@@ -342,7 +342,7 @@
       "id": "cobra-slot-4",
       "section": "r1",
       "trigger": "Slot 4 — live picks 4, 21, 28, 45… (16 rounds, no keepers).",
-      "why": "Slot 4 — leftover Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase / Jonathan Taylor / Puka Nacua. Never Josh Jacobs. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "why": "Slot 4 — leftover Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase / Jonathan Taylor / Puka Nacua. Fade Josh Jacobs (CEL). Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson.",
       "picks": [
         {
           "overall": 4,
@@ -429,7 +429,7 @@
       "id": "cobra-slot-5",
       "section": "r1",
       "trigger": "Slot 5 — live picks 5, 20, 29, 44… (16 rounds, no keepers).",
-      "why": "Slot 5 — leftover of Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase / Jonathan Taylor / Puka Nacua / James Cook. Never Josh Jacobs. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "why": "Slot 5 — leftover of Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase / Jonathan Taylor / Puka Nacua / James Cook. Fade Josh Jacobs (CEL). Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson.",
       "picks": [
         {
           "overall": 5,
@@ -516,7 +516,7 @@
       "id": "cobra-slot-6",
       "section": "r1",
       "trigger": "Slot 6 — live picks 6, 19, 30, 43… (16 rounds, no keepers).",
-      "why": "Slot 6 — leftover Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase / Jonathan Taylor / Puka Nacua / James Cook / Derrick Henry. Never Josh Jacobs. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "why": "Slot 6 — leftover Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase / Jonathan Taylor / Puka Nacua / James Cook / Derrick Henry. Fade Josh Jacobs (CEL). Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson.",
       "picks": [
         {
           "overall": 6,
@@ -603,7 +603,7 @@
       "id": "cobra-slot-7",
       "section": "r1",
       "trigger": "Slot 7 — live picks 7, 18, 31, 42… (16 rounds, no keepers).",
-      "why": "Slot 7 — leftover Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey / Ja'Marr Chase. Never Josh Jacobs. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "why": "Slot 7 — leftover Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey / Ja'Marr Chase. Fade Josh Jacobs (CEL). Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson.",
       "picks": [
         {
           "overall": 7,
@@ -695,7 +695,7 @@
       "id": "cobra-slot-8",
       "section": "r1",
       "trigger": "Slot 8 — live picks 8, 17, 32, 41… (16 rounds, no keepers).",
-      "why": "Slot 8 — leftover James Cook / Derrick Henry / Christian McCaffrey / Puka Nacua / Jaxon Smith-Njigba. Never Josh Jacobs. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "why": "Slot 8 — leftover James Cook / Derrick Henry / Christian McCaffrey / Puka Nacua / Jaxon Smith-Njigba. Fade Josh Jacobs (CEL). Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson.",
       "picks": [
         {
           "overall": 8,
@@ -787,7 +787,7 @@
       "id": "cobra-slot-9",
       "section": "r1",
       "trigger": "Slot 9 — live picks 9, 16, 33, 40… (16 rounds, no keepers).",
-      "why": "Slot 9 — leftover Christian McCaffrey / Jaxon Smith-Njigba / Amon-Ra St. Brown / Saquon Barkley. Never Josh Jacobs. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "why": "Slot 9 — leftover Christian McCaffrey / Jaxon Smith-Njigba / Amon-Ra St. Brown / Saquon Barkley. Fade Josh Jacobs (CEL). Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson.",
       "picks": [
         {
           "overall": 9,
@@ -879,7 +879,7 @@
       "id": "cobra-slot-10",
       "section": "r1",
       "trigger": "Slot 10 — live picks 10, 15, 34, 39… (16 rounds, no keepers).",
-      "why": "Slot 10 — leftover Amon-Ra St. Brown / Saquon Barkley / Chase Brown / Jaxon Smith-Njigba. Never Josh Jacobs. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "why": "Slot 10 — leftover Amon-Ra St. Brown / Saquon Barkley / Chase Brown / Jaxon Smith-Njigba. Fade Josh Jacobs (CEL). Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson.",
       "picks": [
         {
           "overall": 10,
@@ -971,7 +971,7 @@
       "id": "cobra-slot-11",
       "section": "r1",
       "trigger": "Slot 11 — live picks 11, 14, 35, 38… (16 rounds, no keepers).",
-      "why": "Slot 11 — leftover Saquon Barkley / Chase Brown / Omarion Hampton / Amon-Ra St. Brown. Never Josh Jacobs. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "why": "Slot 11 — leftover Saquon Barkley / Chase Brown / Omarion Hampton / Amon-Ra St. Brown. Fade Josh Jacobs (CEL). Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson.",
       "picks": [
         {
           "overall": 11,
@@ -1063,7 +1063,7 @@
       "id": "cobra-slot-12",
       "section": "r1",
       "trigger": "Slot 12 — live picks 12, 13, 36, 37… (16 rounds, no keepers).",
-      "why": "Slot 12 — turn double-up. Leftover Saquon Barkley / Chase Brown / Omarion Hampton / Christian McCaffrey. Never Josh Jacobs. Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen, never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "why": "Slot 12 — turn double-up. Leftover Saquon Barkley / Chase Brown / Omarion Hampton / Christian McCaffrey. Fade Josh Jacobs (CEL). Round 2: leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson.",
       "picks": [
         {
           "overall": 12,
@@ -1155,7 +1155,7 @@
       "id": "cobra-other-slot",
       "section": "r1",
       "trigger": "Any slot except 3 — smash leftover Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase / Jonathan Taylor / Puka Nacua. Wait on Josh Allen.",
-      "why": "Do not run the slot-3 script unless CBS draws 3. Best remaining named pile or next skill. Never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.",
+      "why": "Do not run the slot-3 script unless CBS draws 3. Best remaining named pile or next skill. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson.",
       "picks": [
         {
           "overall": 1,
@@ -1194,7 +1194,7 @@
       "id": "cobra-r2",
       "section": "r2",
       "trigger": "Round 2 — every slot. Best remaining RB/WR. Never Josh Allen.",
-      "why": "Do not take Josh Allen in R2 from any slot. Never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson. Smash leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey / Jaxon Smith-Njigba / Amon-Ra St. Brown.",
+      "why": "Do not take Josh Allen in R2 from any slot. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson. Smash leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey / Jaxon Smith-Njigba / Amon-Ra St. Brown.",
       "picks": [
         {
           "overall": 0,
@@ -1246,7 +1246,7 @@
       "id": "cobra-mid",
       "section": "mid",
       "trigger": "R3–R6 — all-play. Best remaining named skill. Wait on Josh Allen until ~R7.",
-      "why": "3WR + FLEX. Smash leftover Amon-Ra St. Brown / CeeDee Lamb / Justin Jefferson / Drake London / Jadarian Price / Bhayshul Tuten. Never Josh Jacobs. Never Josh Allen here. GB stash later is MarShawn Lloyd, not Kaleb Johnson.",
+      "why": "3WR + FLEX. Smash leftover Amon-Ra St. Brown / CeeDee Lamb / Justin Jefferson / Drake London / Jadarian Price / Bhayshul Tuten. Fade Josh Jacobs (CEL). Never Josh Allen here. MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson.",
       "picks": [
         {
           "overall": 0,
@@ -1295,8 +1295,8 @@
     {
       "id": "cobra-late-mid",
       "section": "late-mid",
-      "trigger": "R7–R14 — first QB window. MarShawn Lloyd if GB is open. Not Kaleb Johnson.",
-      "why": "If you still have no QB, take a starter (Josh Allen is allowed now). Else Carnell Tate / J.K. Dobbins / MarShawn Lloyd / Rashid Shaheed. Never Josh Jacobs. Never Kaleb Johnson. Never K/DST until the last two.",
+      "trigger": "R7–R14 — first QB window. MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson.",
+      "why": "If you still have no QB, take a starter (Josh Allen is allowed now). Else Carnell Tate / J.K. Dobbins / MarShawn Lloyd / Rashid Shaheed. Fade Josh Jacobs (CEL). Never Kaleb Johnson. MarShawn Lloyd is climbing but still a reach. Never K/DST until the last two.",
       "picks": [
         {
           "overall": 0,
@@ -1337,7 +1337,7 @@
       "id": "cobra-late",
       "section": "late",
       "trigger": "Last two rounds — K and DST only.",
-      "why": "Do not spend an earlier pick on a kicker or DST. Never Josh Jacobs. Never Kaleb Johnson.",
+      "why": "Do not spend an earlier pick on a kicker or DST. Fade Josh Jacobs (CEL). Never Kaleb Johnson.",
       "picks": [
         {
           "overall": 0,
@@ -1375,7 +1375,7 @@
       "id": "cobra-cheat",
       "section": "cheat",
       "trigger": "ONE-SCREEN CHEAT — Cobra, slot unknown until kickoff.",
-      "why": "Draw 1–12. R1 leftover Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase / Jonathan Taylor / Puka Nacua. R2 leftover RB/WR — never Josh Allen, never Josh Jacobs. Mid: Amon-Ra St. Brown / CeeDee Lamb / Justin Jefferson / Drake London / Price / Tuten. R7+ Josh Allen ok; MarShawn Lloyd not Kaleb Johnson. Last two K/DST.",
+      "why": "Draw 1–12. R1 leftover Jahmyr Gibbs / Bijan Robinson / Ja'Marr Chase / Jonathan Taylor / Puka Nacua. R2 leftover Ja'Marr Chase / Puka Nacua / James Cook / Derrick Henry / Christian McCaffrey — never Josh Allen. Fade Josh Jacobs (CEL). Mid: Amon-Ra St. Brown / CeeDee Lamb / Justin Jefferson / Drake London / Price / Tuten. R7+ Josh Allen ok; MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson. Last two K/DST.",
       "picks": [
         {
           "overall": 0,

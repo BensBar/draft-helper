@@ -104,7 +104,10 @@ describe("source overlay", () => {
     expect(resolveAdpSourceId(catalog, "fantasypros", "cobra")).toBe("cbs-public");
     expect(defaultAdpSourceForLeague(catalog, "cobra")).toBe("cbs-public");
     expect((adpCbsPublic as AdpBoard).scoring).toBe("Non-PPR");
-    expect((adpCbsPublic as AdpBoard).fetched).toBe("2026-09-04");
+    expect((adpCbsPublic as AdpBoard).fetched).toBe("2026-09-05");
+    expect((adpCbsPublic as AdpBoard).url).toBe(
+      "https://www.cbssports.com/fantasy/football/draft/averages/both/h2h/all/",
+    );
     const ranked = rankedPlayersForSource(players, catalog, boards, "fantasypros");
     expect(ranked.find((p) => p.id === "james-cook")?.adp).toBe(7.3);
   });

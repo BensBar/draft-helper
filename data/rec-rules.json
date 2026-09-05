@@ -97,11 +97,11 @@
     "round2": {
       "positions": ["RB", "WR"],
       "neverIds": ["josh-allen", "josh-jacobs"],
-      "why": "Round 2 — leftover skill. Do not take Josh Allen. Never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson."
+      "why": "Round 2 — leftover skill. Do not take Josh Allen. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson."
     },
     "mid": {
       "positions": ["WR", "RB"],
-      "why": "All-play 3WR+FLEX. Wait on Josh Allen until ~R7. Never Josh Jacobs. GB stash is MarShawn Lloyd, not Kaleb Johnson."
+      "why": "All-play 3WR+FLEX. Wait on Josh Allen until ~R7. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson."
     },
     "waitOnQbUntilRound": 7,
     "kDstLastRounds": 2,

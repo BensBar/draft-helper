@@ -30,8 +30,8 @@ export function PreQueue({
         </p>
       </div>
       <p className="text-[12px] text-[#a8a4b0] mb-2">
-        Paste a ranked list (one full name per line) for the CBS robot. Smash uses this order once
-        a slot is drawn. Josh Jacobs and Kaleb Johnson are stripped even if pasted.
+        Paste a ranked list (one full name per line) before kickoff. Smash uses this order once a
+        slot is drawn. Josh Jacobs (CEL fade) and Kaleb Johnson are stripped even if pasted.
       </p>
       <textarea
         data-testid="prequeue-paste"

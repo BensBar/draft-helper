@@ -53,6 +53,6 @@ export function prequeueWhy(queue: Player[]): string {
   const next = queue.slice(0, 4).map((p) => p.name);
   const rest = next.slice(1).join(" / ");
   return rest
-    ? `Preloaded robot queue — smash ${next[0]}. Next: ${rest}. Never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.`
-    : `Preloaded robot queue — smash ${next[0]}. Never Josh Jacobs. MarShawn Lloyd not Kaleb Johnson.`;
+    ? `Preloaded robot queue — smash ${next[0]}. Next: ${rest}. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson.`
+    : `Preloaded robot queue — smash ${next[0]}. Fade Josh Jacobs (CEL). MarShawn Lloyd is climbing but still a reach — never confuse with Kaleb Johnson.`;
 }

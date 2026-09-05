@@ -4,9 +4,9 @@
     "gable": "gil",
     "cobra": "cbs-public"
   },
-  "fetched": "2026-09-04",
+  "fetched": "2026-09-05",
   "scoring": "mixed",
-  "notes": "Cobra default is CBS public Non-PPR (data/adp-cbs-public.json, Sep 4 2026) — closest CBS board; CBS has no public half-PPR / pass-TD-6 ADP. Gable default remains Gil's 8/31 board (data/players.json). Consensus averages unique publishers only (Gil + ESPN + Yahoo).",
+  "notes": "Cobra default is Gil's CBS Non-PPR board https://www.cbssports.com/fantasy/football/draft/averages/both/h2h/all/ (data/adp-cbs-public.json, Sep 5 2026). CBS has no public half-PPR / pass-TD-6 ADP. Gable default remains Gil's 8/31 board (data/players.json).",
   "sources": [
     {
       "id": "gil",
@@ -20,9 +20,9 @@
     },
     {
       "id": "cbs-public",
-      "label": "CBS Non-PPR 9/4",
-      "banner": "CBS Non-PPR ADP Sep 4 2026 — Cobra default. Closest CBS (no public half-PPR). Not a live draft feed.",
-      "fetched": "2026-09-04",
+      "label": "CBS Non-PPR 9/5",
+      "banner": "CBS Non-PPR ADP Sep 5 2026 — Gil's both/h2h/all board. Cobra default. Closest CBS (no public half-PPR). Not a live draft feed.",
+      "fetched": "2026-09-05",
       "scoring": "Non-PPR",
       "status": "ok",
       "file": "adp-cbs-public.json",

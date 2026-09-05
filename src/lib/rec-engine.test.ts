@@ -293,6 +293,8 @@ describe("Cobra rec engine — slot is drawn, never assumed 3", () => {
       expect(rec.queue.every((p) => p.id !== "josh-allen")).toBe(true);
       expect(rec.why).toMatch(/Josh Allen/);
       expect(rec.why).toMatch(/MarShawn Lloyd/);
+      expect(rec.why).toMatch(/CEL/);
+      expect(rec.why).toMatch(/reach/);
     }
   });
 
